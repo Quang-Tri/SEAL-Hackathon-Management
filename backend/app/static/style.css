@@ -1,0 +1,140 @@
+/* --- 1. ĐỊNH DẠNG CƠ BẢN --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace; /* Font chữ lập trình */
+}
+
+body {
+    background-color: #000;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- 2. LỚP NỀN MA TRẬN (CANVAS) --- */
+#matrix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Nằm ở lớp dưới cùng */
+}
+
+/* --- 3. KHUNG CHỨA FORM CHÍNH --- */
+.container {
+    position: relative;
+    z-index: 10; /* Đẩy khung nổi hẳn lên trên lớp ma trận */
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.form-box {
+    background: rgba(0, 0, 0, 0.85); /* Nền tối trong suốt nhẹ */
+    border: 2px solid #00ff00; /* Viền xanh neon */
+    box-shadow: 0 0 20px #00ff00; /* Hiệu ứng phát sáng đổ bóng */
+    border-radius: 10px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* --- 4. CÁC THÀNH PHẦN TRONG FORM --- */
+h2 {
+    color: #00ff00;
+    margin-bottom: 5px;
+    font-size: 28px;
+    text-shadow: 0 0 10px #00ff00;
+}
+
+.subtitle {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.avatar-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px #00ff00;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    color: #00ff00;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid #00ff00;
+    color: #fff;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+}
+
+.input-group input:focus {
+    box-shadow: 0 0 10px #00ff00;
+}
+
+/* --- 5. NÚT BẤM CYBERPUNK --- */
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: #00ff00;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 15px #00ff00;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #000;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    box-shadow: 0 0 25px #00ff00;
+}
+
+/* --- 6. PHẦN CHÂN FORM --- */
+.form-footer {
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+.form-footer a {
+    color: #00ff00;
+    text-decoration: none;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
+.form-footer p {
+    color: #888;
+    margin-top: 10px;
+}
+
+/* --- 7. CƠ CHẾ ẨN FORM --- */
+.hidden {
+    display: none !important;
