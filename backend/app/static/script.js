@@ -110,3 +110,43 @@ if (loginForm) {
         setInterval(draw, 30);
     }
 });
+document.getElementById("register-form-element").addEventListener("submit", async function(e) {
+    e.preventDefault(); // Chặn không cho trình duyệt load lại trang thô
+
+    const formData = new FormData(this);
+
+    try {
+        const response = await fetch("/auth/register", {
+            method: "POST",
+            body: formData
+        });
+
+       if (response.ok) {
+            // Khi đăng ký thành công, lập tức tải lại trang login 
+            // Trình duyệt sẽ tự động quay về màn hình Đăng nhập sạch sẽ ban đầu
+            window.location.reload();
+        } else {
+            const errorData = await response.json();
+            alert("Đăng ký thất bại: " + (errorData.detail || "Vui lòng kiểm tra lại thông tin!"));
+        }
+    } catch (error) {
+        console.error("Lỗi kết nối hệ thống:", error);
+    }
+});
+
+const loginBox = document.getElementById("login-box");
+const registerBox = document.getElementById("register-form");
+
+// 1. Khi đang ở Đăng nhập, ấn "Sign Up" -> Ẩn Login, Hiện Register
+document.getElementById("show-register").addEventListener("click", function(e) {
+    e.preventDefault(); // Chặn không cho trang nhảy link thô
+    loginBox.classList.add("hidden");       // Thêm class ẩn khối Đăng nhập
+    registerBox.classList.remove("hidden"); // Gỡ class ẩn để hiện khối Đăng ký
+});
+
+// 2. Khi đang ở Đăng ký, ấn "Login here" -> Ẩn Register, Hiện Login
+document.getElementById("show-login").addEventListener("click", function(e) {
+    e.preventDefault(); // Chặn không cho trang nhảy link thô
+    registerBox.classList.add("hidden");    // Thêm class ẩn khối Đăng ký
+    loginBox.classList.remove("hidden");    // Gỡ class ẩn để hiện khối Đăng nhập
+});

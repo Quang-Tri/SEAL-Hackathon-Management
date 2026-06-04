@@ -132,9 +132,29 @@ h2 {
 
 .form-footer p {
     color: #888;
-    margin-top: 10px;
+    margin-top: 10px;//
 }
 
 /* --- 7. CƠ CHẾ ẨN FORM --- */
 .hidden {
     display: none !important;
+    form-box {
+    max-width: 350px;       /* Bóp gọn chiều rộng từ khoảng 400px xuống 350px */
+    margin: 15px auto;      /* Giảm khoảng cách viền trên dưới */
+    padding: 15px 25px;     /* Thu hẹp khoảng đệm bên trong để form ngắn lại, không bị tràn màn hình */
+}
+
+/* Thu nhỏ icon avatar (hình đầu người và cây bút) để tiết kiệm không gian */
+.avatar-icon {
+    font-size: 40px;        /* Giảm cỡ icon xuống một chút */
+    margin-bottom: 10px;    /* Thu hẹp khoảng cách với form */
+}
+
+/* Thu hẹp khoảng cách giữa các ô nhập liệu */
+.input-group {
+    margin-bottom: 12px;    
+}
+
+.input-group label {
+    margin-bottom: 3px;     /* Cho chữ sát vào ô input hơn */
+}
