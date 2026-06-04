@@ -24,7 +24,40 @@ document.addEventListener("DOMContentLoaded", () => {
             loginForm.classList.remove("hidden"); // Hiện lại form login
         });
     }
+if (loginForm) {
+    loginForm.addEventListener("submit", async (e) => {
+        e.preventDefault(); // Chặn không cho form tự load lại trang thô JSON
 
+        // Thu thập dữ liệu từ các ô nhập liệu trong Form
+        const formData = new FormData(loginForm);
+
+        try {
+            // Gửi yêu cầu POST ẩn đến API Backend của bạn
+            const response = await fetch("/auth/login", {
+                method: "POST",
+                body: formData // Truyền trực tiếp formData để khớp OAuth2 Backend
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                
+                // Lưu token đăng nhập vào trình duyệt để dùng cho các tính năng sau
+                localStorage.setItem("access_token", data.access_token);
+                
+            
+                
+                // LỆNH THẦN THÁNH: Tự động nhảy thẳng sang trang chủ mượt mà
+                window.location.href = "/static/home.html";
+            } else {
+                const errorData = await response.json();
+                alert("Đăng nhập thất bại: " + (errorData.detail || "Sai tài khoản hoặc mật khẩu!"));
+            }
+        } catch (error) {
+            console.error("Lỗi kết nối:", error);
+            alert("Không thể kết nối đến máy chủ Backend!");
+        }
+    });
+}
     if (forgotPasswordLink) {
         forgotPasswordLink.addEventListener("click", (e) => {
             e.preventDefault();

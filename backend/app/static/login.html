@@ -10,11 +10,12 @@
     <canvas id="matrix"></canvas>
 
     <div class="container">
-        <div id="login-form" class="form-box">
+        <div id="login-box" class="form-box">
             <h2>SEAL Hackathon</h2>
             <p class="subtitle">Backend Login</p>
             <div class="avatar-icon">👤</div>
-            <form action="/auth/login" method="POST">
+            
+            <form id="login-form">
                 <div class="input-group">
                     <label>Username:</label>
                     <input type="text" name="username" required placeholder="Nhập tài khoản...">
@@ -25,6 +26,7 @@
                 </div>
                 <button type="submit" class="btn">LOG IN</button>
             </form>
+            
             <div class="form-footer">
                 <a href="#" id="forgot-password">Forgot Password?</a>
                 <p>Don't have an account? <a href="#" id="show-register">Sign Up</a></p>

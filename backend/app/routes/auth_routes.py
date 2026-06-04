@@ -1,11 +1,11 @@
 from fastapi import APIRouter, Depends, HTTPException, status, Form
 from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
-from ..database import get_db
-from .. import models
 
-# Chú ý dòng import auth riêng biệt dưới đây để sửa lỗi NameError
-from .. import auth 
+# Chuyển đổi sang Import tuyệt đối để tránh lỗi sập Uvicorn
+from app.database import get_db
+from app import models
+from app import auth 
 
 router = APIRouter(prefix="/auth", tags=["Authentication"])
 
@@ -25,8 +25,9 @@ def register_user(
     if user_exists:
         raise HTTPException(status_code=400, detail="Username hoặc Email đã được sử dụng!")
     
-    # Mã hóa mật khẩu an toàn
-    hashed_pwd = auth.hash_password(password)
+    # Ép chuỗi mật khẩu thô để loại bỏ xung đột UTF-8 của bcrypt trên Windows
+    safe_password = str(password)
+    hashed_pwd = auth.hash_password(safe_password)
     
     # Lưu người dùng mới vào DB
     new_user = models.User(username=username, email=email, hashed_password=hashed_pwd)
