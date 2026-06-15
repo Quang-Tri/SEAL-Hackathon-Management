@@ -1,61 +1,221 @@
 # TÀI LIỆU YÊU CẦU CHỨC NĂNG (FUNCTIONAL REQUIREMENT QUALITY - FRQ)
+
 ## HỆ THỐNG QUẢN LÝ CUỘC THI SEAL HACKATHON
 
 ---
 
-## 1. Quản lý Đăng nhập & Phân quyền (Authentication & Authorization)
-*   **FR-01.1: Đăng nhập hệ thống**
-    *   *Mô tả:* Hệ thống cho phép Thí sinh và Ban giám khảo (BGK) đăng nhập bằng tài khoản được cấp trước hoặc qua tài khoản trường/tổ chức.
-    *   *Tiêu chí kiểm thử:* Đăng nhập thành công điều hướng đúng về giao diện tương ứng (Dashboard thí sinh hoặc Màn hình chấm điểm). Nhập sai mật khẩu hiển thị thông báo lỗi "Tài khoản hoặc mật khẩu không chính xác".
-*   **FR-01.2: Phân quyền người dùng**
-    *   *Mô tả:* Hệ thống phải phân định rõ ràng quyền truy cập giữa các vai trò.
-    *   *Tiêu chí kiểm thử:* Thí sinh không thể truy cập vào URL của màn hình chấm điểm. BGK không thể thực hiện hành động nộp bài thay thí sinh.
+## 1. Quản lý Tài khoản & Xác thực (Authentication & Authorization)
+
+### FR-01.1: Đăng ký tài khoản
+
+**Mô tả:** Hệ thống cho phép người dùng đăng ký tài khoản bằng email và mật khẩu. Khi đăng ký, người dùng phải khai báo là sinh viên FPT hoặc sinh viên ngoài trường.
+
+**Tiêu chí kiểm thử:**
+
+* Email không được trùng với tài khoản đã tồn tại.
+* Thông tin đăng ký được lưu thành công.
+* Tài khoản ở trạng thái "Chờ phê duyệt" cho đến khi được Ban tổ chức xác nhận.
+
+### FR-01.2: Đăng nhập hệ thống
+
+**Mô tả:** Người dùng có thể đăng nhập bằng email và mật khẩu sau khi tài khoản được phê duyệt.
+
+**Tiêu chí kiểm thử:**
+
+* Đăng nhập thành công sẽ chuyển đến giao diện tương ứng với vai trò người dùng.
+* Hiển thị thông báo lỗi khi nhập sai thông tin đăng nhập.
+
+### FR-01.3: Phân quyền người dùng
+
+**Mô tả:** Hệ thống phân quyền theo các vai trò Team Member, Team Leader, Mentor, Judge và Event Coordinator.
+
+**Tiêu chí kiểm thử:**
+
+* Người dùng chỉ được truy cập các chức năng thuộc quyền hạn của mình.
+* Không thể truy cập trực tiếp vào chức năng của vai trò khác.
 
 ---
 
-## 2. Phân hệ Thí sinh (Candidate Dashboard)
-*   **FR-02.1: Hiển thị thông tin đội thi**
-    *   *Mô tả:* Hệ thống hiển thị tên đội, danh sách thành viên và trạng thái hoạt động của nhóm trên Dashboard.
-    *   *Tiêu chí kiểm thử:* Kiểm tra màn hình Dashboard hiển thị chính xác tên đội và danh sách thành viên khớp với cơ sở dữ liệu.
-*   **FR-02.2: Đồng hồ đếm ngược (Countdown Timer)**
-    *   *Mô tả:* Hệ thống hiển thị thời gian làm bài còn lại theo thời gian thực (Realtime).
-    *   *Tiêu chí kiểm thử:* Thời gian tự động giảm dần từng giây. Khi đồng hồ về `00:00:00`, nút "Nộp bài" phải tự động vô hiệu hóa (Disabled).
-*   **FR-02.3: Xem và tải đề bài**
-    *   *Mô tả:* Hệ thống cho phép thí sinh xem tóm tắt chủ đề và bấm nút tải file đề bài chi tiết (định dạng PDF).
-    *   *Tiêu chí kiểm thử:* Người dùng click vào nút "Tải đề bài", file `.pdf` được tải xuống máy cục bộ và mở đọc bình thường.
-*   **FR-02.4: Nộp bài thi (Submission)**
-    *   *Mô tả:* Thí sinh có thể nộp bài bằng cách kéo thả file nén (`.zip`, `.rar`) hoặc dán đường dẫn repository (GitHub/GitLab).
-    *   *Tiêu chí kiểm thử:* Khi upload file hợp lệ và nhấn "Nộp bài", hệ thống hiển thị thông báo "Nộp bài thành công" và cập nhật trạng thái vào Lịch sử nộp bài.
+## 2. Quản lý Đội thi (Team Management)
+
+### FR-02.1: Tạo đội thi
+
+**Mô tả:** Team Leader có thể tạo đội thi mới để tham gia sự kiện.
+
+**Tiêu chí kiểm thử:**
+
+* Tên đội được lưu thành công.
+* Đội được tạo với Team Leader là người quản lý.
+
+### FR-02.2: Tham gia đội thi
+
+**Mô tả:** Sinh viên có thể tham gia đội thi thông qua lời mời hoặc mã tham gia.
+
+**Tiêu chí kiểm thử:**
+
+* Thành viên được thêm vào danh sách đội.
+* Một đội có từ 3 đến 5 thành viên.
+
+### FR-02.3: Đăng ký hạng mục thi
+
+**Mô tả:** Team Leader đăng ký đội vào một hạng mục (Track) của sự kiện.
+
+**Tiêu chí kiểm thử:**
+
+* Mỗi đội chỉ được đăng ký một hạng mục trong cùng một sự kiện.
+* Thông tin đăng ký được lưu thành công.
 
 ---
 
-## 3. Phân hệ Ban Giám Khảo (Jury / Grading Screen)
-*   **FR-03.1: Hiển thị danh sách đội thi & Trạng thái**
-    *   *Mô tả:* Hiển thị danh sách toàn bộ các đội thi kèm bộ lọc trạng thái: `Chưa nộp`, `Đã nộp - Chưa chấm`, `Đã chấm`.
-    *   *Tiêu chí kiểm thử:* Khi chọn bộ lọc `Đã nộp - Chưa chấm`, danh sách chỉ hiển thị đúng các đội thỏa mãn điều kiện để BGK tiện theo dõi.
-*   **FR-03.2: Xem chi tiết bài nộp**
-    *   *Mô tả:* BGK có thể click vào một đội để xem liên kết GitHub, tải file source code hoặc file tài liệu đính kèm của đội đó.
-    *   *Tiêu chí kiểm thử:* Các đường link mã nguồn mở ra tab mới chính xác, file đính kèm tải xuống thành công.
-*   **FR-03.3: Chấm điểm theo tiêu chí (Grading Form)**
-    *   *Mô tả:* Hệ thống cung cấp form nhập điểm số (thang điểm 0 - 100) cho 4 tiêu chí cốt lõi:
-        1. Tính năng hệ thống (Trọng số 40%)
-        2. UI/UX & Thiết kế (Trọng số 20%)
-        3. Chất lượng mã nguồn / Kỹ thuật (Trọng số 20%)
-        4. Kỹ năng thuyết trình (Trọng số 20%)
-    *   *Tiêu chí kiểm thử:* Ô nhập điểm chỉ nhận giá trị số từ 0 đến 100. Hệ thống tự động tính toán Điểm tổng kết theo công thức trọng số ngay khi BGK nhập điểm thành phần.
-*   **FR-03.4: Nhập nhận xét & Lưu kết quả**
-    *   *Mô tả:* BGK có thể gõ nhận xét chi tiết vào ô văn bản, chọn "Lưu tạm" để chỉnh sửa sau hoặc chọn "Hoàn tất chấm điểm" để khóa điểm.
-    *   *Tiêu chí kiểm thử:* Sau khi bấm "Hoàn tất chấm điểm", điểm số của đội đó được ghi nhận vào hệ thống và trạng thái chuyển sang màu xanh lá (`Đã chấm`).
+## 3. Quản lý Bài nộp (Submission Management)
+
+### FR-03.1: Nộp bài theo vòng thi
+
+**Mô tả:** Team Leader nộp bài cho từng vòng thi bằng cách cung cấp đường dẫn repository, demo và slide báo cáo.
+
+**Tiêu chí kiểm thử:**
+
+* Hệ thống lưu thành công thông tin bài nộp.
+* Chỉ cho phép nộp bài trước thời hạn quy định.
+
+### FR-03.2: Xem trạng thái bài nộp
+
+**Mô tả:** Thành viên đội có thể theo dõi trạng thái bài nộp của đội mình.
+
+**Tiêu chí kiểm thử:**
+
+* Hiển thị đúng thời gian nộp bài.
+* Hiển thị trạng thái bài nộp tương ứng.
 
 ---
 
-## 4. Phân hệ Kết quả & Bảng xếp hạng (Leaderboard)
-*   **FR-04.1: Vinh danh Top 3**
-    *   *Mô tả:* Hệ thống tự động lọc ra 3 đội có tổng điểm cao nhất để hiển thị trực quan trên bục vinh quang (Hạng 1, Hạng 2, Hạng 3) ở đầu trang.
-    *   *Tiêu chí kiểm thử:* Đội có điểm cao nhất bắt buộc phải nằm ở bục Hạng 1 (ở giữa).
-*   **FR-04.2: Bảng điểm chi tiết toàn đoàn**
-    *   *Mô tả:* Hiển thị danh sách tất cả các đội thi dưới dạng bảng dữ liệu, tự động sắp xếp theo thứ tự Tổng điểm giảm dần.
-    *   *Tiêu chí kiểm thử:* Khi có một đội được BGK cập nhật điểm mới, Bảng xếp hạng phải tự động tính toán lại vị trí (Rank) của đội đó.
-*   **FR-04.3: Tìm kiếm đội thi**
-    *   *Mô tả:* Cung cấp thanh tìm kiếm nhanh theo Tên đội thi trên bảng xếp hạng.
-    *   *Tiêu chí kiểm thử:* Gõ từ khóa "Nhóm 4", bảng dữ liệu ngay lập tức bộ lọc chỉ hiển thị dòng dữ liệu của Nhóm 4.
+## 4. Quản lý Chấm điểm (Evaluation Management)
+
+### FR-04.1: Xem danh sách bài cần chấm
+
+**Mô tả:** Judge có thể xem danh sách bài nộp được phân công.
+
+**Tiêu chí kiểm thử:**
+
+* Chỉ hiển thị các bài thuộc vòng thi mà Judge được phân công.
+
+### FR-04.2: Chấm điểm theo tiêu chí
+
+**Mô tả:** Judge thực hiện chấm điểm dựa trên các tiêu chí của sự kiện.
+
+**Tiêu chí kiểm thử:**
+
+* Điểm số được nhập theo từng tiêu chí.
+* Hệ thống lưu riêng điểm của từng Judge.
+
+### FR-04.3: Nhập nhận xét
+
+**Mô tả:** Judge có thể nhập nhận xét cho bài thi.
+
+**Tiêu chí kiểm thử:**
+
+* Nhận xét được lưu cùng với kết quả chấm điểm.
+* Judge có thể cập nhật nhận xét trước khi hoàn tất chấm điểm.
+
+---
+
+## 5. Quản lý Mentor
+
+### FR-05.1: Theo dõi đội thi
+
+**Mô tả:** Mentor có thể xem danh sách các đội thuộc hạng mục được phân công.
+
+**Tiêu chí kiểm thử:**
+
+* Hiển thị đúng danh sách đội trong hạng mục.
+
+### FR-05.2: Gửi góp ý
+
+**Mô tả:** Mentor có thể gửi nhận xét hoặc hướng dẫn cho đội thi.
+
+**Tiêu chí kiểm thử:**
+
+* Nội dung góp ý được lưu và hiển thị cho đội thi.
+
+---
+
+## 6. Quản lý Sự kiện (Event Management)
+
+### FR-06.1: Tạo sự kiện Hackathon
+
+**Mô tả:** Event Coordinator có thể tạo mới sự kiện hackathon.
+
+**Tiêu chí kiểm thử:**
+
+* Thông tin sự kiện được lưu thành công.
+* Sự kiện xuất hiện trong danh sách quản lý.
+
+### FR-06.2: Quản lý vòng thi
+
+**Mô tả:** Event Coordinator cấu hình các vòng thi trong mỗi sự kiện.
+
+**Tiêu chí kiểm thử:**
+
+* Có thể tạo, cập nhật hoặc đóng vòng thi.
+* Thiết lập được thời hạn nộp bài.
+
+### FR-06.3: Phân công Judge và Mentor
+
+**Mô tả:** Event Coordinator phân công Judge và Mentor cho từng hạng mục hoặc vòng thi.
+
+**Tiêu chí kiểm thử:**
+
+* Thông tin phân công được lưu thành công.
+* Judge và Mentor chỉ nhìn thấy các phần được phân công.
+
+---
+
+## 7. Quản lý Kết quả & Xếp hạng
+
+### FR-07.1: Tính điểm tổng
+
+**Mô tả:** Hệ thống tự động tính điểm tổng dựa trên điểm của các Judge.
+
+**Tiêu chí kiểm thử:**
+
+* Điểm tổng được cập nhật khi có thay đổi điểm thành phần.
+
+### FR-07.2: Xếp hạng đội thi
+
+**Mô tả:** Hệ thống tự động sắp xếp thứ hạng các đội theo điểm số.
+
+**Tiêu chí kiểm thử:**
+
+* Đội có điểm cao hơn được xếp hạng cao hơn.
+* Bảng xếp hạng được cập nhật tự động.
+
+### FR-07.3: Xác định đội thăng vòng
+
+**Mô tả:** Hệ thống xác định các đội đủ điều kiện vào vòng tiếp theo dựa trên quy tắc đã thiết lập.
+
+**Tiêu chí kiểm thử:**
+
+* Chỉ các đội đạt điều kiện mới được thăng vòng.
+* Kết quả thăng vòng được hiển thị chính xác.
+
+---
+
+## 8. Báo cáo & Nhật ký hệ thống
+
+### FR-08.1: Xuất báo cáo
+
+**Mô tả:** Event Coordinator có thể xuất kết quả và bảng xếp hạng dưới dạng CSV hoặc Excel.
+
+**Tiêu chí kiểm thử:**
+
+* File xuất ra chứa đầy đủ dữ liệu.
+* File có thể mở và sử dụng bình thường.
+
+### FR-08.2: Audit Log
+
+**Mô tả:** Hệ thống ghi nhận các hành động quan trọng như chấm điểm, sửa điểm hoặc loại đội.
+
+**Tiêu chí kiểm thử:**
+
+* Mỗi bản ghi chứa người thực hiện, thời gian và hành động tương ứng.
+* Có thể tra cứu lịch sử hoạt động khi cần thiết.
