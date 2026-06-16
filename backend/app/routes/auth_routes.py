@@ -36,11 +36,15 @@ def register_user(
     db.refresh(new_user)
     
     return {"status": "Thành công", "message": f"Tài khoản '{username}' đã được khởi tạo thành công!"}
-
 # 2. API ĐĂNG NHẬP
 @router.post("/login")
-def login_user(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
-    user = db.query(models.User).filter(models.User.username == form_data.username).first()
+def login_user(
+    form_data: OAuth2PasswordRequestForm = Depends(),
+    db: Session = Depends(get_db)
+):
+    user = db.query(models.User).filter(
+        models.User.username == form_data.username
+    ).first()
 
     if not user or not auth.verify_password(form_data.password, user.hashed_password):
         raise HTTPException(
