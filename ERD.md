@@ -4,7 +4,7 @@
 
 ### ERD Diagram
 
-![ERD](ERD.drawio.png)
+![ERD](./ERD.png)
 
 ### Description
 
