@@ -637,5 +637,76 @@ npm run preview      # Preview production build
 - **Error Handling**: Xử lý lỗi API và hiển thị thông báo cho user
 - **Loading States**: Hiển thị loading indicator khi chờ API
 - **Responsive Design**: Sử dụng Tailwind responsive classes
-
+\chapter{Thiết kế hệ thống}
+	\section{Thiết kế cơ sở dữ liệu}
+	Để đảm bảo hệ thống SEAL Hackathon Management System vận hành ổn định, lưu trữ dữ liệu nhất quán và tối ưu hóa tốc độ truy vấn, cơ sở dữ liệu được thiết kế theo mô hình dữ liệu quan hệ dưới dạng chuẩn hóa (3NF). Hệ thống quản lý tập trung các luồng thông tin từ tài khoản người dùng, hồ sơ đội thi, các mốc thời gian nộp bài cho đến tiêu chí chấm điểm của giám khảo.
+	
+	\section{Sơ đồ quan hệ thực thể (ERD Diagram)}
+	Sơ đồ ERD dưới đây mô tả cấu trúc tổng thể của cơ sở dữ liệu, thể hiện các thực thể chính trong hệ thống và các mối quan hệ ràng buộc dữ liệu giữa chúng.
+	
+	\begin{center}
+		\includegraphics[width=0.9\textwidth]{../../Downloads/erd_diagram}
+		\\ \textit{Hình 3.1: Sơ đồ quan hệ thực thể (ERD) của hệ thống}
+	\end{center}
+	
+	\section{Mô tả các thực thể và mối quan hệ}
+	Dựa trên sơ đồ ERD, cấu trúc dữ liệu của hệ thống được phân tách thành các thực thể và mối quan hệ cụ thể như sau:
+	
+	\subsection{Mô tả các thực thể chi tiết}
+	\begin{itemize}
+		\item \textbf{Users (Người dùng):} Lưu trữ thông tin định danh toàn bộ người dùng trong hệ thống.
+		\begin{itemize}
+			\item \textit{Thuộc tính:} \texttt{UserID} (Khóa chính), \texttt{FullName}, \texttt{Email}, \texttt{PasswordHash}, \texttt{Role} (Participant, Mentor, Judge, Admin), \texttt{CreatedAt}.
+		\end{itemize}
+		
+		\item \textbf{Hackathons (Cuộc thi):} Lưu trữ thông tin về các cuộc thi Hackathon do Admin khởi tạo.
+		\begin{itemize}
+			\item \textit{Thuộc tính:} \texttt{HackathonID} (Khóa chính), \texttt{Title}, \texttt{Description}, \texttt{StartDate}, \texttt{EndDate}, \texttt{Status}.
+		\end{itemize}
+		
+		\item \textbf{Teams (Đội thi):} Quản lý thông tin của các nhóm tham gia cuộc thi.
+		\begin{itemize}
+			\item \textit{Thuộc tính:} \texttt{TeamID} (Khóa chính), \texttt{TeamName}, \texttt{InviteCode}, \texttt{LeaderID} (Khóa ngoại liên kết tới Users), \texttt{HackathonID} (Khóa ngoại liên kết tới Hackathons).
+		\end{itemize}
+		
+		\item \textbf{Submissions (Bài dự thi):} Lưu trữ thông tin các sản phẩm/mã nguồn do các đội thi nộp lên hệ thống.
+		\begin{itemize}
+			\item \textit{Thuộc tính:} \texttt{SubmissionID} (Khóa chính), \texttt{TeamID} (Khóa ngoại), \texttt{GithubURL}, \texttt{ProjectDescription}, \texttt{SubmittedAt}.
+		\end{itemize}
+		
+		\item \textbf{Evaluations (Đánh giá/Chấm điểm):} Lưu trữ điểm số và nhận xét của giám khảo dành cho các bài dự thi.
+		\begin{itemize}
+			\item \textit{Thuộc tính:} \texttt{EvaluationID} (Khóa chính), \texttt{SubmissionID} (Khóa ngoại), \texttt{JudgeID} (Khóa ngoại liên kết tới Users), \texttt{Score}, \texttt{Comment}, \texttt{EvaluatedAt}.
+		\end{itemize}
+		
+		\item \textbf{Mentorships (Cố vấn):} Bản ghi trung gian thể hiện sự kết nối, hỗ trợ giữa Mentor và các Đội thi.
+		\begin{itemize}
+			\item \textit{Thuộc tính:} \texttt{MentorshipID} (Khóa chính), \texttt{MentorID} (Khóa ngoại liên kết tới Users), \texttt{TeamID} (Khóa ngoại), \texttt{AssignedAt}.
+		\end{itemize}
+	\end{itemize}
+	
+	\subsection{Mô tả các mối quan hệ}
+	\begin{itemize}
+		\item \textbf{Users -- Teams (1 - N):} Một người dùng làm trưởng nhóm (\texttt{LeaderID}) chỉ quản lý 1 đội thi tại một thời điểm, nhưng một tài khoản người dùng nói chung có thể đăng ký tham gia vào nhiều đội thi với vai trò thành viên thông qua bảng liên kết thành viên.
+		\item \textbf{Hackathons -- Teams (1 - N):} Một cuộc thi Hackathon có thể có nhiều đội thi đăng ký tham gia, nhưng một đội thi chỉ thuộc về một cuộc thi duy nhất.
+		\item \textbf{Teams -- Submissions (1 - 1):} Để đảm bảo tính công bằng, mỗi đội thi chỉ được phép có duy nhất một bài dự thi chính thức trên hệ thống (hoặc cập nhật đè trên bài cũ).
+		\item \textbf{Submissions -- Evaluations (1 - N):} Một bài dự thi của một đội có thể được chấm điểm và nhận xét bởi nhiều giám khảo khác nhau (\texttt{JudgeID}) để lấy điểm trung bình làm kết quả cuối cùng.
+		\item \textbf{Users (Mentor) -- Teams (N - N):} Một cố vấn có thể hỗ trợ nhiều đội thi khác nhau và ngược lại, một đội thi có thể nhận sự cố vấn từ nhiều chuyên gia thông qua bảng trung gian \texttt{Mentorships}.
+	\end{itemize}
+	
+	\section{Cấu trúc thư mục dự án}
+	Hệ thống SEAL Hackathon Management System được tổ chức theo kiến trúc phân lớp hiện đại (Clean Architecture / MVC), tách biệt rõ ràng giữa mã nguồn Frontend, Backend và cấu trúc Cơ sở dữ liệu để tạo điều kiện thuận lợi cho việc phát triển song song và bảo trì hệ thống lâu dài.
+	
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]{../../Downloads/project_structure}
+		\\ \textit{Hình 3.2: Sơ đồ minh họa cấu trúc thư mục mã nguồn dự án}
+	\end{center}
+	
+	Dựa trên sơ đồ cấu trúc, dự án được chia làm các thư mục chức năng chính:
+	\begin{itemize}
+		\item \texttt{/backend}: Chứa mã nguồn xử lý logic API, kết nối database (Models, Controllers, Routes, Middleware).
+		\item \texttt{/frontend}: Chứa giao diện người dùng, các component UI, trang dashboard và xử lý call API (Views, Components, Services).
+		\item \texttt{/docs}: Lưu trữ các tài liệu phân tích thiết kế, file sơ đồ (Use Case, ERD) và đặc tả API.
+		\item \texttt{/config}: Chứa các file cấu hình môi trường, bảo mật (Environment variables, Database connection config).
+	\end{itemize}
 \end{document}
