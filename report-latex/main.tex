@@ -200,4 +200,442 @@ Các chức năng ngoài phạm vi của hệ thống bao gồm quản lý thanh
 		\item \textbf{Khối Nộp bài thi (Project Submission):} Thiết kế biểu mẫu đóng gói sản phẩm thông qua trường nhập liệu URL kho lưu trữ GitHub (\texttt{github-link}). Thí sinh có thể liên tục cập nhật đường dẫn trước thời điểm đóng cổng nộp bài thông qua nút "Nộp bài / Cập nhật" (API \texttt{/submissions/submit}).
 		\item \textbf{Cơ chế phản hồi (Toast UI):} Mọi tương tác bất đồng bộ đều được phản hồi trực quan bằng các thông báo ngắn (Toast Message) báo lỗi hoặc thành công, giúp thí sinh kiểm soát tốt quá trình thao tác.
 	\end{itemize}
+	# Môi trường phát triển và Cấu trúc dự án - SEAL Hackathon Management System
+
+## 1. Môi trường phát triển hệ thống
+
+### 1.1. Yêu cầu hệ thống
+
+#### Backend
+- **Python**: Phiên bản 3.14 trở lên
+- **Hệ điều hành**: Windows, macOS, hoặc Linux
+- **Database**: SQLite (built-in với Python)
+
+#### Frontend
+- **Node.js**: Phiên bản 16.x trở lên
+- **npm**: Phiên bản 7.x trở lên (hoặc yarn)
+- **Trình duyệt**: Chrome, Firefox, Edge, Safari (phiên bản mới nhất)
+
+### 1.2. Công cụ phát triển
+
+| Công cụ | Mục đích | Phiên bản đề xuất |
+|---------|---------|------------------|
+| VS Code | IDE lập trình chính | Latest |
+| Git | Quản lý source code | 2.x |
+| GitHub | Version control hosting | - |
+| Postman | Test API | Latest |
+| DB Browser for SQLite | Xem và quản lý database | Latest |
+| Ngrok | Public server để test | 7.x |
+| Jira | Quản lý task, sprint | - |
+| draw.io | Vẽ diagram (ERD, UC, Sequence) | - |
+| Figma | Thiết kế UI/UX prototype | - |
+| TeXstudio + MiKTeX | Viết báo cáo LaTeX | - |
+
+### 1.3. Cài đặt môi trường
+
+#### Cài đặt Backend
+```bash
+# Di chuyển vào thư mục backend
+cd backend
+
+# Cài đặt các thư viện Python
+pip install -r requirements.txt
+
+# Các thư viện chính:
+# - fastapi: Framework REST API
+# - uvicorn: ASGI server
+# - pydantic: Validation dữ liệu
+# - passlib[bcrypt]: Mã hóa mật khẩu
+# - python-jose: Xác thực JWT
+# - python-multipart: Xử lý form data
+# - pyngrok: Public server qua Ngrok
+# - jinja2: Render HTML template
+```
+
+#### Cài đặt Frontend
+```bash
+# Cài đặt dependencies
+npm install
+
+# Các thư viện chính:
+# - react: ^18.2.0
+# - react-dom: ^18.2.0
+# - lucide-react: ^0.263.1 (icon library)
+# - vite: ^4.3.9 (build tool)
+# - tailwindcss: ^3.3.2 (CSS framework)
+```
+
+### 1.4. Chạy ứng dụng
+
+#### Chạy Backend
+```bash
+cd backend
+python -m uvicorn app.main:app --reload
+# Server chạy tại http://localhost:8000
+# API Docs tại http://localhost:8000/docs
+```
+
+#### Chạy Frontend
+```bash
+npm run dev
+# Frontend chạy tại http://localhost:5173 (mặc định của Vite)
+```
+
+#### Public server qua Ngrok (tùy chọn)
+```bash
+ngrok http 8000
+```
+
+---
+
+## 2. Cấu trúc thư mục dự án
+
+```
+SEAL-Hackathon-Management/
+├── .github/                  # GitHub Actions workflows
+├── .vs/                      # Visual Studio settings
+├── backend/                  # Backend application (Python/FastAPI)
+│   ├── app/                  # Main application code
+│   │   ├── auth.py           # Authentication logic
+│   │   ├── config.py         # Configuration settings
+│   │   ├── database.py       # Database connection setup
+│   │   ├── main.py           # FastAPI application entry point
+│   │   ├── models.py         # SQLAlchemy ORM models
+│   │   ├── routes/           # API route handlers
+│   │   │   ├── auth_routes.py      # Authentication endpoints
+│   │   │   ├── submission_routes.py # Submission endpoints
+│   │   │   └── teams.py            # Team management endpoints
+│   │   └── static/           # Static files (HTML, CSS, JS)
+│   ├── requirements.txt      # Python dependencies
+│   ├── seal_hackathon.db     # SQLite database file
+│   └── .gitignore           # Git ignore rules
+├── src/                      # Frontend application (React/Vite)
+│   ├── components/          # React components
+│   │   ├── CandidateDashboard.jsx  # Dashboard for candidates
+│   │   ├── JuryScreen.jsx         # Screen for jury members
+│   │   └── Leaderboard.jsx        # Leaderboard display
+│   ├── App.jsx              # Main React application component
+│   ├── main.jsx             # React entry point
+│   └── index.css            # Global CSS styles
+├── docs/                     # Documentation files
+├── report-latex/            # LaTeX report files
+├── node_modules/            # Node.js dependencies (generated)
+├── index.html               # HTML entry point for frontend
+├── package.json             # Node.js dependencies and scripts
+├── package-lock.json        # Locked dependency versions
+├── vite.config.js           # Vite configuration
+├── tailwind.config.js       # Tailwind CSS configuration
+├── postcss.config.js        # PostCSS configuration
+├── config.env.example       # Environment variables template
+├── README.md                # Project documentation
+├── ERD.md                   # Entity Relationship Diagram documentation
+├── ERD.png                  # ERD diagram image
+├── FRQ.md                   # Functional Requirements documentation
+├── RQ.md                    # Requirements documentation
+├── Todo.json                # Task tracking
+├── check-list.md            # Project checklist
+├── frontend-logic.md        # Frontend logic documentation
+├── plan_project.md          # Project planning documentation
+└── tech_stack.md            # Technology stack documentation
+```
+
+---
+
+## 3. Mô tả kiến thức Backend
+
+### 3.1. Kiến trúc Backend
+
+Backend sử dụng kiến trúc **REST API** với framework **FastAPI**, một framework hiện đại, hiệu suất cao cho xây dựng API với Python.
+
+```
+Client (Browser/Mobile)
+        │
+        │ HTTP Request (JSON)
+        ▼
+FastAPI Application (Uvicorn Server)
+        │
+        ├── Authentication Layer (auth.py)
+        │   ├── JWT Token validation
+        │   └── Password hashing (bcrypt)
+        │
+        ├── Route Handlers (routes/)
+        │   ├── auth_routes.py (register, login)
+        │   ├── teams.py (create, join, approve teams)
+        │   └── submission_routes.py (submit projects)
+        │
+        ├── Business Logic
+        │   ├── Authentication logic
+        │   ├── Team management
+        │   └── Submission handling
+        │
+        ├── Data Layer (models.py)
+        │   ├── SQLAlchemy ORM models
+        │   └── Database operations
+        │
+        └── Database (SQLite)
+            ├── Users table
+            ├── Teams table
+            └── Submissions table
+
+### 3.2. Các thành phần chính
+
+#### 3.2.1. FastAPI Framework
+- **Mục đích**: Xây dựng REST API nhanh chóng với automatic validation
+- **Tính năng**:
+  - Automatic API documentation (Swagger UI tại `/docs`)
+  - Data validation với Pydantic
+  - Type hints hỗ trợ
+  - Async/await support
+
+#### 3.2.2. Uvicorn Server
+- **Mục đích**: ASGI server để chạy ứng dụng FastAPI
+- **Chức năng**: Xử lý HTTP requests, hỗ trợ async operations
+
+#### 3.2.3. SQLAlchemy ORM
+- **Mục đích**: Object-Relational Mapping để thao tác database
+- **Models** (trong `models.py`):
+  - **User**: Thông tin người dùng (username, password_hash, role)
+  - **Team**: Thông tin đội thi (team_name, leader_id, members)
+  - **Submission**: Bài nộp dự án (team_id, project_name, description, score)
+
+#### 3.2.4. Authentication & Authorization
+- **JWT (JSON Web Token)**: Xác thực người dùng
+  - Tạo token khi đăng nhập
+  - Validate token cho các protected routes
+- **Password Hashing**: Sử dụng bcrypt để mã hóa mật khẩu
+- **Roles**: Phân quyền (Candidate, Jury, Admin)
+
+#### 3.2.5. Pydantic
+- **Mục đích**: Validation dữ liệu đầu vào
+- **Schemas**: Định nghĩa cấu trúc dữ liệu cho request/response
+  - UserCreate, UserLogin
+  - TeamCreate, TeamResponse
+  - SubmissionCreate, SubmissionResponse
+
+### 3.3. API Endpoints
+
+#### Authentication (`/auth`)
+- `POST /auth/register`: Đăng ký tài khoản mới
+- `POST /auth/login`: Đăng nhập và nhận JWT token
+
+#### Teams (`/teams`)
+- `POST /teams/create`: Tạo đội mới
+- `POST /teams/join`: Tham gia đội
+- `POST /teams/approve`: Phê duyệt thành viên đội
+- `GET /teams/my-team`: Lấy thông tin đội của mình
+
+#### Submissions (`/submissions`)
+- `POST /submissions/submit`: Nộp bài dự án
+- `GET /submissions/all`: Lấy danh sách bài nộp (cho Jury)
+- `POST /submissions/score`: Chấm điểm bài nộp (cho Jury)
+
+### 3.4. Database Schema
+
+#### Users Table
+```python
+- id: Integer (Primary Key)
+- username: String (Unique)
+- password_hash: String
+- role: String (candidate/jury/admin)
+- created_at: DateTime
+```
+
+#### Teams Table
+```python
+- id: Integer (Primary Key)
+- team_name: String (Unique)
+- leader_id: Integer (Foreign Key → Users)
+- members: JSON (Array of user IDs)
+- status: String (pending/approved)
+- created_at: DateTime
+```
+
+#### Submissions Table
+```python
+- id: Integer (Primary Key)
+- team_id: Integer (Foreign Key → Teams)
+- project_name: String
+- description: Text
+- github_link: String
+- demo_link: String
+- score: Float (Nullable)
+- jury_comments: Text (Nullable)
+- submitted_at: DateTime
+```
+
+### 3.5. Security
+
+- **Password Hashing**: Sử dụng bcrypt với salt
+- **JWT Token**: Token hết hạn sau một thời gian nhất định
+- **CORS**: Cấu hình Cross-Origin Resource Sharing
+- **Input Validation**: Pydantic schemas validate tất cả input
+
+---
+
+## 4. Mô tả cấu trúc thư mục Frontend (src)
+
+### 4.1. Tổng quan
+
+Frontend được xây dựng với **React 18** sử dụng **Vite** làm build tool và **Tailwind CSS** cho styling. Cấu trúc thư mục `src/` tổ chức code theo component-based architecture.
+
+### 4.2. Cấu trúc chi tiết
+
+```
+src/
+├── components/              # React Components
+│   ├── CandidateDashboard.jsx   # Dashboard cho thí sinh
+│   ├── JuryScreen.jsx           # Màn hình cho giám khảo
+│   └── Leaderboard.jsx          # Bảng xếp hạng
+├── App.jsx                  # Component chính của ứng dụng
+├── main.jsx                 # Entry point của React
+└── index.css                # Global styles và Tailwind directives
+```
+
+### 4.3. Chi tiết từng file/thư mục
+
+#### 4.3.1. `components/` - React Components
+
+**CandidateDashboard.jsx**
+- **Mục đích**: Giao diện chính cho thí sinh sau khi đăng nhập
+- **Chức năng**:
+  - Hiển thị thông tin đội thi
+  - Tạo đội mới
+  - Tham gia đội
+  - Nộp bài dự án
+  - Xem trạng thái bài nộp
+- **State Management**: Sử dụng React hooks (useState, useEffect)
+- **API Calls**: Gọi backend endpoints qua fetch/axios
+- **UI Components**: Form tạo đội, form nộp bài, hiển thị thông tin
+
+**JuryScreen.jsx**
+- **Mục đích**: Giao diện cho giám khảo chấm điểm
+- **Chức năng**:
+  - Xem danh sách bài nộp
+  - Chấm điểm từng bài
+  - Thêm nhận xét
+  - Xem thông tin đội thi
+- **Features**: 
+  - Filter bài nộp theo trạng thái
+  - Sort theo điểm số
+  - Real-time update khi chấm điểm
+
+**Leaderboard.jsx**
+- **Mục đích**: Hiển thị bảng xếp hạng các đội
+- **Chức năng**:
+  - Hiển thị danh sách đội theo thứ hạng
+  - Hiển thị điểm số của từng đội
+  - Cập nhật real-time
+- **UI**: Table hoặc card layout với styling Tailwind
+
+#### 4.3.2. `App.jsx` - Main Application Component
+
+- **Mục đích**: Component gốc quản lý routing và state toàn cục
+- **Chức năng**:
+  - Quản lý authentication state (đăng nhập/đăng xuất)
+  - Routing điều hướng giữa các màn hình
+  - Layout chính (header, navigation)
+  - Context Provider cho global state
+- **Structure**:
+  ```jsx
+  function App() {
+    // Authentication state
+    // User role determination
+    // Conditional rendering based on role
+    return (
+      // Layout
+      // Navigation
+      // Page content based on route
+    )
+  }
+  ```
+
+#### 4.3.3. `main.jsx` - React Entry Point
+
+- **Mục đích**: Mount React application vào DOM
+- **Code**:
+  ```jsx
+  import React from 'react'
+  import ReactDOM from 'react-dom/client'
+  import App from './App.jsx'
+  import './index.css'
+  
+  ReactDOM.createRoot(document.getElementById('root')).render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>,
+  )
+  ```
+
+#### 4.3.4. `index.css` - Global Styles
+
+- **Mục đích**: Import Tailwind CSS directives và custom styles
+- **Content**:
+  ```css
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+  
+  /* Custom styles if needed */
+  ```
+
+### 4.4. Kiến trúc Frontend
+
+```
+User Interaction
+        │
+        ▼
+React Components (src/components/)
+        │
+        ├── State Management (useState, useEffect, useContext)
+        │
+        ├── API Integration (fetch/axios to Backend)
+        │   └── http://localhost:8000/api/*
+        │
+        └── UI Rendering
+            ├── JSX Components
+            ├── Tailwind CSS Styling
+            └── Lucide React Icons
+```
+
+### 4.5. Công nghệ Frontend
+
+| Công nghệ | Phiên bản | Mục đích |
+|-----------|-----------|---------|
+| React | 18.2.0 | UI Library |
+| React DOM | 18.2.0 | React rendering cho browser |
+| Vite | 4.3.9 | Build tool & dev server |
+| Tailwind CSS | 3.3.2 | Utility-first CSS framework |
+| Lucide React | 0.263.1 | Icon library |
+| PostCSS | 8.4.24 | CSS transformation |
+| Autoprefixer | 10.4.14 | Add vendor prefixes |
+
+### 4.6. Luồng dữ liệu Frontend
+
+1. **User Action**: Người dùng tương tác với UI (click, submit form)
+2. **Event Handler**: Component xử lý event
+3. **State Update**: Cập nhật local state
+4. **API Call**: Gửi request đến backend (nếu cần)
+5. **Response Handling**: Xử lý response từ backend
+6. **UI Update**: Re-render component với dữ liệu mới
+
+### 4.7. Development Workflow
+
+```bash
+# Development
+npm run dev          # Start dev server (http://localhost:5173)
+
+# Production Build
+npm run build        # Build for production (dist/ folder)
+npm run preview      # Preview production build
+```
+
+### 4.8. Best Practices
+
+- **Component Reusability**: Tạo các components nhỏ, tái sử dụng
+- **State Management**: Sử dụng hooks phù hợp (useState, useEffect, useContext)
+- **API Integration**: Centralize API calls trong custom hooks hoặc services
+- **Error Handling**: Xử lý lỗi API và hiển thị thông báo cho user
+- **Loading States**: Hiển thị loading indicator khi chờ API
+- **Responsive Design**: Sử dụng Tailwind responsive classes
+
 \end{document}
