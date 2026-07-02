@@ -176,5 +176,28 @@ Các chức năng ngoài phạm vi của hệ thống bao gồm quản lý thanh
 	
 	
 	\section{Phác thảo giao diện}
+	Mục này trình bày phác thảo thiết kế giao diện (Mockup) cho các chức năng cốt lõi của hệ thống SEAL Hackathon Management System. Giao diện được thiết kế theo hướng hiện đại, trực quan, tập trung vào trải nghiệm người dùng (UX/UI) và đảm bảo tính khả dụng trên nhiều thiết bị.
 	
+	\subsection{Giao diện Chi tiết Cuộc thi Hackathon}
+	Giao diện Chi tiết Cuộc thi (Hackathon Details) là trang thông tin trung tâm, cung cấp cái nhìn toàn diện cho \textit{Participant} về thể lệ, tiến trình và quyền lợi khi tham gia SEAL Hackathon.
+	\begin{itemize}
+		\item \textbf{Khối thông tin tổng quan (Hero Section):} Hiển thị hình ảnh thương hiệu, trạng thái cuộc thi cùng nút hành động "Đăng ký tham gia ngay" (Call-to-Action).
+		\item \textbf{Khối Lộ trình thời gian (Timeline Widget):} Hiển thị tiến trình cuộc thi dưới dạng trục thời gian với các mốc quan trọng (Mở cổng đăng ký, Khai mạc, Hạn chót nộp bài, Chung kết).
+		\item \textbf{Khối Thể lệ và Tiêu chí:} Trình bày chi tiết quy định cuộc thi (yêu cầu kho lưu trữ mã nguồn mở) và tiêu chí đánh giá của Giám khảo.
+	\end{itemize}
+	
+	\subsection{Giao diện Quản lý Đội nhóm (Team Management)}
+	Phân hệ này là không gian làm việc chuyên biệt để các thí sinh thiết lập bộ máy nhân sự nội bộ cho cuộc thi, bao gồm:
+	\begin{itemize}
+		\item \textbf{Khối Thiết lập Đội thi:} Cung cấp hai biểu mẫu xử lý song song là Tạo đội mới (trả về mã mời) và Tham gia đội (nhập mã mời có sẵn). Hệ thống giao tiếp với các API \texttt{/teams/create} và \texttt{/teams/join}.
+		\item \textbf{Bảng Danh sách Nhân sự:} Phân tách làm hai khu vực gồm "Thành viên hiện tại" và "Thành viên chờ duyệt". Trưởng nhóm có quyền thao tác trực tiếp (Đồng ý/Từ chối) trên các yêu cầu gia nhập thông qua API \texttt{/teams/approve}.
+	\end{itemize}
+	
+	\subsection{Giao diện Dashboard và Nộp bài (Dashboard \& Submission)}
+	Màn hình Dashboard là trung tâm tương tác chính, được xây dựng bằng cấu trúc lưới và thẻ (Grid \& Card layout) nhằm tối ưu hóa không gian hiển thị.
+	\begin{itemize}
+		\item \textbf{Bố cục tổng quan:} Gồm Sidebar điều hướng bên trái và thanh tiêu đề cấu hình Token xác thực phía trên.
+		\item \textbf{Khối Nộp bài thi (Project Submission):} Thiết kế biểu mẫu đóng gói sản phẩm thông qua trường nhập liệu URL kho lưu trữ GitHub (\texttt{github-link}). Thí sinh có thể liên tục cập nhật đường dẫn trước thời điểm đóng cổng nộp bài thông qua nút "Nộp bài / Cập nhật" (API \texttt{/submissions/submit}).
+		\item \textbf{Cơ chế phản hồi (Toast UI):} Mọi tương tác bất đồng bộ đều được phản hồi trực quan bằng các thông báo ngắn (Toast Message) báo lỗi hoặc thành công, giúp thí sinh kiểm soát tốt quá trình thao tác.
+	\end{itemize}
 \end{document}
