@@ -8,6 +8,7 @@
 \usepackage{array}
 \usepackage{setspace}
 \usepackage{xcolor}
+\usepackage{booktabs} % Hỗ trợ vẽ bảng chuyên nghiệp
 
 \begin{document}
 	
@@ -57,6 +58,7 @@
 	Việc quản lý thông tin bằng các phương pháp thủ công hoặc sử dụng nhiều nền tảng riêng biệt thường gây khó khăn trong việc theo dõi tiến độ, đánh giá kết quả và trao đổi thông tin giữa các bên liên quan. Điều này làm tăng khối lượng công việc cho ban tổ chức và dễ phát sinh sai sót trong quá trình vận hành cuộc thi.
 	
 	Để giải quyết những vấn đề trên, hệ thống SEAL Hackathon Management System được đề xuất nhằm hỗ trợ quản lý tập trung toàn bộ quá trình tổ chức và vận hành cuộc thi. Hệ thống cho phép người dùng đăng ký tham gia, tạo đội, quản lý dự án, nộp bài dự thi, nhận hỗ trợ từ cố vấn và tham gia quá trình đánh giá một cách hiệu quả.
+	
 	\section{Mục tiêu hệ thống}
 	
 	Hệ thống SEAL Hackathon Management System được xây dựng nhằm đạt được các mục tiêu sau:
@@ -70,24 +72,25 @@
 		\item Hỗ trợ giám khảo đánh giá và chấm điểm dự án.
 		\item Cung cấp các chức năng quản trị và thống kê phục vụ ban tổ chức.
 	\end{itemize}
+	
 	\section{Phạm vi hệ thống}
 	
-Hệ thống tập trung hỗ trợ các hoạt động chính trong cuộc thi Hackathon từ giai đoạn đăng ký tham gia đến khi công bố kết quả.
-
-Các chức năng được hỗ trợ bao gồm:
-
-\begin{itemize}
-	\item Đăng ký và đăng nhập tài khoản.
-	\item Quản lý hồ sơ cá nhân.
-	\item Đăng ký tham gia cuộc thi.
-	\item Tạo và quản lý đội thi.
-	\item Quản lý cố vấn.
-	\item Nộp và cập nhật bài dự thi.
-	\item Đánh giá và chấm điểm dự án.
-	\item Quản trị cuộc thi và thống kê báo cáo.
-\end{itemize}
-
-Các chức năng ngoài phạm vi của hệ thống bao gồm quản lý thanh toán, livestream sự kiện và các hoạt động tài chính của cuộc thi.
+	Hệ thống tập trung hỗ trợ các hoạt động chính trong cuộc thi Hackathon từ giai đoạn đăng ký tham gia đến khi công bố kết quả.
+	
+	Các chức năng được hỗ trợ bao gồm:
+	
+	\begin{itemize}
+		\item Đăng ký và đăng nhập tài khoản.
+		\item Quản lý hồ sơ cá nhân.
+		\item Đăng ký tham gia cuộc thi.
+		\item Tạo và quản lý đội thi.
+		\item Quản lý cố vấn.
+		\item Nộp và cập nhật bài dự thi.
+		\item Đánh giá và chấm điểm dự án.
+		\item Quản trị cuộc thi và thống kê báo cáo.
+	\end{itemize}
+	
+	Các chức năng ngoài phạm vi của hệ thống bao gồm quản lý thanh toán, livestream sự kiện và các hoạt động tài chính của cuộc thi.
 	
 	\chapter{Phân tích yêu cầu}
 	\section{Các đối tượng sử dụng}
@@ -105,6 +108,7 @@ Các chức năng ngoài phạm vi của hệ thống bao gồm quản lý thanh
 		
 		\item \textbf{Admin}: Quản trị viên chịu trách nhiệm quản lý người dùng, cuộc thi, đội thi, bài nộp và toàn bộ hoạt động của hệ thống.
 	\end{itemize}
+	
 	\section{Yêu cầu chức năng}
 	
 	Dựa trên phân tích nghiệp vụ và sơ đồ Use Case, hệ thống cần đáp ứng các yêu cầu chức năng sau:
@@ -131,6 +135,7 @@ Các chức năng ngoài phạm vi của hệ thống bao gồm quản lý thanh
 		\item Cho phép quản trị viên quản lý đội thi.
 		\item Cho phép quản trị viên thống kê và xuất báo cáo.
 	\end{enumerate}
+	
 	\section{Yêu cầu phi chức năng}
 	
 	Ngoài các yêu cầu chức năng, hệ thống cần đáp ứng các yêu cầu phi chức năng nhằm đảm bảo chất lượng vận hành.
@@ -154,6 +159,7 @@ Các chức năng ngoài phạm vi của hệ thống bao gồm quản lý thanh
 	\subsection{Khả năng mở rộng}
 	
 	Hệ thống phải có khả năng mở rộng để đáp ứng số lượng người dùng và cuộc thi ngày càng tăng trong tương lai.
+	
 	\section{Sơ đồ use case}
 	
 	Sơ đồ Use Case mô tả các tác nhân tham gia vào hệ thống và các chức năng mà hệ thống cung cấp cho từng tác nhân. Thông qua sơ đồ có thể xác định được phạm vi chức năng của hệ thống cũng như mối quan hệ giữa người dùng và các chức năng nghiệp vụ.
@@ -168,12 +174,11 @@ Các chức năng ngoài phạm vi của hệ thống bao gồm quản lý thanh
 	
 	Sơ đồ ngữ cảnh mô tả hệ thống SEAL Hackathon Management System như một tiến trình trung tâm và các luồng dữ liệu trao đổi với các tác nhân bên ngoài. Sơ đồ giúp xác định phạm vi hệ thống và mối quan hệ giữa hệ thống với môi trường bên ngoài.
 	
-\begin{center}
-	\includegraphics[width=0.8\textwidth]{../../Downloads/context diagram}
-\end{center}
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{../../Downloads/context diagram}
+	\end{center}
 	
 	Trong sơ đồ ngữ cảnh, các tác nhân bên ngoài bao gồm Participant, Team Member, Mentor, Judge và Admin. Các tác nhân này gửi yêu cầu đến hệ thống như đăng ký tham gia cuộc thi, quản lý đội thi, nộp bài dự thi, đánh giá dự án và quản trị hệ thống. Ngược lại, hệ thống cung cấp các thông tin phản hồi như kết quả đánh giá, thông tin cuộc thi, trạng thái bài nộp và các báo cáo quản trị. Sơ đồ ngữ cảnh cho thấy hệ thống đóng vai trò là trung tâm xử lý và quản lý toàn bộ dữ liệu liên quan đến cuộc thi Hackathon.
-	
 	
 	\section{Phác thảo giao diện}
 	Mục này trình bày phác thảo thiết kế giao diện (Mockup) cho các chức năng cốt lõi của hệ thống SEAL Hackathon Management System. Giao diện được thiết kế theo hướng hiện đại, trực quan, tập trung vào trải nghiệm người dùng (UX/UI) và đảm bảo tính khả dụng trên nhiều thiết bị.
@@ -200,513 +205,191 @@ Các chức năng ngoài phạm vi của hệ thống bao gồm quản lý thanh
 		\item \textbf{Khối Nộp bài thi (Project Submission):} Thiết kế biểu mẫu đóng gói sản phẩm thông qua trường nhập liệu URL kho lưu trữ GitHub (\texttt{github-link}). Thí sinh có thể liên tục cập nhật đường dẫn trước thời điểm đóng cổng nộp bài thông qua nút "Nộp bài / Cập nhật" (API \texttt{/submissions/submit}).
 		\item \textbf{Cơ chế phản hồi (Toast UI):} Mọi tương tác bất đồng bộ đều được phản hồi trực quan bằng các thông báo ngắn (Toast Message) báo lỗi hoặc thành công, giúp thí sinh kiểm soát tốt quá trình thao tác.
 	\end{itemize}
-	# Môi trường phát triển và Cấu trúc dự án - SEAL Hackathon Management System
-
-## 1. Môi trường phát triển hệ thống
-
-### 1.1. Yêu cầu hệ thống
-
-#### Backend
-- **Python**: Phiên bản 3.14 trở lên
-- **Hệ điều hành**: Windows, macOS, hoặc Linux
-- **Database**: SQLite (built-in với Python)
-
-#### Frontend
-- **Node.js**: Phiên bản 16.x trở lên
-- **npm**: Phiên bản 7.x trở lên (hoặc yarn)
-- **Trình duyệt**: Chrome, Firefox, Edge, Safari (phiên bản mới nhất)
-
-### 1.2. Công cụ phát triển
-
-| Công cụ | Mục đích | Phiên bản đề xuất |
-|---------|---------|------------------|
-| VS Code | IDE lập trình chính | Latest |
-| Git | Quản lý source code | 2.x |
-| GitHub | Version control hosting | - |
-| Postman | Test API | Latest |
-| DB Browser for SQLite | Xem và quản lý database | Latest |
-| Ngrok | Public server để test | 7.x |
-| Jira | Quản lý task, sprint | - |
-| draw.io | Vẽ diagram (ERD, UC, Sequence) | - |
-| Figma | Thiết kế UI/UX prototype | - |
-| TeXstudio + MiKTeX | Viết báo cáo LaTeX | - |
-
-### 1.3. Cài đặt môi trường
-
-#### Cài đặt Backend
-```bash
-# Di chuyển vào thư mục backend
-cd backend
-
-# Cài đặt các thư viện Python
-pip install -r requirements.txt
-
-# Các thư viện chính:
-# - fastapi: Framework REST API
-# - uvicorn: ASGI server
-# - pydantic: Validation dữ liệu
-# - passlib[bcrypt]: Mã hóa mật khẩu
-# - python-jose: Xác thực JWT
-# - python-multipart: Xử lý form data
-# - pyngrok: Public server qua Ngrok
-# - jinja2: Render HTML template
-```
-
-#### Cài đặt Frontend
-```bash
-# Cài đặt dependencies
-npm install
-
-# Các thư viện chính:
-# - react: ^18.2.0
-# - react-dom: ^18.2.0
-# - lucide-react: ^0.263.1 (icon library)
-# - vite: ^4.3.9 (build tool)
-# - tailwindcss: ^3.3.2 (CSS framework)
-```
-
-### 1.4. Chạy ứng dụng
-
-#### Chạy Backend
-```bash
-cd backend
-python -m uvicorn app.main:app --reload
-# Server chạy tại http://localhost:8000
-# API Docs tại http://localhost:8000/docs
-```
-
-#### Chạy Frontend
-```bash
-npm run dev
-# Frontend chạy tại http://localhost:5173 (mặc định của Vite)
-```
-
-#### Public server qua Ngrok (tùy chọn)
-```bash
-ngrok http 8000
-```
-
----
-
-## 2. Cấu trúc thư mục dự án
-
-```
-SEAL-Hackathon-Management/
-├── .github/                  # GitHub Actions workflows
-├── .vs/                      # Visual Studio settings
-├── backend/                  # Backend application (Python/FastAPI)
-│   ├── app/                  # Main application code
-│   │   ├── auth.py           # Authentication logic
-│   │   ├── config.py         # Configuration settings
-│   │   ├── database.py       # Database connection setup
-│   │   ├── main.py           # FastAPI application entry point
-│   │   ├── models.py         # SQLAlchemy ORM models
-│   │   ├── routes/           # API route handlers
-│   │   │   ├── auth_routes.py      # Authentication endpoints
-│   │   │   ├── submission_routes.py # Submission endpoints
-│   │   │   └── teams.py            # Team management endpoints
-│   │   └── static/           # Static files (HTML, CSS, JS)
-│   ├── requirements.txt      # Python dependencies
-│   ├── seal_hackathon.db     # SQLite database file
-│   └── .gitignore           # Git ignore rules
-├── src/                      # Frontend application (React/Vite)
-│   ├── components/          # React components
-│   │   ├── CandidateDashboard.jsx  # Dashboard for candidates
-│   │   ├── JuryScreen.jsx         # Screen for jury members
-│   │   └── Leaderboard.jsx        # Leaderboard display
-│   ├── App.jsx              # Main React application component
-│   ├── main.jsx             # React entry point
-│   └── index.css            # Global CSS styles
-├── docs/                     # Documentation files
-├── report-latex/            # LaTeX report files
-├── node_modules/            # Node.js dependencies (generated)
-├── index.html               # HTML entry point for frontend
-├── package.json             # Node.js dependencies and scripts
-├── package-lock.json        # Locked dependency versions
-├── vite.config.js           # Vite configuration
-├── tailwind.config.js       # Tailwind CSS configuration
-├── postcss.config.js        # PostCSS configuration
-├── config.env.example       # Environment variables template
-├── README.md                # Project documentation
-├── ERD.md                   # Entity Relationship Diagram documentation
-├── ERD.png                  # ERD diagram image
-├── FRQ.md                   # Functional Requirements documentation
-├── RQ.md                    # Requirements documentation
-├── Todo.json                # Task tracking
-├── check-list.md            # Project checklist
-├── frontend-logic.md        # Frontend logic documentation
-├── plan_project.md          # Project planning documentation
-└── tech_stack.md            # Technology stack documentation
-```
-
----
-
-## 3. Mô tả kiến thức Backend
-
-### 3.1. Kiến trúc Backend
-
-Backend sử dụng kiến trúc **REST API** với framework **FastAPI**, một framework hiện đại, hiệu suất cao cho xây dựng API với Python.
-
-```
-Client (Browser/Mobile)
-        │
-        │ HTTP Request (JSON)
-        ▼
-FastAPI Application (Uvicorn Server)
-        │
-        ├── Authentication Layer (auth.py)
-        │   ├── JWT Token validation
-        │   └── Password hashing (bcrypt)
-        │
-        ├── Route Handlers (routes/)
-        │   ├── auth_routes.py (register, login)
-        │   ├── teams.py (create, join, approve teams)
-        │   └── submission_routes.py (submit projects)
-        │
-        ├── Business Logic
-        │   ├── Authentication logic
-        │   ├── Team management
-        │   └── Submission handling
-        │
-        ├── Data Layer (models.py)
-        │   ├── SQLAlchemy ORM models
-        │   └── Database operations
-        │
-        └── Database (SQLite)
-            ├── Users table
-            ├── Teams table
-            └── Submissions table
-
-### 3.2. Các thành phần chính
-
-#### 3.2.1. FastAPI Framework
-- **Mục đích**: Xây dựng REST API nhanh chóng với automatic validation
-- **Tính năng**:
-  - Automatic API documentation (Swagger UI tại `/docs`)
-  - Data validation với Pydantic
-  - Type hints hỗ trợ
-  - Async/await support
-
-#### 3.2.2. Uvicorn Server
-- **Mục đích**: ASGI server để chạy ứng dụng FastAPI
-- **Chức năng**: Xử lý HTTP requests, hỗ trợ async operations
-
-#### 3.2.3. SQLAlchemy ORM
-- **Mục đích**: Object-Relational Mapping để thao tác database
-- **Models** (trong `models.py`):
-  - **User**: Thông tin người dùng (username, password_hash, role)
-  - **Team**: Thông tin đội thi (team_name, leader_id, members)
-  - **Submission**: Bài nộp dự án (team_id, project_name, description, score)
-
-#### 3.2.4. Authentication & Authorization
-- **JWT (JSON Web Token)**: Xác thực người dùng
-  - Tạo token khi đăng nhập
-  - Validate token cho các protected routes
-- **Password Hashing**: Sử dụng bcrypt để mã hóa mật khẩu
-- **Roles**: Phân quyền (Candidate, Jury, Admin)
-
-#### 3.2.5. Pydantic
-- **Mục đích**: Validation dữ liệu đầu vào
-- **Schemas**: Định nghĩa cấu trúc dữ liệu cho request/response
-  - UserCreate, UserLogin
-  - TeamCreate, TeamResponse
-  - SubmissionCreate, SubmissionResponse
-
-### 3.3. API Endpoints
-
-#### Authentication (`/auth`)
-- `POST /auth/register`: Đăng ký tài khoản mới
-- `POST /auth/login`: Đăng nhập và nhận JWT token
-
-#### Teams (`/teams`)
-- `POST /teams/create`: Tạo đội mới
-- `POST /teams/join`: Tham gia đội
-- `POST /teams/approve`: Phê duyệt thành viên đội
-- `GET /teams/my-team`: Lấy thông tin đội của mình
-
-#### Submissions (`/submissions`)
-- `POST /submissions/submit`: Nộp bài dự án
-- `GET /submissions/all`: Lấy danh sách bài nộp (cho Jury)
-- `POST /submissions/score`: Chấm điểm bài nộp (cho Jury)
-
-### 3.4. Database Schema
-
-#### Users Table
-```python
-- id: Integer (Primary Key)
-- username: String (Unique)
-- password_hash: String
-- role: String (candidate/jury/admin)
-- created_at: DateTime
-```
-
-#### Teams Table
-```python
-- id: Integer (Primary Key)
-- team_name: String (Unique)
-- leader_id: Integer (Foreign Key → Users)
-- members: JSON (Array of user IDs)
-- status: String (pending/approved)
-- created_at: DateTime
-```
-
-#### Submissions Table
-```python
-- id: Integer (Primary Key)
-- team_id: Integer (Foreign Key → Teams)
-- project_name: String
-- description: Text
-- github_link: String
-- demo_link: String
-- score: Float (Nullable)
-- jury_comments: Text (Nullable)
-- submitted_at: DateTime
-```
-
-### 3.5. Security
-
-- **Password Hashing**: Sử dụng bcrypt với salt
-- **JWT Token**: Token hết hạn sau một thời gian nhất định
-- **CORS**: Cấu hình Cross-Origin Resource Sharing
-- **Input Validation**: Pydantic schemas validate tất cả input
-
----
-
-## 4. Mô tả cấu trúc thư mục Frontend (src)
-
-### 4.1. Tổng quan
-
-Frontend được xây dựng với **React 18** sử dụng **Vite** làm build tool và **Tailwind CSS** cho styling. Cấu trúc thư mục `src/` tổ chức code theo component-based architecture.
-
-### 4.2. Cấu trúc chi tiết
-
-```
-src/
-├── components/              # React Components
-│   ├── CandidateDashboard.jsx   # Dashboard cho thí sinh
-│   ├── JuryScreen.jsx           # Màn hình cho giám khảo
-│   └── Leaderboard.jsx          # Bảng xếp hạng
-├── App.jsx                  # Component chính của ứng dụng
-├── main.jsx                 # Entry point của React
-└── index.css                # Global styles và Tailwind directives
-```
-
-### 4.3. Chi tiết từng file/thư mục
-
-#### 4.3.1. `components/` - React Components
-
-**CandidateDashboard.jsx**
-- **Mục đích**: Giao diện chính cho thí sinh sau khi đăng nhập
-- **Chức năng**:
-  - Hiển thị thông tin đội thi
-  - Tạo đội mới
-  - Tham gia đội
-  - Nộp bài dự án
-  - Xem trạng thái bài nộp
-- **State Management**: Sử dụng React hooks (useState, useEffect)
-- **API Calls**: Gọi backend endpoints qua fetch/axios
-- **UI Components**: Form tạo đội, form nộp bài, hiển thị thông tin
-
-**JuryScreen.jsx**
-- **Mục đích**: Giao diện cho giám khảo chấm điểm
-- **Chức năng**:
-  - Xem danh sách bài nộp
-  - Chấm điểm từng bài
-  - Thêm nhận xét
-  - Xem thông tin đội thi
-- **Features**: 
-  - Filter bài nộp theo trạng thái
-  - Sort theo điểm số
-  - Real-time update khi chấm điểm
-
-**Leaderboard.jsx**
-- **Mục đích**: Hiển thị bảng xếp hạng các đội
-- **Chức năng**:
-  - Hiển thị danh sách đội theo thứ hạng
-  - Hiển thị điểm số của từng đội
-  - Cập nhật real-time
-- **UI**: Table hoặc card layout với styling Tailwind
-
-#### 4.3.2. `App.jsx` - Main Application Component
-
-- **Mục đích**: Component gốc quản lý routing và state toàn cục
-- **Chức năng**:
-  - Quản lý authentication state (đăng nhập/đăng xuất)
-  - Routing điều hướng giữa các màn hình
-  - Layout chính (header, navigation)
-  - Context Provider cho global state
-- **Structure**:
-  ```jsx
-  function App() {
-    // Authentication state
-    // User role determination
-    // Conditional rendering based on role
-    return (
-      // Layout
-      // Navigation
-      // Page content based on route
-    )
-  }
-  ```
-
-#### 4.3.3. `main.jsx` - React Entry Point
-
-- **Mục đích**: Mount React application vào DOM
-- **Code**:
-  ```jsx
-  import React from 'react'
-  import ReactDOM from 'react-dom/client'
-  import App from './App.jsx'
-  import './index.css'
-  
-  ReactDOM.createRoot(document.getElementById('root')).render(
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>,
-  )
-  ```
-
-#### 4.3.4. `index.css` - Global Styles
-
-- **Mục đích**: Import Tailwind CSS directives và custom styles
-- **Content**:
-  ```css
-  @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
-  
-  /* Custom styles if needed */
-  ```
-
-### 4.4. Kiến trúc Frontend
-
-```
-User Interaction
-        │
-        ▼
-React Components (src/components/)
-        │
-        ├── State Management (useState, useEffect, useContext)
-        │
-        ├── API Integration (fetch/axios to Backend)
-        │   └── http://localhost:8000/api/*
-        │
-        └── UI Rendering
-            ├── JSX Components
-            ├── Tailwind CSS Styling
-            └── Lucide React Icons
-```
-
-### 4.5. Công nghệ Frontend
-
-| Công nghệ | Phiên bản | Mục đích |
-|-----------|-----------|---------|
-| React | 18.2.0 | UI Library |
-| React DOM | 18.2.0 | React rendering cho browser |
-| Vite | 4.3.9 | Build tool & dev server |
-| Tailwind CSS | 3.3.2 | Utility-first CSS framework |
-| Lucide React | 0.263.1 | Icon library |
-| PostCSS | 8.4.24 | CSS transformation |
-| Autoprefixer | 10.4.14 | Add vendor prefixes |
-
-### 4.6. Luồng dữ liệu Frontend
-
-1. **User Action**: Người dùng tương tác với UI (click, submit form)
-2. **Event Handler**: Component xử lý event
-3. **State Update**: Cập nhật local state
-4. **API Call**: Gửi request đến backend (nếu cần)
-5. **Response Handling**: Xử lý response từ backend
-6. **UI Update**: Re-render component với dữ liệu mới
-
-### 4.7. Development Workflow
-
-```bash
-# Development
-npm run dev          # Start dev server (http://localhost:5173)
-
-# Production Build
-npm run build        # Build for production (dist/ folder)
-npm run preview      # Preview production build
-```
-
-### 4.8. Best Practices
-
-- **Component Reusability**: Tạo các components nhỏ, tái sử dụng
-- **State Management**: Sử dụng hooks phù hợp (useState, useEffect, useContext)
-- **API Integration**: Centralize API calls trong custom hooks hoặc services
-- **Error Handling**: Xử lý lỗi API và hiển thị thông báo cho user
-- **Loading States**: Hiển thị loading indicator khi chờ API
-- **Responsive Design**: Sử dụng Tailwind responsive classes
-\chapter{Thiết kế hệ thống}
-	\section{Thiết kế cơ sở dữ liệu}
-	Để đảm bảo hệ thống SEAL Hackathon Management System vận hành ổn định, lưu trữ dữ liệu nhất quán và tối ưu hóa tốc độ truy vấn, cơ sở dữ liệu được thiết kế theo mô hình dữ liệu quan hệ dưới dạng chuẩn hóa (3NF). Hệ thống quản lý tập trung các luồng thông tin từ tài khoản người dùng, hồ sơ đội thi, các mốc thời gian nộp bài cho đến tiêu chí chấm điểm của giám khảo.
 	
-	\section{Sơ đồ quan hệ thực thể (ERD Diagram)}
-	Sơ đồ ERD dưới đây mô tả cấu trúc tổng thể của cơ sở dữ liệu, thể hiện các thực thể chính trong hệ thống và các mối quan hệ ràng buộc dữ liệu giữa chúng.
+	\chapter{Môi trường phát triển và Cấu trúc dự án}
 	
-	\begin{center}
-		\includegraphics[width=0.9\textwidth]{../../Downloads/erd_diagram}
-		\\ \textit{Hình 3.1: Sơ đồ quan hệ thực thể (ERD) của hệ thống}
-	\end{center}
+	\section{Môi trường phát triển hệ thống}
 	
-	\section{Mô tả các thực thể và mối quan hệ}
-	Dựa trên sơ đồ ERD, cấu trúc dữ liệu của hệ thống được phân tách thành các thực thể và mối quan hệ cụ thể như sau:
+	\subsection{Yêu cầu hệ thống}
 	
-	\subsection{Mô tả các thực thể chi tiết}
+	\textbf{Backend:}
 	\begin{itemize}
-		\item \textbf{Users (Người dùng):} Lưu trữ thông tin định danh toàn bộ người dùng trong hệ thống.
-		\begin{itemize}
-			\item \textit{Thuộc tính:} \texttt{UserID} (Khóa chính), \texttt{FullName}, \texttt{Email}, \texttt{PasswordHash}, \texttt{Role} (Participant, Mentor, Judge, Admin), \texttt{CreatedAt}.
-		\end{itemize}
-		
-		\item \textbf{Hackathons (Cuộc thi):} Lưu trữ thông tin về các cuộc thi Hackathon do Admin khởi tạo.
-		\begin{itemize}
-			\item \textit{Thuộc tính:} \texttt{HackathonID} (Khóa chính), \texttt{Title}, \texttt{Description}, \texttt{StartDate}, \texttt{EndDate}, \texttt{Status}.
-		\end{itemize}
-		
-		\item \textbf{Teams (Đội thi):} Quản lý thông tin của các nhóm tham gia cuộc thi.
-		\begin{itemize}
-			\item \textit{Thuộc tính:} \texttt{TeamID} (Khóa chính), \texttt{TeamName}, \texttt{InviteCode}, \texttt{LeaderID} (Khóa ngoại liên kết tới Users), \texttt{HackathonID} (Khóa ngoại liên kết tới Hackathons).
-		\end{itemize}
-		
-		\item \textbf{Submissions (Bài dự thi):} Lưu trữ thông tin các sản phẩm/mã nguồn do các đội thi nộp lên hệ thống.
-		\begin{itemize}
-			\item \textit{Thuộc tính:} \texttt{SubmissionID} (Khóa chính), \texttt{TeamID} (Khóa ngoại), \texttt{GithubURL}, \texttt{ProjectDescription}, \texttt{SubmittedAt}.
-		\end{itemize}
-		
-		\item \textbf{Evaluations (Đánh giá/Chấm điểm):} Lưu trữ điểm số và nhận xét của giám khảo dành cho các bài dự thi.
-		\begin{itemize}
-			\item \textit{Thuộc tính:} \texttt{EvaluationID} (Khóa chính), \texttt{SubmissionID} (Khóa ngoại), \texttt{JudgeID} (Khóa ngoại liên kết tới Users), \texttt{Score}, \texttt{Comment}, \texttt{EvaluatedAt}.
-		\end{itemize}
-		
-		\item \textbf{Mentorships (Cố vấn):} Bản ghi trung gian thể hiện sự kết nối, hỗ trợ giữa Mentor và các Đội thi.
-		\begin{itemize}
-			\item \textit{Thuộc tính:} \texttt{MentorshipID} (Khóa chính), \texttt{MentorID} (Khóa ngoại liên kết tới Users), \texttt{TeamID} (Khóa ngoại), \texttt{AssignedAt}.
-		\end{itemize}
+		\item Python: Phiên bản 3.14 trở lên
+		\item Hệ điều hành: Windows, macOS, hoặc Linux
+		\item Database: SQLite (tích hợp sẵn với Python)
 	\end{itemize}
 	
-	\subsection{Mô tả các mối quan hệ}
+	\textbf{Frontend:}
 	\begin{itemize}
-		\item \textbf{Users -- Teams (1 - N):} Một người dùng làm trưởng nhóm (\texttt{LeaderID}) chỉ quản lý 1 đội thi tại một thời điểm, nhưng một tài khoản người dùng nói chung có thể đăng ký tham gia vào nhiều đội thi với vai trò thành viên thông qua bảng liên kết thành viên.
-		\item \textbf{Hackathons -- Teams (1 - N):} Một cuộc thi Hackathon có thể có nhiều đội thi đăng ký tham gia, nhưng một đội thi chỉ thuộc về một cuộc thi duy nhất.
-		\item \textbf{Teams -- Submissions (1 - 1):} Để đảm bảo tính công bằng, mỗi đội thi chỉ được phép có duy nhất một bài dự thi chính thức trên hệ thống (hoặc cập nhật đè trên bài cũ).
-		\item \textbf{Submissions -- Evaluations (1 - N):} Một bài dự thi của một đội có thể được chấm điểm và nhận xét bởi nhiều giám khảo khác nhau (\texttt{JudgeID}) để lấy điểm trung bình làm kết quả cuối cùng.
-		\item \textbf{Users (Mentor) -- Teams (N - N):} Một cố vấn có thể hỗ trợ nhiều đội thi khác nhau và ngược lại, một đội thi có thể nhận sự cố vấn từ nhiều chuyên gia thông qua bảng trung gian \texttt{Mentorships}.
+		\item Node.js: Phiên bản 16.x trở lên
+		\item npm: Phiên bản 7.x trở lên (hoặc yarn)
+		\item Trình duyệt: Chrome, Firefox, Edge, Safari (phiên bản mới nhất)
 	\end{itemize}
+	
+	\subsection{Công cụ phát triển}
+	
+	\begin{table}[h!]
+		\centering
+		\caption{Danh sách các công cụ phát triển hệ thống}
+		\begin{tabular}{llc}
+			\toprule
+			\textbf{Công cụ} & \textbf{Mục đích} & \textbf{Phiên bản đề xuất} \\
+			\midrule
+			VS Code & IDE lập trình chính & Mới nhất \\
+			Git & Quản lý mã nguồn & 2.x \\
+			GitHub & Lưu trữ quản lý phiên bản & - \\
+			Postman & Kiểm thử API & Mới nhất \\
+			DB Browser for SQLite & Quản lý cơ sở dữ liệu SQLite & Mới nhất \\
+			Ngrok & Public local server để kiểm thử & 7.x \\
+			Jira & Quản lý tác vụ và Sprint & - \\
+			draw.io & Vẽ sơ đồ kỹ thuật (ERD, UC, v.v.) & - \\
+			Figma & Thiết kế mẫu thử UI/UX & - \\
+			TeXstudio + MiKTeX & Biên soạn báo cáo LaTeX & - \\
+			\bottomrule
+		\end{tabular}
+	\end{table}
+	
+	\subsection{Cài đặt môi trường}
+	
+	\textbf{Cài đặt cấu hình phần Backend:}
+	\begin{verbatim}
+	# Di chuyển vào thư mục backend
+	cd backend
+	
+	# Cài đặt các thư viện Python cần thiết
+	pip install -r requirements.txt
+	\end{verbatim}
+	Các gói thư viện chính bao gồm: \texttt{fastapi} (Framework REST API), \texttt{uvicorn} (ASGI server), \texttt{pydantic} (Xác thực dữ liệu), \texttt{passlib[bcrypt]} (Mã hóa bảo mật mật khẩu), \texttt{python-jose} (Xác thực mã JWT), \texttt{python-multipart} (Xử lý dữ liệu Form), \texttt{pyngrok} và \texttt{jinja2}.
+	
+	\textbf{Cài đặt cấu hình phần Frontend:}
+	\begin{verbatim}
+	# Cài đặt các gói phụ thuộc NodeJS
+	npm install
+	\end{verbatim}
+	Các thư viện cốt lõi bao gồm: \texttt{react} (\^{}18.2.0), \texttt{react-dom}, \texttt{lucide-react} (thư viện biểu tượng), \texttt{vite} (công cụ đóng gói mã nguồn) và \texttt{tailwindcss}.
+	
+	\subsection{Hướng dẫn vận hành ứng dụng}
+	
+	\textbf{Khởi chạy phía Backend:}
+	\begin{verbatim}
+	cd backend
+	python -m uvicorn app.main:app --reload
+	\end{verbatim}
+	Hệ thống Server cục bộ hoạt động tại địa chỉ \texttt{http://localhost:8000}. Trang tài liệu kiểm thử API tự động (Swagger UI) có thể truy cập công khai tại đường dẫn \texttt{http://localhost:8000/docs}.
+	
+	\textbf{Khởi chạy phía Frontend:}
+	\begin{verbatim}
+	npm run dev
+	\end{verbatim}
+	Ứng dụng giao diện người dùng hoạt động mặc định qua Vite tại \texttt{http://localhost:5173}.
+	
+	\textbf{Cấu hình Public Server bằng Ngrok (Tùy chọn bổ sung):}
+	\begin{verbatim}
+	ngrok http 8000
+	\end{verbatim}
 	
 	\section{Cấu trúc thư mục dự án}
-	Hệ thống SEAL Hackathon Management System được tổ chức theo kiến trúc phân lớp hiện đại (Clean Architecture / MVC), tách biệt rõ ràng giữa mã nguồn Frontend, Backend và cấu trúc Cơ sở dữ liệu để tạo điều kiện thuận lợi cho việc phát triển song song và bảo trì hệ thống lâu dài.
+	Dưới đây là cây cấu trúc phân mục toàn diện của dự án \texttt{SEAL-Hackathon-Management}:
 	
-	\begin{center}
-		\includegraphics[width=0.5\textwidth]{../../Downloads/project_structure}
-		\\ \textit{Hình 3.2: Sơ đồ minh họa cấu trúc thư mục mã nguồn dự án}
-	\end{center}
+	\begin{verbatim}
+	SEAL-Hackathon-Management/
+	├── .github/                  # Các kịch bản tự động hóa GitHub Actions
+	├── .vs/                      # Các tệp cấu hình Visual Studio
+	├── backend/                  # Mã nguồn ứng dụng Backend (Python/FastAPI)
+	│   ├── app/                  # Thư mục mã nguồn xử lý logic chính
+	│   │   ├── auth.py           # Logic thực hiện xác thực người dùng
+	│   │   ├── config.py         # Quản lý các tham số cấu hình hệ thống
+	│   │   ├── database.py       # Thiết lập kết nối cơ sở dữ liệu
+	│   │   ├── main.py           # Điểm khởi chạy ứng dụng FastAPI
+	│   │   ├── models.py         # Định nghĩa các bảng cấu trúc SQLAlchemy ORM
+	│   │   ├── routes/           # Thư mục chứa các phân tuyến API điều hướng
+	│   │   │   ├── auth_routes.py       # API phân hệ xác thực đăng nhập
+	│   │   │   ├── submission_routes.py  # API phân hệ nộp bài thi
+	│   │   │   └── teams.py             # API phân hệ quản lý đội nhóm
+	│   │   └── static/           # Chứa tài nguyên tĩnh (HTML, CSS, JS)
+	│   ├── requirements.txt      # Danh mục thư viện Python phụ thuộc
+	│   ├── seal_hackathon.db     # Tệp tin lưu trữ cơ sở dữ liệu SQLite
+	│   └── .gitignore           # Quy tắc loại trừ tệp tin khi đồng bộ Git
+	├── src/                      # Mã nguồn ứng dụng Frontend (React/Vite)
+	│   ├── components/          # Tập hợp các thành phần React tái sử dụng
+	│   │   ├── CandidateDashboard.jsx  # Bảng điều khiển dành cho thí sinh
+	│   │   ├── JuryScreen.jsx         # Giao diện dành cho thành viên giám khảo
+	│   │   └── Leaderboard.jsx        # Giao diện hiển thị bảng xếp hạng
+	│   ├── App.jsx              # Thành phần React gốc điều phối chính
+	│   ├── main.jsx             # Điểm tiếp nhận cấu hình phân phối React
+	│   └── index.css            # Tệp cấu hình định dạng kiểu dáng CSS toàn cục
+	├── docs/                     # Các tài liệu đặc tả dự án bổ sung
+	├── report-latex/            # Các tệp tin biên soạn báo cáo bằng LaTeX
+	├── node_modules/            # Thư mục chứa tài nguyên NodeJS sinh tự động
+	├── index.html               # Điểm neo cấu trúc HTML ứng dụng giao diện
+	├── package.json             # Quản lý tệp cấu hình script lệnh và thư viện Node
+	├── package-lock.json        # Phiên bản đóng khóa chi tiết các thư viện Node
+	├── vite.config.js           # Tham số cấu hình cho công cụ Vite
+	├── tailwind.config.js       # Tham số cấu hình cấu trúc giao diện Tailwind CSS
+	├── postcss.config.js        # Tham số cấu hình xử lý tương thích PostCSS
+	├── config.env.example       # Biểu mẫu thiết lập biến môi trường mẫu
+	├── README.md                # Tài liệu hướng dẫn tổng quan dự án gốc
+	└── ERD.png                  # Ảnh sơ đồ quan hệ thực thể thực tế
+	\end{verbatim}
 	
-	Dựa trên sơ đồ cấu trúc, dự án được chia làm các thư mục chức năng chính:
+	\section{Mô tả chi tiết kiến thức kiến trúc Backend}
+	
+	\subsection{Kiến trúc xử lý phía Backend}
+	Hệ thống Backend được thiết kế chuẩn cấu trúc kiến trúc liên lạc \textbf{REST API} dựa trên nền tảng framework \textbf{FastAPI}. Quy trình vận hành luân chuyển dữ liệu được mô tả tuần tự như mô hình dưới đây:
+	
+	\begin{verbatim}
+	Client (Trình duyệt Web hoặc Mobile)
+	        │
+	        │ Gửi dữ liệu HTTP Request định dạng JSON
+	        ▼
+	FastAPI Application (Bảo trợ bởi Uvicorn ASGI Server)
+	        │
+	        ├── Lớp Xác thực & Bảo mật (auth.py)
+	        │   ├── Xác thực và giải mã khóa Token JWT hợp lệ
+	        │   └── Mã hóa một chiều bảo mật mật khẩu bằng thuật toán Bcrypt
+	        │
+	        ├── Lớp Định tuyến phân tuyến dữ liệu (routes/)
+	        │   ├── auth_routes.py (Xử lý các thao tác đăng ký, đăng nhập)
+	        │   ├── teams.py (Tạo lập, gia nhập, phê duyệt thành viên đội thi)
+	        │   └── submission_routes.py (Đóng gói nộp các bài thi dự án)
+	        │
+	        ├── Phân lớp Xử lý Logic Nghiệp vụ (Business Logic Layer)
+	        │
+	        ├── Lớp Ánh xạ Dữ liệu (models.py)
+	        │   ├── Định nghĩa thực thể thông qua các lớp SQLAlchemy ORM
+	        │   └── Thực thi chuyển đổi câu lệnh thao tác cơ sở dữ liệu
+	        │
+	        └── Tầng Cơ sở dữ liệu vật lý (SQLite Database)
+	            ├── Bảng lưu trữ thông tin Người dùng (Users Table)
+	            ├── Bảng lưu trữ thông tin Đội thi (Teams Table)
+	            └── Bảng lưu trữ dữ liệu Bài nộp (Submissions Table)
+	\end{verbatim}
+	
+	\subsection{Các thành phần công nghệ cốt lõi}
+	
 	\begin{itemize}
-		\item \texttt{/backend}: Chứa mã nguồn xử lý logic API, kết nối database (Models, Controllers, Routes, Middleware).
-		\item \texttt{/frontend}: Chứa giao diện người dùng, các component UI, trang dashboard và xử lý call API (Views, Components, Services).
-		\item \texttt{/docs}: Lưu trữ các tài liệu phân tích thiết kế, file sơ đồ (Use Case, ERD) và đặc tả API.
-		\item \texttt{/config}: Chứa các file cấu hình môi trường, bảo mật (Environment variables, Database connection config).
+		\item \textbf{FastAPI Framework:} Cung cấp hạ tầng xây dựng hệ thống cổng API với hiệu năng xử lý cao, hỗ trợ tự động sinh tài liệu giao tiếp đặc tả và xác thực cấu trúc dữ liệu nghiêm ngặt qua Pydantic Schemas.
+		\item \textbf{Uvicorn Server:} ASGI server chịu trách nhiệm trung chuyển và duy trì kết nối luồng truyền tải gói tin HTTP không đồng bộ (Async/Await support).
+		\item \textbf{SQLAlchemy ORM:} Công cụ ánh xạ thực thể giúp lập trình viên viết truy vấn cơ sở dữ liệu bằng ngôn ngữ lập trình Python hướng đối tượng mà không cần viết các câu lệnh SQL thuần.
+		\item \textbf{Cơ chế An ninh & Phân quyền:} Kết hợp Token JWT để duy trì phiên làm việc bảo mật ngắn hạn, mã hóa mã băm Bcrypt phòng vệ dữ liệu mật khẩu, thực hiện gán nhãn phân quyền người dùng cố định (\textit{Candidate}, \textit{Jury}, \textit{Admin}).
 	\end{itemize}
-\end{document}
+	
+	\subsection{Danh sách các phân hệ cổng API hệ thống}
+	
+	\textbf{Phân hệ Xác thực hệ thống (\texttt{/auth}):}
+	\begin{itemize}
+		\item \texttt{POST /auth/register}: Tiếp nhận dữ liệu khởi tạo đăng ký người dùng mới.
+		\item \texttt{POST /auth/login}: Kiểm tra thông tin định danh và cấp phát Token JWT truy cập hợp lệ.
+	\end{itemize}
+	
+	\textbf{Phân hệ Điều phối Đội nhóm (\texttt{/teams}):}
+	\begin{itemize}
+		\item \texttt{POST /teams/create}: Xử lý yêu cầu thành lập một nhóm thi đấu mới.
+		\item \texttt{POST /teams/join}: Tiếp nhận mã Token mời để xin gia nhập nhóm có sẵn.
+		\item \texttt{POST /teams/approve}: Cấp quyền Trưởng nhóm phê duyệt duyệt duyệt các yêu cầu chờ gia nhập.
+		\item \texttt{GET /teams/my-team}: Truy xuất dữ liệu hồ sơ chi tiết của đội thi hiện tại.
+	\end{itemize}
+	
+	\textbf{Phân hệ Quản lý Bài nộp (\texttt{/submissions}):}
+	\begin{itemize}
+		\item \texttt{POST /submissions/submit}: Ghi nhận thông tin URL mã nguồn
