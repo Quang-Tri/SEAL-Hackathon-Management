@@ -49,6 +49,7 @@ def register_user(
     db.add(new_user)
     db.commit()
     db.refresh(new_user)
+<<<<<<< HEAD
 
     return {
         "status": "Thành công",
@@ -60,28 +61,41 @@ def register_user(
 # LOGIN
 # ============================================================
 
+=======
+    
+    return {"status": "Thành công", "message": f"Tài khoản '{username}' đã được khởi tạo thành công!"}
+# 2. API ĐĂNG NHẬP
+>>>>>>> 214eaa3c4cad450c33d21daa5ab7ff0b5825c194
 @router.post("/login")
 def login_user(
     form_data: OAuth2PasswordRequestForm = Depends(),
     db: Session = Depends(get_db)
 ):
+<<<<<<< HEAD
     print("=" * 50)
     print("USERNAME =", repr(form_data.username))
     print("PASSWORD =", repr(form_data.password))
     print("PASSWORD LENGTH =", len(form_data.password.encode("utf-8")))
     print("=" * 50)
 
+=======
+>>>>>>> 214eaa3c4cad450c33d21daa5ab7ff0b5825c194
     user = db.query(models.User).filter(
         models.User.username == form_data.username
     ).first()
 
+<<<<<<< HEAD
     if not user:
+=======
+    if not user or not auth.verify_password(form_data.password, user.hashed_password):
+>>>>>>> 214eaa3c4cad450c33d21daa5ab7ff0b5825c194
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Tài khoản không tồn tại!",
             headers={"WWW-Authenticate": "Bearer"},
         )
 
+<<<<<<< HEAD
     try:
         password_ok = auth.verify_password(
             form_data.password[:72],
@@ -101,6 +115,8 @@ def login_user(
             headers={"WWW-Authenticate": "Bearer"},
         )
 
+=======
+>>>>>>> 214eaa3c4cad450c33d21daa5ab7ff0b5825c194
     access_token = auth.create_access_token(
         data={"sub": str(user.id)}
     )
@@ -108,4 +124,8 @@ def login_user(
     return {
         "access_token": access_token,
         "token_type": "bearer"
+<<<<<<< HEAD
     }
+=======
+    }
+>>>>>>> 214eaa3c4cad450c33d21daa5ab7ff0b5825c194

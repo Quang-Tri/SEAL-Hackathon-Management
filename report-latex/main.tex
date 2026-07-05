@@ -8,6 +8,7 @@
 \usepackage{array}
 \usepackage{setspace}
 \usepackage{xcolor}
+\usepackage{booktabs} % Hỗ trợ vẽ bảng chuyên nghiệp
 
 \begin{document}
 	
@@ -57,6 +58,7 @@
 	Việc quản lý thông tin bằng các phương pháp thủ công hoặc sử dụng nhiều nền tảng riêng biệt thường gây khó khăn trong việc theo dõi tiến độ, đánh giá kết quả và trao đổi thông tin giữa các bên liên quan. Điều này làm tăng khối lượng công việc cho ban tổ chức và dễ phát sinh sai sót trong quá trình vận hành cuộc thi.
 	
 	Để giải quyết những vấn đề trên, hệ thống SEAL Hackathon Management System được đề xuất nhằm hỗ trợ quản lý tập trung toàn bộ quá trình tổ chức và vận hành cuộc thi. Hệ thống cho phép người dùng đăng ký tham gia, tạo đội, quản lý dự án, nộp bài dự thi, nhận hỗ trợ từ cố vấn và tham gia quá trình đánh giá một cách hiệu quả.
+	
 	\section{Mục tiêu hệ thống}
 	
 	Hệ thống SEAL Hackathon Management System được xây dựng nhằm đạt được các mục tiêu sau:
@@ -70,24 +72,25 @@
 		\item Hỗ trợ giám khảo đánh giá và chấm điểm dự án.
 		\item Cung cấp các chức năng quản trị và thống kê phục vụ ban tổ chức.
 	\end{itemize}
+	
 	\section{Phạm vi hệ thống}
 	
-Hệ thống tập trung hỗ trợ các hoạt động chính trong cuộc thi Hackathon từ giai đoạn đăng ký tham gia đến khi công bố kết quả.
-
-Các chức năng được hỗ trợ bao gồm:
-
-\begin{itemize}
-	\item Đăng ký và đăng nhập tài khoản.
-	\item Quản lý hồ sơ cá nhân.
-	\item Đăng ký tham gia cuộc thi.
-	\item Tạo và quản lý đội thi.
-	\item Quản lý cố vấn.
-	\item Nộp và cập nhật bài dự thi.
-	\item Đánh giá và chấm điểm dự án.
-	\item Quản trị cuộc thi và thống kê báo cáo.
-\end{itemize}
-
-Các chức năng ngoài phạm vi của hệ thống bao gồm quản lý thanh toán, livestream sự kiện và các hoạt động tài chính của cuộc thi.
+	Hệ thống tập trung hỗ trợ các hoạt động chính trong cuộc thi Hackathon từ giai đoạn đăng ký tham gia đến khi công bố kết quả.
+	
+	Các chức năng được hỗ trợ bao gồm:
+	
+	\begin{itemize}
+		\item Đăng ký và đăng nhập tài khoản.
+		\item Quản lý hồ sơ cá nhân.
+		\item Đăng ký tham gia cuộc thi.
+		\item Tạo và quản lý đội thi.
+		\item Quản lý cố vấn.
+		\item Nộp và cập nhật bài dự thi.
+		\item Đánh giá và chấm điểm dự án.
+		\item Quản trị cuộc thi và thống kê báo cáo.
+	\end{itemize}
+	
+	Các chức năng ngoài phạm vi của hệ thống bao gồm quản lý thanh toán, livestream sự kiện và các hoạt động tài chính của cuộc thi.
 	
 	\chapter{Phân tích yêu cầu}
 	\section{Các đối tượng sử dụng}
@@ -105,6 +108,7 @@ Các chức năng ngoài phạm vi của hệ thống bao gồm quản lý thanh
 		
 		\item \textbf{Admin}: Quản trị viên chịu trách nhiệm quản lý người dùng, cuộc thi, đội thi, bài nộp và toàn bộ hoạt động của hệ thống.
 	\end{itemize}
+	
 	\section{Yêu cầu chức năng}
 	
 	Dựa trên phân tích nghiệp vụ và sơ đồ Use Case, hệ thống cần đáp ứng các yêu cầu chức năng sau:
@@ -131,6 +135,7 @@ Các chức năng ngoài phạm vi của hệ thống bao gồm quản lý thanh
 		\item Cho phép quản trị viên quản lý đội thi.
 		\item Cho phép quản trị viên thống kê và xuất báo cáo.
 	\end{enumerate}
+	
 	\section{Yêu cầu phi chức năng}
 	
 	Ngoài các yêu cầu chức năng, hệ thống cần đáp ứng các yêu cầu phi chức năng nhằm đảm bảo chất lượng vận hành.
@@ -154,6 +159,7 @@ Các chức năng ngoài phạm vi của hệ thống bao gồm quản lý thanh
 	\subsection{Khả năng mở rộng}
 	
 	Hệ thống phải có khả năng mở rộng để đáp ứng số lượng người dùng và cuộc thi ngày càng tăng trong tương lai.
+	
 	\section{Sơ đồ use case}
 	
 	Sơ đồ Use Case mô tả các tác nhân tham gia vào hệ thống và các chức năng mà hệ thống cung cấp cho từng tác nhân. Thông qua sơ đồ có thể xác định được phạm vi chức năng của hệ thống cũng như mối quan hệ giữa người dùng và các chức năng nghiệp vụ.
@@ -168,14 +174,222 @@ Các chức năng ngoài phạm vi của hệ thống bao gồm quản lý thanh
 	
 	Sơ đồ ngữ cảnh mô tả hệ thống SEAL Hackathon Management System như một tiến trình trung tâm và các luồng dữ liệu trao đổi với các tác nhân bên ngoài. Sơ đồ giúp xác định phạm vi hệ thống và mối quan hệ giữa hệ thống với môi trường bên ngoài.
 	
-\begin{center}
-	\includegraphics[width=0.8\textwidth]{../../Downloads/context diagram}
-\end{center}
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{../../Downloads/context diagram}
+	\end{center}
 	
 	Trong sơ đồ ngữ cảnh, các tác nhân bên ngoài bao gồm Participant, Team Member, Mentor, Judge và Admin. Các tác nhân này gửi yêu cầu đến hệ thống như đăng ký tham gia cuộc thi, quản lý đội thi, nộp bài dự thi, đánh giá dự án và quản trị hệ thống. Ngược lại, hệ thống cung cấp các thông tin phản hồi như kết quả đánh giá, thông tin cuộc thi, trạng thái bài nộp và các báo cáo quản trị. Sơ đồ ngữ cảnh cho thấy hệ thống đóng vai trò là trung tâm xử lý và quản lý toàn bộ dữ liệu liên quan đến cuộc thi Hackathon.
 	
-	
 	\section{Phác thảo giao diện}
+	Mục này trình bày phác thảo thiết kế giao diện (Mockup) cho các chức năng cốt lõi của hệ thống SEAL Hackathon Management System. Giao diện được thiết kế theo hướng hiện đại, trực quan, tập trung vào trải nghiệm người dùng (UX/UI) và đảm bảo tính khả dụng trên nhiều thiết bị.
 	
-	\input{chuong3_api_sequence.tex}
-\end{document}
+	\subsection{Giao diện Chi tiết Cuộc thi Hackathon}
+	Giao diện Chi tiết Cuộc thi (Hackathon Details) là trang thông tin trung tâm, cung cấp cái nhìn toàn diện cho \textit{Participant} về thể lệ, tiến trình và quyền lợi khi tham gia SEAL Hackathon.
+	\begin{itemize}
+		\item \textbf{Khối thông tin tổng quan (Hero Section):} Hiển thị hình ảnh thương hiệu, trạng thái cuộc thi cùng nút hành động "Đăng ký tham gia ngay" (Call-to-Action).
+		\item \textbf{Khối Lộ trình thời gian (Timeline Widget):} Hiển thị tiến trình cuộc thi dưới dạng trục thời gian với các mốc quan trọng (Mở cổng đăng ký, Khai mạc, Hạn chót nộp bài, Chung kết).
+		\item \textbf{Khối Thể lệ và Tiêu chí:} Trình bày chi tiết quy định cuộc thi (yêu cầu kho lưu trữ mã nguồn mở) và tiêu chí đánh giá của Giám khảo.
+	\end{itemize}
+	
+	\subsection{Giao diện Quản lý Đội nhóm (Team Management)}
+	Phân hệ này là không gian làm việc chuyên biệt để các thí sinh thiết lập bộ máy nhân sự nội bộ cho cuộc thi, bao gồm:
+	\begin{itemize}
+		\item \textbf{Khối Thiết lập Đội thi:} Cung cấp hai biểu mẫu xử lý song song là Tạo đội mới (trả về mã mời) và Tham gia đội (nhập mã mời có sẵn). Hệ thống giao tiếp với các API \texttt{/teams/create} và \texttt{/teams/join}.
+		\item \textbf{Bảng Danh sách Nhân sự:} Phân tách làm hai khu vực gồm "Thành viên hiện tại" và "Thành viên chờ duyệt". Trưởng nhóm có quyền thao tác trực tiếp (Đồng ý/Từ chối) trên các yêu cầu gia nhập thông qua API \texttt{/teams/approve}.
+	\end{itemize}
+	
+	\subsection{Giao diện Dashboard và Nộp bài (Dashboard \& Submission)}
+	Màn hình Dashboard là trung tâm tương tác chính, được xây dựng bằng cấu trúc lưới và thẻ (Grid \& Card layout) nhằm tối ưu hóa không gian hiển thị.
+	\begin{itemize}
+		\item \textbf{Bố cục tổng quan:} Gồm Sidebar điều hướng bên trái và thanh tiêu đề cấu hình Token xác thực phía trên.
+		\item \textbf{Khối Nộp bài thi (Project Submission):} Thiết kế biểu mẫu đóng gói sản phẩm thông qua trường nhập liệu URL kho lưu trữ GitHub (\texttt{github-link}). Thí sinh có thể liên tục cập nhật đường dẫn trước thời điểm đóng cổng nộp bài thông qua nút "Nộp bài / Cập nhật" (API \texttt{/submissions/submit}).
+		\item \textbf{Cơ chế phản hồi (Toast UI):} Mọi tương tác bất đồng bộ đều được phản hồi trực quan bằng các thông báo ngắn (Toast Message) báo lỗi hoặc thành công, giúp thí sinh kiểm soát tốt quá trình thao tác.
+	\end{itemize}
+	
+	\chapter{Môi trường phát triển và Cấu trúc dự án}
+	
+	\section{Môi trường phát triển hệ thống}
+	
+	\subsection{Yêu cầu hệ thống}
+	
+	\textbf{Backend:}
+	\begin{itemize}
+		\item Python: Phiên bản 3.14 trở lên
+		\item Hệ điều hành: Windows, macOS, hoặc Linux
+		\item Database: SQLite (tích hợp sẵn với Python)
+	\end{itemize}
+	
+	\textbf{Frontend:}
+	\begin{itemize}
+		\item Node.js: Phiên bản 16.x trở lên
+		\item npm: Phiên bản 7.x trở lên (hoặc yarn)
+		\item Trình duyệt: Chrome, Firefox, Edge, Safari (phiên bản mới nhất)
+	\end{itemize}
+	
+	\subsection{Công cụ phát triển}
+	
+	\begin{table}[h!]
+		\centering
+		\caption{Danh sách các công cụ phát triển hệ thống}
+		\begin{tabular}{llc}
+			\toprule
+			\textbf{Công cụ} & \textbf{Mục đích} & \textbf{Phiên bản đề xuất} \\
+			\midrule
+			VS Code & IDE lập trình chính & Mới nhất \\
+			Git & Quản lý mã nguồn & 2.x \\
+			GitHub & Lưu trữ quản lý phiên bản & - \\
+			Postman & Kiểm thử API & Mới nhất \\
+			DB Browser for SQLite & Quản lý cơ sở dữ liệu SQLite & Mới nhất \\
+			Ngrok & Public local server để kiểm thử & 7.x \\
+			Jira & Quản lý tác vụ và Sprint & - \\
+			draw.io & Vẽ sơ đồ kỹ thuật (ERD, UC, v.v.) & - \\
+			Figma & Thiết kế mẫu thử UI/UX & - \\
+			TeXstudio + MiKTeX & Biên soạn báo cáo LaTeX & - \\
+			\bottomrule
+		\end{tabular}
+	\end{table}
+	
+	\subsection{Cài đặt môi trường}
+	
+	\textbf{Cài đặt cấu hình phần Backend:}
+	\begin{verbatim}
+	# Di chuyển vào thư mục backend
+	cd backend
+	
+	# Cài đặt các thư viện Python cần thiết
+	pip install -r requirements.txt
+	\end{verbatim}
+	Các gói thư viện chính bao gồm: \texttt{fastapi} (Framework REST API), \texttt{uvicorn} (ASGI server), \texttt{pydantic} (Xác thực dữ liệu), \texttt{passlib[bcrypt]} (Mã hóa bảo mật mật khẩu), \texttt{python-jose} (Xác thực mã JWT), \texttt{python-multipart} (Xử lý dữ liệu Form), \texttt{pyngrok} và \texttt{jinja2}.
+	
+	\textbf{Cài đặt cấu hình phần Frontend:}
+	\begin{verbatim}
+	# Cài đặt các gói phụ thuộc NodeJS
+	npm install
+	\end{verbatim}
+	Các thư viện cốt lõi bao gồm: \texttt{react} (\^{}18.2.0), \texttt{react-dom}, \texttt{lucide-react} (thư viện biểu tượng), \texttt{vite} (công cụ đóng gói mã nguồn) và \texttt{tailwindcss}.
+	
+	\subsection{Hướng dẫn vận hành ứng dụng}
+	
+	\textbf{Khởi chạy phía Backend:}
+	\begin{verbatim}
+	cd backend
+	python -m uvicorn app.main:app --reload
+	\end{verbatim}
+	Hệ thống Server cục bộ hoạt động tại địa chỉ \texttt{http://localhost:8000}. Trang tài liệu kiểm thử API tự động (Swagger UI) có thể truy cập công khai tại đường dẫn \texttt{http://localhost:8000/docs}.
+	
+	\textbf{Khởi chạy phía Frontend:}
+	\begin{verbatim}
+	npm run dev
+	\end{verbatim}
+	Ứng dụng giao diện người dùng hoạt động mặc định qua Vite tại \texttt{http://localhost:5173}.
+	
+	\textbf{Cấu hình Public Server bằng Ngrok (Tùy chọn bổ sung):}
+	\begin{verbatim}
+	ngrok http 8000
+	\end{verbatim}
+	
+	\section{Cấu trúc thư mục dự án}
+	Dưới đây là cây cấu trúc phân mục toàn diện của dự án \texttt{SEAL-Hackathon-Management}:
+	
+	\begin{verbatim}
+	SEAL-Hackathon-Management/
+	├── .github/                  # Các kịch bản tự động hóa GitHub Actions
+	├── .vs/                      # Các tệp cấu hình Visual Studio
+	├── backend/                  # Mã nguồn ứng dụng Backend (Python/FastAPI)
+	│   ├── app/                  # Thư mục mã nguồn xử lý logic chính
+	│   │   ├── auth.py           # Logic thực hiện xác thực người dùng
+	│   │   ├── config.py         # Quản lý các tham số cấu hình hệ thống
+	│   │   ├── database.py       # Thiết lập kết nối cơ sở dữ liệu
+	│   │   ├── main.py           # Điểm khởi chạy ứng dụng FastAPI
+	│   │   ├── models.py         # Định nghĩa các bảng cấu trúc SQLAlchemy ORM
+	│   │   ├── routes/           # Thư mục chứa các phân tuyến API điều hướng
+	│   │   │   ├── auth_routes.py       # API phân hệ xác thực đăng nhập
+	│   │   │   ├── submission_routes.py  # API phân hệ nộp bài thi
+	│   │   │   └── teams.py             # API phân hệ quản lý đội nhóm
+	│   │   └── static/           # Chứa tài nguyên tĩnh (HTML, CSS, JS)
+	│   ├── requirements.txt      # Danh mục thư viện Python phụ thuộc
+	│   ├── seal_hackathon.db     # Tệp tin lưu trữ cơ sở dữ liệu SQLite
+	│   └── .gitignore           # Quy tắc loại trừ tệp tin khi đồng bộ Git
+	├── src/                      # Mã nguồn ứng dụng Frontend (React/Vite)
+	│   ├── components/          # Tập hợp các thành phần React tái sử dụng
+	│   │   ├── CandidateDashboard.jsx  # Bảng điều khiển dành cho thí sinh
+	│   │   ├── JuryScreen.jsx         # Giao diện dành cho thành viên giám khảo
+	│   │   └── Leaderboard.jsx        # Giao diện hiển thị bảng xếp hạng
+	│   ├── App.jsx              # Thành phần React gốc điều phối chính
+	│   ├── main.jsx             # Điểm tiếp nhận cấu hình phân phối React
+	│   └── index.css            # Tệp cấu hình định dạng kiểu dáng CSS toàn cục
+	├── docs/                     # Các tài liệu đặc tả dự án bổ sung
+	├── report-latex/            # Các tệp tin biên soạn báo cáo bằng LaTeX
+	├── node_modules/            # Thư mục chứa tài nguyên NodeJS sinh tự động
+	├── index.html               # Điểm neo cấu trúc HTML ứng dụng giao diện
+	├── package.json             # Quản lý tệp cấu hình script lệnh và thư viện Node
+	├── package-lock.json        # Phiên bản đóng khóa chi tiết các thư viện Node
+	├── vite.config.js           # Tham số cấu hình cho công cụ Vite
+	├── tailwind.config.js       # Tham số cấu hình cấu trúc giao diện Tailwind CSS
+	├── postcss.config.js        # Tham số cấu hình xử lý tương thích PostCSS
+	├── config.env.example       # Biểu mẫu thiết lập biến môi trường mẫu
+	├── README.md                # Tài liệu hướng dẫn tổng quan dự án gốc
+	└── ERD.png                  # Ảnh sơ đồ quan hệ thực thể thực tế
+	\end{verbatim}
+	
+	\section{Mô tả chi tiết kiến thức kiến trúc Backend}
+	
+	\subsection{Kiến trúc xử lý phía Backend}
+	Hệ thống Backend được thiết kế chuẩn cấu trúc kiến trúc liên lạc \textbf{REST API} dựa trên nền tảng framework \textbf{FastAPI}. Quy trình vận hành luân chuyển dữ liệu được mô tả tuần tự như mô hình dưới đây:
+	
+	\begin{verbatim}
+	Client (Trình duyệt Web hoặc Mobile)
+	        │
+	        │ Gửi dữ liệu HTTP Request định dạng JSON
+	        ▼
+	FastAPI Application (Bảo trợ bởi Uvicorn ASGI Server)
+	        │
+	        ├── Lớp Xác thực & Bảo mật (auth.py)
+	        │   ├── Xác thực và giải mã khóa Token JWT hợp lệ
+	        │   └── Mã hóa một chiều bảo mật mật khẩu bằng thuật toán Bcrypt
+	        │
+	        ├── Lớp Định tuyến phân tuyến dữ liệu (routes/)
+	        │   ├── auth_routes.py (Xử lý các thao tác đăng ký, đăng nhập)
+	        │   ├── teams.py (Tạo lập, gia nhập, phê duyệt thành viên đội thi)
+	        │   └── submission_routes.py (Đóng gói nộp các bài thi dự án)
+	        │
+	        ├── Phân lớp Xử lý Logic Nghiệp vụ (Business Logic Layer)
+	        │
+	        ├── Lớp Ánh xạ Dữ liệu (models.py)
+	        │   ├── Định nghĩa thực thể thông qua các lớp SQLAlchemy ORM
+	        │   └── Thực thi chuyển đổi câu lệnh thao tác cơ sở dữ liệu
+	        │
+	        └── Tầng Cơ sở dữ liệu vật lý (SQLite Database)
+	            ├── Bảng lưu trữ thông tin Người dùng (Users Table)
+	            ├── Bảng lưu trữ thông tin Đội thi (Teams Table)
+	            └── Bảng lưu trữ dữ liệu Bài nộp (Submissions Table)
+	\end{verbatim}
+	
+	\subsection{Các thành phần công nghệ cốt lõi}
+	
+	\begin{itemize}
+		\item \textbf{FastAPI Framework:} Cung cấp hạ tầng xây dựng hệ thống cổng API với hiệu năng xử lý cao, hỗ trợ tự động sinh tài liệu giao tiếp đặc tả và xác thực cấu trúc dữ liệu nghiêm ngặt qua Pydantic Schemas.
+		\item \textbf{Uvicorn Server:} ASGI server chịu trách nhiệm trung chuyển và duy trì kết nối luồng truyền tải gói tin HTTP không đồng bộ (Async/Await support).
+		\item \textbf{SQLAlchemy ORM:} Công cụ ánh xạ thực thể giúp lập trình viên viết truy vấn cơ sở dữ liệu bằng ngôn ngữ lập trình Python hướng đối tượng mà không cần viết các câu lệnh SQL thuần.
+		\item \textbf{Cơ chế An ninh & Phân quyền:} Kết hợp Token JWT để duy trì phiên làm việc bảo mật ngắn hạn, mã hóa mã băm Bcrypt phòng vệ dữ liệu mật khẩu, thực hiện gán nhãn phân quyền người dùng cố định (\textit{Candidate}, \textit{Jury}, \textit{Admin}).
+	\end{itemize}
+	
+	\subsection{Danh sách các phân hệ cổng API hệ thống}
+	
+	\textbf{Phân hệ Xác thực hệ thống (\texttt{/auth}):}
+	\begin{itemize}
+		\item \texttt{POST /auth/register}: Tiếp nhận dữ liệu khởi tạo đăng ký người dùng mới.
+		\item \texttt{POST /auth/login}: Kiểm tra thông tin định danh và cấp phát Token JWT truy cập hợp lệ.
+	\end{itemize}
+	
+	\textbf{Phân hệ Điều phối Đội nhóm (\texttt{/teams}):}
+	\begin{itemize}
+		\item \texttt{POST /teams/create}: Xử lý yêu cầu thành lập một nhóm thi đấu mới.
+		\item \texttt{POST /teams/join}: Tiếp nhận mã Token mời để xin gia nhập nhóm có sẵn.
+		\item \texttt{POST /teams/approve}: Cấp quyền Trưởng nhóm phê duyệt duyệt duyệt các yêu cầu chờ gia nhập.
+		\item \texttt{GET /teams/my-team}: Truy xuất dữ liệu hồ sơ chi tiết của đội thi hiện tại.
+	\end{itemize}
+	
+	\textbf{Phân hệ Quản lý Bài nộp (\texttt{/submissions}):}
+	\begin{itemize}
+		\item \texttt{POST /submissions/submit}: Ghi nhận thông tin URL mã nguồn
