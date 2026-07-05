@@ -15,7 +15,25 @@
 | Phạm Minh Tâm | 2251150033 | Kiểm thử / Viết báo cáo |
 
 ## Công nghệ sử dụng
-(cập nhật sau khi nhóm chốt)
+
+### Backend
+- Python 3.14
+- FastAPI + Uvicorn
+- SQLite + SQLAlchemy ORM
+- JWT Authentication (python-jose)
+- Bcrypt (passlib)
+
+### Frontend
+- HTML5 / CSS3 / JavaScript
+- Tailwind CSS
+
+### Công cụ
+- Git + GitHub
+- Jira (Agile Scrum)
+- Ngrok
+- Postman
+- draw.io
+- TeXstudio + MiKTeX (LaTeX)
 
 ## Tài liệu
 - Jira Board: 
