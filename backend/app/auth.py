@@ -13,11 +13,13 @@ ACCESS_TOKEN_EXPIRE_MINUTES = 60
 
 # Hàm băm mật khẩu thành chuỗi bảo mật
 def hash_password(password: str) -> str:
-    return pwd_context.hash(password)
+    return pwd_context.hash(str(password)[:72])
 
-# Hàm kiểm tra mật khẩu nhập vào với mật khẩu đã băm trong DB
 def verify_password(plain_password: str, hashed_password: str) -> bool:
-    return pwd_context.verify(plain_password, hashed_password)
+    try:
+        return pwd_context.verify(str(plain_password)[:72], hashed_password)
+    except Exception:
+        return False
 
 # Hàm tạo mã Token Đăng nhập (JWT Access Token)
 def create_access_token(data: dict, expires_delta: Optional[timedelta] = None) -> str:
