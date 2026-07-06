@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ - Hackathon Management</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #f4f6f9;
+        }
+        .navbar {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        .welcome-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .btn-logout {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <h2>Dashboard Hackathon</h2>
+        <button class="btn-logout" onclick="location.href='/static/login.html'">Đăng xuất</button>
+    </div>
+
+    <div class="container">
+        <div class="welcome-card">
+            <h1>👋 Chào mừng bạn đến với Hệ thống Quản lý Hackathon!</h1>
+            <p>Trang chủ của bạn đã được kết nối thành công qua Ngrok.</p>
+            <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+            <h3>Các tính năng dự kiến xây dựng:</h3>
+            <ul>
+                <li>Xem danh sách đội thi (Teams)</li>
+                <li>Đăng ký đề tài thi đấu</li>
+                <li>Xem bảng điểm từ Ban giám khảo</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

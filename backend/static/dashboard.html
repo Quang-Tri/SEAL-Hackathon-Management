@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Đội nhóm & Nộp bài</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <div class="logo-icon">🏆</div>
+                <span class="logo-text">TeamHub</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                    </svg>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    <span>Đội nhóm</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                    <span>Nộp bài</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                    </svg>
+                    <span>Cài đặt</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="top-header">
+                <div class="header-title">
+                    <h1>Dashboard</h1>
+                    <p class="header-subtitle">Quản lý đội nhóm và nộp bài thi</p>
+                </div>
+                <div class="header-actions">
+                    <div class="user-profile">
+                        <div class="avatar">NV</div>
+                        <span class="user-name">nguyễn trung hiếu</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="content-wrapper">
+                <!-- Khối Đội nhóm -->
+                <section class="section">
+                    <div class="section-header">
+                        <h2>Quản lý Đội nhóm</h2>
+                    </div>
+                    
+                    <div class="team-grid">
+                        <!-- Tạo đội mới -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Tạo đội mới</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="team-name">Tên đội</label>
+                                    <input type="text" id="team-name" placeholder="Nhập tên đội của bạn">
+                                </div>
+                                <button class="btn btn-primary">Tạo đội</button>
+                            </div>
+                        </div>
+
+                        <!-- Tham gia đội -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Tham gia đội</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="join-code">Mã code tham gia</label>
+                                    <input type="text" id="join-code" placeholder="Nhập mã code đội">
+                                </div>
+                                <button class="btn btn-secondary">Tham gia đội</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Bảng Thành viên -->
+                <section class="section">
+                    <div class="section-header">
+                        <h2>Danh sách Thành viên</h2>
+                    </div>
+                    
+                    <div class="members-grid">
+                        <!-- Thành viên hiện tại -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Thành viên hiện tại</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-wrapper">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>STT</th>
+                                                <th>Họ và tên</th>
+                                                <th>Vai trò</th>
+                                                <th>Ngày tham gia</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>nguyễn trung hiếu</td>
+                                                <td><span class="badge badge-leader">Trưởng đội</span></td>
+                                                <td>14/06/2026</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>phạm minh tâm</td>
+                                                <td><span class="badge badge-member">Thành viên</span></td>
+                                                <td>14/06/2026</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>lê quang trí</td>
+                                                <td><span class="badge badge-member">Thành viên</span></td>
+                                                <td>14/06/2026</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Thành viên chờ duyệt -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Thành viên chờ duyệt</h3>
+                                <span class="badge badge-warning">3 chờ duyệt</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-wrapper">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>STT</th>
+                                                <th>Họ và tên</th>
+                                                <th>Ngày yêu cầu</th>
+                                                <th>Hành động</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>ái nhân</td>
+                                                <td>14/06/2026</td>
+                                                <td class="action-cell">
+                                                    <button class="btn-sm btn-approve">Đồng ý</button>
+                                                    <button class="btn-sm btn-reject">Từ chối</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>thảo vân</td>
+                                                <td>14/06/2026</td>
+                                                <td class="action-cell">
+                                                    <button class="btn-sm btn-approve">Đồng ý</button>
+                                                    <button class="btn-sm btn-reject">Từ chối</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>thảo uyên </td>
+                                                <td>14/06/2026</td>
+                                                <td class="action-cell">
+                                                    <button class="btn-sm btn-approve">Đồng ý</button>
+                                                    <button class="btn-sm btn-reject">Từ chối</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Khu vực Nộp bài -->
+                <section class="section">
+                    <div class="section-header">
+                        <h2>Nộp bài thi</h2>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="github-link">Link GitHub bài thi</label>
+                                <input type="url" id="github-link" placeholder="https://github.com/username/repository">
+                            </div>
+                            <div class="submission-info">
+                                <div class="info-item">
+                                    <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                    </svg>
+                                    <span>Dán link repository GitHub chứa bài thi của bạn</span>
+                                </div>
+                                <div class="info-item">
+                                    <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                    </svg>
+                                    <span>Đảm bảo repository là public để có thể đánh giá</span>
+                                </div>
+                                <div class="info-item">
+                                    <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                    </svg>
+                                    <span>Bạn có thể cập nhật link bất cứ lúc nào</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-submit">Nộp bài / Cập nhật</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
