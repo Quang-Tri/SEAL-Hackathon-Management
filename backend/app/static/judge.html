@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giám khảo — Chấm điểm bài thi</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f0f2f5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* NAVBAR */
+        nav {
+            background: #1a1a2e;
+            color: white;
+            padding: 14px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav .logo { font-size: 18px; font-weight: 600; }
+        nav .nav-links a {
+            color: #ccc;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;
+        }
+        nav .nav-links a:hover { color: white; }
+
+        /* MAIN */
+        .container {
+            max-width: 900px; /* Rộng hơn một chút để hiển thị danh sách bài thi */
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #1a1a2e;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        .layout-grid {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 24px;
+        }
+
+        @media (max-width: 768px) {
+            .layout-grid { grid-template-columns: 1fr; }
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            height: fit-content;
+        }
+
+        .card h2 {
+            font-size: 16px;
+            color: #1a1a2e;
+            margin-bottom: 16px;
+            border-bottom: 2px solid #f3f4f6;
+            padding-bottom: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 6px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1.5px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.2s;
+            font-family: inherit;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #4f46e5;
+        }
+
+        input:disabled {
+            background: #f3f4f6;
+            color: #999;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background: #4f46e5;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn:hover { background: #4338ca; }
+
+        .alert {
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 14px;
+            margin-top: 16px;
+            display: none;
+        }
+
+        .alert-success {
+            background: #d1fae5;
+            color: #065f46;
+            border: 1px solid #6ee7b7;
+        }
+
+        .alert-error {
+            background: #fee2e2;
+            color: #991b1b;
+            border: 1px solid #fca5a5;
+        }
+
+        /* TABLES */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        th {
+            background: #f8f9fa;
+            padding: 12px;
+            text-align: left;
+            color: #666;
+            font-weight: 500;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #f3f4f6;
+            color: #333;
+            vertical-align: top;
+        }
+
+        .btn-sm {
+            padding: 6px 12px;
+            background: #e0e7ff;
+            color: #4f46e5;
+            border: none;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .btn-sm:hover {
+            background: #4f46e5;
+            color: white;
+        }
+
+        .project-link {
+            color: #4f46e5;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .project-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">SEAL HMS — Giám khảo</div>
+    <div class="nav-links">
+        <a href="/static/home.html">Trang chủ</a>
+        <a href="#" onclick="logout()">Đăng xuất</a>
+    </div>
+</nav>
+
+<div class="container">
+    <h1>Bảng chấm điểm của Giám khảo</h1>
+    <p class="subtitle">Xem danh sách các sản phẩm công nghệ của đội thi và tiến hành cho điểm đánh giá.</p>
+
+    <div class="layout-grid">
+        <!-- BÊN TRÁI: DANH SÁCH BÀI NỘP -->
+        <div class="card">
+            <h2>Danh sách bài dự thi cần chấm</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Thông tin bài thi</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody id="submissionTableBody">
+                    <tr><td colspan="3" style="text-align:center;color:#999">Đang tải danh sách bài nộp...</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- BÊN PHẢI: FORM NHẬP ĐIỂM -->
+        <div class="card">
+            <h2>Form chấm điểm</h2>
+            <div class="form-group">
+                <label>ID Bài dự thi được chọn</label>
+                <input type="text" id="submissionId" disabled placeholder="Chọn một bài thi để chấm">
+            </div>
+            <div class="form-group">
+                <label>Điểm số (Thang điểm 0 - 10)</label>
+                <input type="number" id="score" step="0.1" min="0" max="10" placeholder="Nhập số điểm">
+            </div>
+            <div class="form-group">
+                <label>Nhận xét / Góp ý</label>
+                <textarea id="comment" rows="4" placeholder="Nhập lời nhận xét cho đội thi..."></textarea>
+            </div>
+            <button class="btn" onclick="submitGrade()">Gửi kết quả chấm</button>
+
+            <div class="alert alert-success" id="successAlert"></div>
+            <div class="alert alert-error" id="errorAlert"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const token = localStorage.getItem("token");
+    if (!token) window.location.href = "/static/login.html";
+
+    // 1. Tải danh sách bài thi từ API của Judge
+    async function loadSubmissions() {
+        try {
+            const res = await fetch("/judge/submissions", {
+                headers: { "Authorization": `Bearer ${token}` }
+            });
+            const data = await res.json();
+            const tbody = document.getElementById("submissionTableBody");
+
+            if (!res.ok) {
+                tbody.innerHTML = '<tr><td colspan="3" style="text-align:center;color:#991b1b">Không thể tải dữ liệu bài thi.</td></tr>';
+                return;
+            }
+
+            if (data.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="3" style="text-align:center;color:#999">Chưa có đội nào nộp bài thi.</td></tr>';
+                return;
+            }
+
+            tbody.innerHTML = data.map(s => `
+                <tr>
+                    <td><strong>#${s.id}</strong></td>
+                    <td>
+                        <div style="font-weight:600; color:#1a1a2e; margin-bottom:4px;">Đội ID: ${s.team_id}</div>
+                        <div style="font-size:13px; color:#666; margin-bottom:6px;">${s.description || 'Không có mô tả sản phẩm.'}</div>
+                        ${s.github_url ? `<a href="${s.github_url}" target="_blank" class="project-link">🔗 Xem mã nguồn GitHub</a>` : ''}
+                    </td>
+                    <td>
+                        <button class="btn-sm" onclick="selectSubmission(${s.id})">Chấm bài</button>
+                    </td>
+                </tr>
+            `).join("");
+        } catch (err) {
+            console.error("Lỗi kết nối:", err);
+        }
+    }
+
+    // 2. Điền ID bài thi được chọn vào form
+    function selectSubmission(id) {
+        document.getElementById("submissionId").value = id;
+        document.getElementById("score").value = "";
+        document.getElementById("comment").value = "";
+        document.getElementById("successAlert").style.display = "none";
+        document.getElementById("errorAlert").style.display = "none";
+        document.getElementById("score").focus();
+    }
+
+    // 3. Gửi điểm số lên API
+    async function submitGrade() {
+        const submissionId = document.getElementById("submissionId").value;
+        const score = parseFloat(document.getElementById("score").value);
+        const comment = document.getElementById("comment").value.trim();
+
+        if (!submissionId) {
+            showError("Vui lòng chọn một bài dự thi từ danh sách bên trái!");
+            return;
+        }
+        if (isNaN(score)) {
+            showError("Vui lòng nhập điểm số hợp lệ!");
+            return;
+        }
+
+        try {
+            const res = await fetch("/judge/grade", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${token}`
+                },
+                body: JSON.stringify({
+                    submission_id: parseInt(submissionId),
+                    score: score,
+                    comment: comment || null
+                })
+            });
+
+            const data = await res.json();
+
+            if (res.ok) {
+                showSuccess("Đã lưu kết quả chấm điểm thành công!");
+                document.getElementById("submissionId").value = "";
+                document.getElementById("score").value = "";
+                document.getElementById("comment").value = "";
+            } else {
+                // Bộ lọc lỗi nâng cao chống bug hiển thị mảng [object Object] của FastAPI
+                let errorMsg = "Chấm điểm thất bại!";
+                if (data && data.detail) {
+                    if (Array.isArray(data.detail)) {
+                        errorMsg = data.detail.map(err => err.msg).join(", ");
+                    } else {
+                        errorMsg = data.detail;
+                    }
+                }
+                showError(errorMsg);
+            }
+        } catch (err) {
+            showError("Lỗi kết nối server!");
+        }
+    }
+
+    function showSuccess(msg) {
+        const el = document.getElementById("successAlert");
+        el.textContent = msg;
+        el.style.display = "block";
+        document.getElementById("errorAlert").style.display = "none";
+    }
+
+    function showError(msg) {
+        const el = document.getElementById("errorAlert");
+        el.textContent = msg;
+        el.style.display = "block";
+        document.getElementById("successAlert").style.display = "none";
+    }
+
+    function logout() {
+        localStorage.removeItem("token");
+        window.location.href = "/static/login.html";
+    }
+
+    // Khởi chạy load danh sách khi vào trang
+    loadSubmissions();
+</script>
+</body>
+</html>
