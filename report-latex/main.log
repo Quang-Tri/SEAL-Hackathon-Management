@@ -1,76 +1,76 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.25)  2 JUL 2026 11:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.7.7)  7 JUL 2026 14:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **./main.tex
 (main.tex
-LaTeX2e <2025-11-01>
-L3 programming layer <2025-12-24>
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
+LaTeX2e <2026-06-01>
+L3 programming layer <2026-06-18>
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
 Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
 File: size10.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count275
-\c@chapter=\count276
-\c@section=\count277
-\c@subsection=\count278
-\c@subsubsection=\count279
-\c@paragraph=\count280
-\c@subparagraph=\count281
-\c@figure=\count282
-\c@table=\count283
+\c@part=\count276
+\c@chapter=\count277
+\c@section=\count278
+\c@subsection=\count279
+\c@subsubsection=\count280
+\c@paragraph=\count281
+\c@subparagraph=\count282
+\c@figure=\count283
+\c@table=\count284
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
-\bibindent=\dimen148
+\bibindent=\dimen150
 )
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks17
 \inpenc@posthook=\toks18
 )
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
-Package: babel 2025/12/11 v25.17 The multilingual framework for LuaLaTeX, pdfLa
-TeX and XeLaTeX
-\babel@savecnt=\count284
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2026/06/14 v26.9 The multilingual framework for LuaLaTeX, pdfLaT
+eX and XeLaTeX
+\babel@savecnt=\count285
 LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
-ne 2068.
+ne 2084.
 LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
-ne 2070.
+ne 2086.
 LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input lin
-e 2072.
+e 2088.
 LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input lin
-e 2073.
+e 2089.
 LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) 
-on input line 2074.
+on input line 2090.
 LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) 
-on input line 2076.
+on input line 2092.
 LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
-on input line 2101.
-\U@D=\dimen149
+on input line 2117.
+\U@D=\dimen151
 \l@unhyphenated=\language79
 
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read2
-\bbl@dirlevel=\count285
+\bbl@dirlevel=\count286
 Package babel Info: Configuration files are deprecated, as
 (babel)             they can break document portability.
-(babel)             Reported on input line 4196.
+(babel)             Reported on input line 4252.
 
 *************************************
 * Local config file bblopts.cfg used
 *
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
  babel
 )
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/vi\babel
--vietnamese.tex)
-Package babel Info: Importing font and identification data for vietnamese
-(babel)             from babel-vi.ini. Reported on input line 4320.
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/vi\babel-
+vietnamese.tex)
+Package babel Info: Importing font and identification data for 'vietnamese'
+(babel)             from babel-vi.ini. Reported on input line 4380.
 
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/babel-vietnamese\vietna
-mese.ldf
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/latex/babel-vietnamese\vietnam
+ese.ldf
 Language: vietnamese 
 
 
@@ -85,12 +85,12 @@ Package babel Info: Hyphen rules for 'vietnamese' set to \l@english
 Package babel Info: Hyphen rules for 'vietnam' set to \l@english
 (babel)             (\language0). Reported on input line 38.
 Loading definitions for the Vietnamese font encoding
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5enc.def
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5enc.def
 File: t5enc.def 2006/11/21 v1.4 Vietnamese T5 encoding
 Now handling font encoding T5 ...
 ... processing UTF-8 mapping file for font encoding T5
 
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5enc.dfu
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5enc.dfu
 File: t5enc.dfu 2006/08/19 v1.1 UTF8 support for Vietnamese
    defining Unicode char U+00AB (decimal 171)
    defining Unicode char U+00BB (decimal 187)
@@ -246,178 +246,174 @@ File: t5enc.dfu 2006/08/19 v1.1 UTF8 support for Vietnamese
 ))
 Package babel Info: Making " an active character on input line 147.
 ))
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
-Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2026-05-17 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
 
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
-Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2026-05-17 v1.15 key=value parser (DPC)
 \KV@toks@=\toks19
 )
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
-Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2026-05-17 v1.4h Standard LaTeX Graphics (DPC,SPQR)
 
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
 )
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
-fg
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cf
+g
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
 
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
 File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen150
-\Gin@req@width=\dimen151
-)
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+\Gin@req@height=\dimen152
+\Gin@req@width=\dimen153
+) (C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2026/03/07 v6.0 Page Geometry
-
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
 ))
-\Gm@cnth=\count286
-\Gm@cntv=\count287
-\c@Gm@tempcnt=\count288
-\Gm@bindingoffset=\dimen152
-\Gm@wd@mp=\dimen153
-\Gm@odd@mp=\dimen154
-\Gm@even@mp=\dimen155
-\Gm@layoutwidth=\dimen156
-\Gm@layoutheight=\dimen157
-\Gm@layouthoffset=\dimen158
-\Gm@layoutvoffset=\dimen159
+\Gm@cnth=\count287
+\Gm@cntv=\count288
+\c@Gm@tempcnt=\count289
+\Gm@bindingoffset=\dimen154
+\Gm@wd@mp=\dimen155
+\Gm@odd@mp=\dimen156
+\Gm@even@mp=\dimen157
+\Gm@layoutwidth=\dimen158
+\Gm@layoutheight=\dimen159
+\Gm@layouthoffset=\dimen160
+\Gm@layoutvoffset=\dimen161
 \Gm@dimlist=\toks20
 
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
-Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2026-06-17 v7.01r Hypertext links for LaTeX
 
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 )
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
-keys.sty
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinek
+eys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 )
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
-ty
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.st
+y
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+ (C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
 )
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
-.sty
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.
+sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
-ty
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.st
+y
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-))
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+)) (C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-)
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
-Package: nameref 2025-06-21 v2.57 Cross-referencing by name of section
+) (C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
 
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 )
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
-lestring.sty
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitl
+estring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count289
-)
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+\c@section@level=\count290
+) (C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count290
+\etb@tempcnta=\count291
 )
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.s
-ty
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.st
+y
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
-\@linkdim=\dimen160
-\Hy@linkcounter=\count291
-\Hy@pagecounter=\count292
- (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
-File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
+\@linkdim=\dimen162
+\Hy@linkcounter=\count292
+\Hy@pagecounter=\count293
+ (C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2026-06-17 v7.01r Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+)
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count293
- (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
-File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
+\Hy@SavedSpaceFactor=\count294
+
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2026-06-17 v7.01r Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Hyper figures OFF on input line 4195.
-Package hyperref Info: Link nesting OFF on input line 4200.
-Package hyperref Info: Hyper index ON on input line 4203.
-Package hyperref Info: Plain pages OFF on input line 4210.
-Package hyperref Info: Backreferencing OFF on input line 4215.
+Package hyperref Info: Hyper figures OFF on input line 4199.
+Package hyperref Info: Link nesting OFF on input line 4204.
+Package hyperref Info: Hyper index ON on input line 4207.
+Package hyperref Info: Plain pages OFF on input line 4214.
+Package hyperref Info: Backreferencing OFF on input line 4219.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4462.
-\c@Hy@tempcnt=\count294
+Package hyperref Info: Bookmarks ON on input line 4466.
+\c@Hy@tempcnt=\count295
 
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 4801.
-\XeTeXLinkMargin=\dimen161
+LaTeX Info: Redefining \url on input line 4805.
+\XeTeXLinkMargin=\dimen163
 
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
-.sty
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc.
+sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count295
-\Field@Width=\dimen162
-\Fld@charsize=\dimen163
-Package hyperref Info: Hyper figures OFF on input line 6078.
-Package hyperref Info: Link nesting OFF on input line 6083.
-Package hyperref Info: Hyper index ON on input line 6086.
-Package hyperref Info: backreferencing OFF on input line 6093.
-Package hyperref Info: Link coloring OFF on input line 6098.
-Package hyperref Info: Link coloring with OCG OFF on input line 6103.
-Package hyperref Info: PDF/A mode OFF on input line 6108.
-\Hy@abspage=\count296
-\c@Item=\count297
-\c@Hfootnote=\count298
+\Fld@menulength=\count296
+\Field@Width=\dimen164
+\Fld@charsize=\dimen165
+Package hyperref Info: Hyper figures OFF on input line 6091.
+Package hyperref Info: Link nesting OFF on input line 6096.
+Package hyperref Info: Hyper index ON on input line 6099.
+Package hyperref Info: backreferencing OFF on input line 6106.
+Package hyperref Info: Link coloring OFF on input line 6111.
+Package hyperref Info: Link coloring with OCG OFF on input line 6116.
+Package hyperref Info: PDF/A mode OFF on input line 6121.
+\Hy@abspage=\count297
+\c@Item=\count298
+\c@Hfootnote=\count299
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
-File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
-\Fld@listcount=\count299
-\c@bookmark@seq@number=\count300
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+File: hpdftex.def 2026-06-17 v7.01r Hyperref driver for pdfTeX
+\Fld@listcount=\count300
+\c@bookmark@seq@number=\count301
 
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
-echeck.sty
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfile
+check.sty
 Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
 
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
-ounter.sty
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniqueco
+unter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
@@ -425,27 +421,28 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip51
 )
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
-Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
-\col@sep=\dimen164
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2026/02/24 v2.7b Tabular extension package (FMi)
+\col@sep=\dimen166
 \ar@mcellbox=\box53
-\extrarowheight=\dimen165
+\extrarowheight=\dimen167
 \NC@list=\toks21
 \extratabsurround=\skip52
 \backup@length=\skip53
 \ar@cellbox=\box54
 )
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
 )
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
 Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
 
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 274.
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
 Package xcolor Info: Model `RGB' extended on input line 1365.
@@ -456,10 +453,10 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
 )
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
-tex.def
-File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count301
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdft
+ex.def
+File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count302
 )
 
 LaTeX Warning: Unused global option(s):
@@ -468,8 +465,7 @@ LaTeX Warning: Unused global option(s):
 (main.aux
 LaTeX Font Info:    Trying to load font information for T5+cmr on input line 8.
 
-
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5cmr.fd
+ (C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5cmr.fd
 File: t5cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 Package babel Info: 'vietnamese' activates 'vietnamese' shorthands.
@@ -498,29 +494,29 @@ LaTeX Font Info:    ... okay on input line 12.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
 
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
-ii
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mki
+i
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count302
-\scratchdimen=\dimen166
+\scratchcounter=\count303
+\scratchdimen=\dimen168
 \scratchbox=\box55
-\nofMPsegments=\count303
-\nofMParguments=\count304
+\nofMPsegments=\count304
+\nofMParguments=\count305
 \everyMPshowfont=\toks22
-\MPscratchCnt=\count305
-\MPscratchDim=\dimen167
-\MPnumerator=\count306
-\makeMPintoPDFobject=\count307
+\MPscratchCnt=\count306
+\MPscratchDim=\dimen169
+\MPnumerator=\count307
+\makeMPintoPDFobject=\count308
 \everyMPtoPDFconversion=\toks23
 )
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
-ase.sty
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-ba
+se.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
-fg
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cf
+g
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 *geometry* driver: auto-detecting
@@ -562,14 +558,10 @@ Package hyperref Info: Link coloring OFF on input line 12.
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
+Package babel Info: Main language set to 'vietnamese'.
  [1
 
-{C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (main.toc
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 3.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 3.
-)
+{C:/Users/MTBH/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (main.toc)
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
@@ -604,6 +596,11 @@ I could not locate the file with any of these extensions:
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
+LaTeX Font Info:    Trying to load font information for T5+cmtt on input line 1
+62.
+(C:\Users\MTBH\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5cmtt.fd
+File: t5cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
 [5]
 
 ! LaTeX Error: File `../../Downloads/context diagram' not found.
@@ -619,121 +616,1794 @@ I could not locate the file with any of these extensions:
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-(chuong3_api_sequence.tex
-LaTeX Font Info:    Trying to load font information for T5+cmtt on input line 1
-5.
+[6] [7]
+Overfull \hbox (21.2279pt too wide) in paragraph at lines 200--201
+\T5/cmr/m/n/10 d�n tr��c th�i ^^_i�m ^^_�ng c�ng n�p b�i th�ng qua n�t "N�p b�i
+ / C�p nh�t"(API \T5/cmtt/m/n/10 /submissions/submit\T5/cmr/m/n/10 ). 
+ []
 
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5cmtt.fd
-File: t5cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-[6] [7] [8]
+! You can't use `macro parameter character #' in vertical mode.
+l.203 	#
+         Môi trường phát triển và Cấu trúc dự án - SEAL Hackat...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
 
-! LaTeX Error: Unknown float option `H'.
+! You can't use `macro parameter character #' in vertical mode.
+l.205 #
+       # 1. Môi trường phát triển hệ thống
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.205 ##
+         1. Môi trường phát triển hệ thống
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.207 #
+       ## 1.1. Yêu cầu hệ thống
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.207 ##
+        # 1.1. Yêu cầu hệ thống
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.207 ###
+          1.1. Yêu cầu hệ thống
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.209 #
+       ### Backend
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.209 ##
+        ## Backend
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.209 ###
+         # Backend
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.209 ####
+           Backend
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.214 #
+       ### Frontend
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.214 ##
+        ## Frontend
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.214 ###
+         # Frontend
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.214 ####
+           Frontend
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.219 #
+       ## 1.2. Công cụ phát triển
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.219 ##
+        # 1.2. Công cụ phát triển
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.219 ###
+          1.2. Công cụ phát triển
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.234 #
+       ## 1.3. Cài đặt môi trường
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.234 ##
+        # 1.3. Cài đặt môi trường
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.234 ###
+          1.3. Cài đặt môi trường
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.236 #
+       ### Cài đặt Backend
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.236 ##
+        ## Cài đặt Backend
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.236 ###
+         # Cài đặt Backend
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.236 ####
+           Cài đặt Backend
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.237 #
+        Di chuyển vào thư mục backend
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.240 #
+        Cài đặt các thư viện Python
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.243 #
+        Các thư viện chính:
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.244 #
+        - fastapi: Framework REST API
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.245 #
+        - uvicorn: ASGI server
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.246 #
+        - pydantic: Validation dữ liệu
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.247 #
+        - passlib[bcrypt]: Mã hóa mật khẩu
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.248 #
+        - python-jose: Xác thực JWT
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.249 #
+        - python-multipart: Xử lý form data
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.250 #
+        - pyngrok: Public server qua Ngrok
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.251 #
+        - jinja2: Render HTML template
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.253 #
+       ### Cài đặt Frontend
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.253 ##
+        ## Cài đặt Frontend
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.253 ###
+         # Cài đặt Frontend
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.253 ####
+           Cài đặt Frontend
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.254 #
+        Cài đặt dependencies
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.257 #
+        Các thư viện chính:
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.258 #
+        - react: ^18.2.0
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.258 # - react: ^
+                  18.2.0
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 258.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 258.
+! You can't use `macro parameter character #' in math mode.
+l.259 #
+        - react-dom: ^18.2.0
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.260 #
+        - lucide-react: ^0.263.1 (icon library)
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.261 #
+        - vite: ^4.3.9 (build tool)
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.262 #
+        - tailwindcss: ^3.3.2 (CSS framework)
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.263 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.264 #
+       ## 1.4. Chạy ứng dụng
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.264 ##
+        # 1.4. Chạy ứng dụng
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.264 ###
+          1.4. Chạy ứng dụng
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.266 #
+       ### Chạy Backend
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.266 ##
+        ## Chạy Backend
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.266 ###
+         # Chạy Backend
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.266 ####
+           Chạy Backend
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.269 #
+        Server chạy tại http://localhost:8000
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.270 #
+        API Docs tại http://localhost:8000/docs
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+Overfull \hbox (10.78464pt too wide) in paragraph at lines 266--271
+[]\T5/cmr/m/n/10 Ch�y Back-end cd back-end python -m uvi-corn app.main:app --re
+load  Server ch�y t�i http://localhost:8000
+ []
+
+! You can't use `macro parameter character #' in vertical mode.
+l.272 #
+       ### Chạy Frontend
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.272 ##
+        ## Chạy Frontend
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.272 ###
+         # Chạy Frontend
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.272 ####
+           Chạy Frontend
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.274 #
+        Frontend chạy tại http://localhost:5173 (mặc định của Vite)
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.276 #
+       ### Public server qua Ngrok (tùy chọn)
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.276 ##
+        ## Public server qua Ngrok (tùy chọn)
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.276 ###
+         # Public server qua Ngrok (tùy chọn)
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.276 ####
+           Public server qua Ngrok (tùy chọn)
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.281 #
+       # 2. Cấu trúc thư mục dự án
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in vertical mode.
+l.281 ##
+         2. Cấu trúc thư mục dự án
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+! LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.109 \begin{figure}[H]
-                       
-Option `H' ignored and `p' used.
+l.284 ├
+         ── .github/                  # GitHub Actions workflows
+You may provide a definition with
+\DeclareUnicodeCharacter 
 
 
-LaTeX Warning: File `images/sequence_login.png' not found on input line 111.
-
-
-! Package pdftex.def Error: File `images/sequence_login.png' not found: using d
-raft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.111 ...th=\textwidth]{images/sequence_login.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Unknown float option `H'.
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.134 \begin{figure}[H]
-                       
-Option `H' ignored and `p' used.
+l.284 ├─
+            ─ .github/                  # GitHub Actions workflows
+You may provide a definition with
+\DeclareUnicodeCharacter 
 
 
-LaTeX Warning: File `images/sequence_submit.png' not found on input line 136.
-
-
-! Package pdftex.def Error: File `images/sequence_submit.png' not found: using 
-draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.136 ...h=\textwidth]{images/sequence_submit.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[9] [10] [11]
-
-! LaTeX Error: Unknown float option `H'.
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.161 \begin{figure}[H]
-                       
-Option `H' ignored and `p' used.
+l.284 ├──
+                .github/                  # GitHub Actions workflows
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.284 ├── .github/                  #
+                                            GitHub Actions workflows
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
 
 
-LaTeX Warning: File `images/sequence_score.png' not found on input line 163.
+! LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
 
-
-! Package pdftex.def Error: File `images/sequence_score.png' not found: using d
-raft setting.
-
-See the pdftex.def package documentation for explanation.
+See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.163 ...th=\textwidth]{images/sequence_score.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+l.285 ├
+         ── .vs/                      # Visual Studio settings
+You may provide a definition with
+\DeclareUnicodeCharacter 
 
-) [12] [13] (main.aux)
- ***********
-LaTeX2e <2025-11-01>
-L3 programming layer <2025-12-24>
- ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 0ECD2EA41C5C2513E21750E1B5EEBAB7;3676.
- ) 
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.285 ├─
+            ─ .vs/                      # Visual Studio settings
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.285 ├──
+                .vs/                      # Visual Studio settings
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.285 ├── .vs/                      #
+                                            Visual Studio settings
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+! LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.286 ├
+         ── backend/                  # Backend application (Python/Fast...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.286 ├─
+            ─ backend/                  # Backend application (Python/Fast...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.286 ├──
+                backend/                  # Backend application (Python/Fast...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.286 ├── backend/                  #
+                                            Backend application (Python/Fast...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.287 │
+            ├── app/                  # Main application code
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.287 │   ├
+               ── app/                  # Main application code
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.287 │   ├─
+                  ─ app/                  # Main application code
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.287 │   ├──
+                      app/                  # Main application code
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.287 │   ├── app/                  #
+                                              Main application code
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.288 │
+            │   ├── auth.py           # Authentication logic
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.288 │   │
+                  ├── auth.py           # Authentication logic
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.288 │   │   ├
+                     ── auth.py           # Authentication logic
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.288 │   │   ├─
+                        ─ auth.py           # Authentication logic
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.288 │   │   ├──
+                            auth.py           # Authentication logic
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.288 │   │   ├── auth.py           #
+                                                Authentication logic
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.289 │
+            │   ├── config.py         # Configuration settings
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.289 │   │
+                  ├── config.py         # Configuration settings
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.289 │   │   ├
+                     ── config.py         # Configuration settings
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.289 │   │   ├─
+                        ─ config.py         # Configuration settings
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.289 │   │   ├──
+                            config.py         # Configuration settings
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.289 │   │   ├── config.py         #
+                                                Configuration settings
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.290 │
+            │   ├── database.py       # Database connection setup
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.290 │   │
+                  ├── database.py       # Database connection setup
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.290 │   │   ├
+                     ── database.py       # Database connection setup
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.290 │   │   ├─
+                        ─ database.py       # Database connection setup
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.290 │   │   ├──
+                            database.py       # Database connection setup
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.290 │   │   ├── database.py       #
+                                                Database connection setup
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.291 │
+            │   ├── main.py           # FastAPI application entry point
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.291 │   │
+                  ├── main.py           # FastAPI application entry point
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.291 │   │   ├
+                     ── main.py           # FastAPI application entry point
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.291 │   │   ├─
+                        ─ main.py           # FastAPI application entry point
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.291 │   │   ├──
+                            main.py           # FastAPI application entry point
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.291 │   │   ├── main.py           #
+                                                FastAPI application entry point
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.292 │
+            │   ├── models.py         # SQLAlchemy ORM models
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.292 │   │
+                  ├── models.py         # SQLAlchemy ORM models
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.292 │   │   ├
+                     ── models.py         # SQLAlchemy ORM models
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.292 │   │   ├─
+                        ─ models.py         # SQLAlchemy ORM models
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.292 │   │   ├──
+                            models.py         # SQLAlchemy ORM models
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.292 │   │   ├── models.py         #
+                                                SQLAlchemy ORM models
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.293 │
+            │   ├── routes/           # API route handlers
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.293 │   │
+                  ├── routes/           # API route handlers
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.293 │   │   ├
+                     ── routes/           # API route handlers
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.293 │   │   ├─
+                        ─ routes/           # API route handlers
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.293 │   │   ├──
+                            routes/           # API route handlers
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.293 │   │   ├── routes/           #
+                                                API route handlers
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.294 │
+            │   │   ├── auth_routes.py      # Authentication endpo...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.294 │   │
+                  │   ├── auth_routes.py      # Authentication endpo...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.294 │   │   │
+                        ├── auth_routes.py      # Authentication endpo...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.294 │   │   │   ├
+                           ── auth_routes.py      # Authentication endpo...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.294 │   │   │   ├─
+                              ─ auth_routes.py      # Authentication endpo...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.294 │   │   │   ├──
+                                  auth_routes.py      # Authentication endpo...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.294 │   │   │   ├── auth_
+                                       routes.py      # Authentication endpo...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! You can't use `macro parameter character #' in math mode.
+l.294 ...�   │   ├── auth_routes.py      #
+                                                   Authentication endpoints
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.295 │
+            │   │   ├── submission_routes.py # Submission endpoints
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.295 │   │
+                  │   ├── submission_routes.py # Submission endpoints
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.295 │   │   │
+                        ├── submission_routes.py # Submission endpoints
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.295 │   │   │   ├
+                           ── submission_routes.py # Submission endpoints
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.295 │   │   │   ├─
+                              ─ submission_routes.py # Submission endpoints
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.295 │   │   │   ├──
+                                  submission_routes.py # Submission endpoints
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+! You can't use `macro parameter character #' in math mode.
+l.295 ...   │   ├── submission_routes.py #
+                                                   Submission endpoints
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.296 │
+            │   │   └── teams.py            # Team management endp...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.296 │   │
+                  │   └── teams.py            # Team management endp...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.296 │   │   │
+                        └── teams.py            # Team management endp...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character └ (U+2514)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.296 │   │   │   └
+                           ── teams.py            # Team management endp...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.296 │   │   │   └─
+                              ─ teams.py            # Team management endp...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.296 │   │   │   └──
+                                  teams.py            # Team management endp...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+! You can't use `macro parameter character #' in math mode.
+l.296 ...�   │   └── teams.py            #
+                                                   Team management endpoints
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.297 │
+            │   └── static/           # Static files (HTML, CSS, JS)
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.297 │   │
+                  └── static/           # Static files (HTML, CSS, JS)
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character └ (U+2514)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.297 │   │   └
+                     ── static/           # Static files (HTML, CSS, JS)
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.297 │   │   └─
+                        ─ static/           # Static files (HTML, CSS, JS)
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.297 │   │   └──
+                            static/           # Static files (HTML, CSS, JS)
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+! You can't use `macro parameter character #' in math mode.
+l.297 │   │   └── static/           #
+                                                Static files (HTML, CSS, JS)
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.298 │
+            ├── requirements.txt      # Python dependencies
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.298 │   ├
+               ── requirements.txt      # Python dependencies
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.298 │   ├─
+                  ─ requirements.txt      # Python dependencies
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.298 │   ├──
+                      requirements.txt      # Python dependencies
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+! You can't use `macro parameter character #' in math mode.
+l.298 │   ├── requirements.txt      #
+                                              Python dependencies
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.299 │
+            ├── seal_hackathon.db     # SQLite database file
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.299 │   ├
+               ── seal_hackathon.db     # SQLite database file
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.299 │   ├─
+                  ─ seal_hackathon.db     # SQLite database file
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.299 │   ├──
+                      seal_hackathon.db     # SQLite database file
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+! You can't use `macro parameter character #' in math mode.
+l.299 │   ├── seal_hackathon.db     #
+                                              SQLite database file
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+! LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.300 │
+            └── .gitignore           # Git ignore rules
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character └ (U+2514)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.300 │   └
+               ── .gitignore           # Git ignore rules
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.300 │   └─
+                  ─ .gitignore           # Git ignore rules
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.300 │   └──
+                      .gitignore           # Git ignore rules
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+! You can't use `macro parameter character #' in math mode.
+l.300 │   └── .gitignore           #
+                                             Git ignore rules
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+! LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.301 ├
+         ── src/                      # Frontend application (React/Vite)
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.301 ├─
+            ─ src/                      # Frontend application (React/Vite)
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.301 ├──
+                src/                      # Frontend application (React/Vite)
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+! You can't use `macro parameter character #' in math mode.
+l.301 ├── src/                      #
+                                            Frontend application (React/Vite)
+(That makes 100 errors; please try again.) 
 Here is how much of TeX's memory you used:
- 11321 strings out of 467871
- 182433 string characters out of 5418376
- 615857 words of memory out of 5000000
- 40011 multiletter control sequences out of 15000+600000
- 638135 words of font info for 52 fonts, out of 8000000 for 9000
+ 11261 strings out of 467510
+ 180264 string characters out of 5409281
+ 620915 words of memory out of 5000000
+ 40328 multiletter control sequences out of 15000+600000
+ 638958 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,5n,79p,898b,544s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
-1000.pk><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnb
-x10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnb
-x12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr
-10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vntt
-10.pfb>
-Output written on main.pdf (14 pages, 132532 bytes).
-PDF statistics:
- 251 PDF objects out of 1000 (max. 8388607)
- 68 named destinations out of 1000 (max. 500000)
- 185 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 74i,5n,79p,692b,570s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
+!  ==> Fatal error occurred, no output PDF file produced!
