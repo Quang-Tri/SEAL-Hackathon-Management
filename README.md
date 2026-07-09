@@ -17,24 +17,32 @@
 ## Công nghệ sử dụng
 
 ### Backend
+
 - Python 3.14
-- FastAPI + Uvicorn
-- SQLite + SQLAlchemy ORM
+- FastAPI
+- Uvicorn
+- SQLAlchemy ORM
+- SQLite
 - JWT Authentication (python-jose)
-- Bcrypt (passlib)
+- Passlib + BCrypt
+- Pydantic
+- Python Multipart
 
 ### Frontend
-- HTML5 / CSS3 / JavaScript
-- Tailwind CSS
+
+- HTML5
+- CSS3
+- JavaScript (Vanilla JS)
 
 ### Công cụ
+
 - Git + GitHub
 - Jira (Agile Scrum)
-- Ngrok
 - Postman
-- draw.io
-- TeXstudio + MiKTeX (LaTeX)
-
+- Ngrok
+- VS Code
+- Draw.io
+- TeXStudio + MiKTeX (LaTeX)
 ## Tài liệu
 - Jira Board: 
 - Báo cáo LaTeX: 
