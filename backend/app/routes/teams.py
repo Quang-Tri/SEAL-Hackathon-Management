@@ -405,3 +405,52 @@ def leave_team(
     return {
         "message": "Bạn đã rời khỏi đội thành công."
     }
+
+# ============================================================
+# BE-09: Kick thành viên khỏi đội
+# DELETE /teams/kick/{user_id}
+# ============================================================
+
+@router.delete("/kick/{user_id}")
+def kick_member(
+    user_id: int,
+    db: Session = Depends(get_db),
+    current_user: models.User = Depends(get_current_user)
+):
+    # Chỉ trưởng đội mới được kick thành viên
+    team = db.query(models.Team).filter(
+        models.Team.leader_id == current_user.id
+    ).first()
+
+    if not team:
+        raise HTTPException(
+            status_code=403,
+            detail="Bạn không phải trưởng đội. Không có quyền kick thành viên."
+        )
+
+    # Không cho trưởng đội tự kick chính mình
+    if user_id == current_user.id:
+        raise HTTPException(
+            status_code=400,
+            detail="Trưởng đội không thể tự kick chính mình. Hãy dùng chức năng giải tán đội."
+        )
+
+    member_record = db.query(models.TeamMember).filter(
+        models.TeamMember.team_id == team.id,
+        models.TeamMember.user_id == user_id,
+        models.TeamMember.is_approved == True
+    ).first()
+
+    if not member_record:
+        raise HTTPException(
+            status_code=404,
+            detail="Không tìm thấy thành viên này trong đội."
+        )
+
+    db.delete(member_record)
+    db.commit()
+
+    return {
+        "message": "Đã kick thành viên khỏi đội thành công."
+    }
+

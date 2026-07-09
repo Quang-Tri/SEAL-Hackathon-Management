@@ -1,4 +1,5 @@
 const token = localStorage.getItem("access_token");
+let currentRole = null;
 
 if (!token) {
     window.location.href = "/static/login.html";
@@ -41,6 +42,7 @@ function getTeamCards() {
 }
 
 function showNoTeamView() {
+    currentRole = null;
     setText(".user-name", "Chưa có đội");
     setText(".avatar", "?");
 
@@ -78,6 +80,9 @@ function showNoTeamView() {
 
     const pendingBody = document.getElementById("pending-table-body");
     if (pendingBody) pendingBody.innerHTML = "";
+    const sections = document.querySelectorAll(".section");
+    if (sections[1]) sections[1].style.display = "none";
+    if (sections[2]) sections[2].style.display = "none";
 
     bindButtons();
 }
@@ -117,6 +122,7 @@ function showTeamView(teamName, inviteCode, role) {
 async function loadDashboard() {
     try {
         const me = await apiFetch("/teams/me");
+        currentRole = me.role || null;
 
         if (!me.has_team) {
             showNoTeamView();
@@ -151,6 +157,8 @@ async function loadMembers() {
     tbody.innerHTML = "";
 
     members.forEach((m, index) => {
+        const canKick = currentRole === "leader" && m.role !== "Leader";
+
         tbody.innerHTML += `
             <tr>
                 <td>${index + 1}</td>
@@ -160,7 +168,13 @@ async function loadMembers() {
                         ${m.role === "Leader" ? "Trưởng đội" : "Thành viên"}
                     </span>
                 </td>
-                <td>Hiện tại</td>
+                <td>
+                    ${
+                        canKick
+                            ? `<button class="btn-sm btn-reject" onclick="kickMember(${m.id})">Kick</button>`
+                            : `Hiện tại`
+                    }
+                </td>
             </tr>
         `;
     });
@@ -254,6 +268,20 @@ async function rejectMember(userId) {
     });
 
     alert(data.message || "Đã từ chối!");
+    await loadPending();
+}
+
+async function kickMember(userId) {
+    if (!confirm("Bạn chắc chắn muốn kick thành viên này khỏi đội?")) {
+        return;
+    }
+
+    const data = await apiFetch(`/teams/kick/${userId}`, {
+        method: "DELETE"
+    });
+
+    alert(data.message || "Đã kick thành viên khỏi đội.");
+    await loadMembers();
     await loadPending();
 }
 
