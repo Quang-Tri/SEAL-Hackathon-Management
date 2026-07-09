@@ -209,3 +209,199 @@ def approve_member(
             status_code=status.HTTP_400_BAD_REQUEST,
             detail="Hành động không hợp lệ. Chỉ chấp nhận 'approve' hoặc 'reject'."
         )
+    
+# ============================================================
+# BE-04: Lấy thông tin đội của tài khoản hiện tại
+# ============================================================
+
+@router.get("/me")
+def get_my_team(
+    db: Session = Depends(get_db),
+    current_user: models.User = Depends(get_current_user)
+):
+    team = db.query(models.Team).filter(
+        models.Team.leader_id == current_user.id
+    ).first()
+
+    role = "leader"
+
+    if not team:
+        membership = db.query(models.TeamMember).filter(
+            models.TeamMember.user_id == current_user.id,
+            models.TeamMember.is_approved == True
+        ).first()
+
+        if membership:
+            team = db.query(models.Team).filter(
+                models.Team.id == membership.team_id
+            ).first()
+            role = "member"
+
+    if not team:
+        return {
+            "has_team": False
+        }
+
+    return {
+        "has_team": True,
+        "role": role,
+        "team": {
+            "id": team.id,
+            "team_name": team.team_name,
+            "invite_code": team.invite_code,
+            "leader_id": team.leader_id,
+            "approved_members": team.approved_members_count
+        }
+    }
+
+
+# ============================================================
+# BE-05: Danh sách thành viên chính thức
+# ============================================================
+
+@router.get("/members")
+def get_members(
+    db: Session = Depends(get_db),
+    current_user: models.User = Depends(get_current_user)
+):
+    team = db.query(models.Team).filter(
+        models.Team.leader_id == current_user.id
+    ).first()
+
+    if not team:
+        membership = db.query(models.TeamMember).filter(
+            models.TeamMember.user_id == current_user.id,
+            models.TeamMember.is_approved == True
+        ).first()
+
+        if not membership:
+            raise HTTPException(404, "Bạn chưa thuộc đội nào.")
+
+        team = db.query(models.Team).filter(
+            models.Team.id == membership.team_id
+        ).first()
+
+    members = []
+
+    leader = db.query(models.User).filter(
+        models.User.id == team.leader_id
+    ).first()
+
+    members.append({
+        "id": leader.id,
+        "username": leader.username,
+        "email": leader.email,
+        "role": "Leader"
+    })
+
+    approved = db.query(models.TeamMember).filter(
+        models.TeamMember.team_id == team.id,
+        models.TeamMember.is_approved == True
+    ).all()
+
+    for m in approved:
+        user = db.query(models.User).filter(
+            models.User.id == m.user_id
+        ).first()
+
+        members.append({
+            "id": user.id,
+            "username": user.username,
+            "email": user.email,
+            "role": "Member"
+        })
+
+    return members
+
+
+# ============================================================
+# BE-06: Danh sách yêu cầu chờ duyệt
+# ============================================================
+
+@router.get("/pending")
+def get_pending_members(
+    db: Session = Depends(get_db),
+    current_user: models.User = Depends(get_current_user)
+):
+    team = db.query(models.Team).filter(
+        models.Team.leader_id == current_user.id
+    ).first()
+
+    if not team:
+        raise HTTPException(
+            status_code=403,
+            detail="Chỉ trưởng nhóm mới được xem."
+        )
+
+    pending = db.query(models.TeamMember).filter(
+        models.TeamMember.team_id == team.id,
+        models.TeamMember.is_approved == False
+    ).all()
+
+    result = []
+
+    for member in pending:
+        user = db.query(models.User).filter(
+            models.User.id == member.user_id
+        ).first()
+
+        result.append({
+            "id": user.id,
+            "username": user.username,
+            "email": user.email
+        })
+
+    return result
+# ============================================================
+# BE-07: Giải tán đội
+# DELETE /teams/disband
+# ============================================================
+
+@router.delete("/disband")
+def disband_team(
+    db: Session = Depends(get_db),
+    current_user: models.User = Depends(get_current_user)
+):
+    team = db.query(models.Team).filter(
+        models.Team.leader_id == current_user.id
+    ).first()
+
+    if not team:
+        raise HTTPException(
+            status_code=403,
+            detail="Bạn không phải trưởng đội."
+        )
+
+    db.delete(team)
+    db.commit()
+
+    return {
+        "message": "Đội đã được giải tán thành công."
+    }
+# ============================================================
+# BE-08: Thành viên rời đội
+# DELETE /teams/leave
+# ============================================================
+
+@router.delete("/leave")
+def leave_team(
+    db: Session = Depends(get_db),
+    current_user: models.User = Depends(get_current_user)
+):
+    membership = db.query(models.TeamMember).filter(
+        models.TeamMember.user_id == current_user.id,
+        models.TeamMember.is_approved == True
+    ).first()
+
+    if not membership:
+        raise HTTPException(
+            status_code=400,
+            detail="Bạn chưa tham gia đội nào."
+        )
+
+    db.delete(membership)
+    db.commit()
+
+    return {
+        "message": "Bạn đã rời khỏi đội thành công."
+    }

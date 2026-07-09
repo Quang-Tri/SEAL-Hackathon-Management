@@ -3,62 +3,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Chủ - Hackathon Management</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            background-color: #f4f6f9;
-        }
-        .navbar {
-            background-color: #2c3e50;
-            color: white;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 30px auto;
-            padding: 0 20px;
-        }
-        .welcome-card {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .btn-logout {
-            background-color: #e74c3c;
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-    </style>
+    <title>Dashboard Đội nhóm & Nộp bài</title>
+    <link rel="stylesheet" href="/static/dashboard.css?v=3">
 </head>
 <body>
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <div class="logo-icon">🏆</div>
+                <span class="logo-text">TeamHub</span>
+            </div>
 
-    <div class="navbar">
-        <h2>Dashboard Hackathon</h2>
-        <button class="btn-logout" onclick="location.href='/static/login.html'">Đăng xuất</button>
+            <nav class="sidebar-nav">
+                <a href="#dashboard-section" class="nav-item active">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                    </svg>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="#team-section" class="nav-item">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    <span>Đội nhóm</span>
+                </a>
+
+                <a href="#submit-section" class="nav-item">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                    <span>Nộp bài</span>
+                </a>
+
+                <a href="#" class="nav-item" id="logout-btn">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                        <polyline points="16 17 21 12 16 7"></polyline>
+                        <line x1="21" y1="12" x2="9" y2="12"></line>
+                    </svg>
+                    <span>Đăng xuất</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content" id="dashboard-section">
+            <!-- Header -->
+            <header class="top-header">
+                <div class="header-title">
+                    <h1>Dashboard</h1>
+                    <p class="header-subtitle">Quản lý đội nhóm và nộp bài thi</p>
+                </div>
+                <div class="header-actions">
+                    <div class="user-profile">
+                        <div class="avatar">?</div>
+                        <span class="user-name">Đang tải...</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="content-wrapper">
+                <!-- Khối Đội nhóm -->
+                <section class="section" id="team-section">
+                    <div class="section-header">
+                        <h2>Quản lý Đội nhóm</h2>
+                    </div>
+
+                    <div class="team-grid">
+                        <!-- Tạo đội / Thông tin đội -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Tạo đội mới</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="team-name">Tên đội</label>
+                                    <input type="text" id="team-name" placeholder="Nhập tên đội của bạn">
+                                </div>
+                                <button class="btn btn-primary" id="create-team-btn">Tạo đội</button>
+                            </div>
+                        </div>
+
+                        <!-- Tham gia đội -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Tham gia đội</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="join-code">Mã code tham gia</label>
+                                    <input type="text" id="join-code" placeholder="Nhập mã code đội">
+                                </div>
+                                <button class="btn btn-secondary" id="join-team-btn">Tham gia đội</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Bảng Thành viên -->
+                <section class="section" id="members-section">
+                    <div class="section-header">
+                        <h2>Danh sách Thành viên</h2>
+                    </div>
+
+                    <div class="members-grid">
+                        <!-- Thành viên hiện tại -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Thành viên hiện tại</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-wrapper">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>STT</th>
+                                                <th>Họ và tên</th>
+                                                <th>Vai trò</th>
+                                                <th>Ngày tham gia</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="members-table-body">
+                                            <!-- dashboard.js sẽ tự thêm thành viên thật từ database -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Thành viên chờ duyệt -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Thành viên chờ duyệt</h3>
+                                <span class="badge badge-warning" id="pending-count">0 chờ duyệt</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-wrapper">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>STT</th>
+                                                <th>Họ và tên</th>
+                                                <th>Ngày yêu cầu</th>
+                                                <th>Hành động</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="pending-table-body">
+                                            <!-- dashboard.js sẽ tự thêm người chờ duyệt thật từ database -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Khu vực Nộp bài -->
+                <section class="section" id="submit-section">
+                    <div class="section-header">
+                        <h2>Nộp bài thi</h2>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Repository GitHub</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="github-link">Link GitHub bài thi</label>
+                                <input type="url" id="github-link" placeholder="https://github.com/username/repository">
+                            </div>
+
+                            <div class="submission-info">
+                                <div class="info-item">
+                                    <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                    </svg>
+                                    <span>Dán link repository GitHub chứa bài thi của bạn.</span>
+                                </div>
+                                <div class="info-item">
+                                    <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                    </svg>
+                                    <span>Đảm bảo repository là public để ban giám khảo có thể đánh giá.</span>
+                                </div>
+                                <div class="info-item">
+                                    <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                    </svg>
+                                    <span>Bạn có thể cập nhật link bất cứ lúc nào trước hạn nộp.</span>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-submit" id="submit-repo-btn">Nộp bài / Cập nhật</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
     </div>
 
-    <div class="container">
-        <div class="welcome-card">
-            <h1>👋 Chào mừng bạn đến với Hệ thống Quản lý Hackathon!</h1>
-            <p>Trang chủ của bạn đã được kết nối thành công qua Ngrok.</p>
-            <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
-            <h3>Các tính năng dự kiến xây dựng:</h3>
-            <ul>
-                <li>Xem danh sách đội thi (Teams)</li>
-                <li>Đăng ký đề tài thi đấu</li>
-                <li>Xem bảng điểm từ Ban giám khảo</li>
-            </ul>
-        </div>
-    </div>
-
+    <script src="/static/dashboard.js?v=3"></script>
 </body>
 </html>

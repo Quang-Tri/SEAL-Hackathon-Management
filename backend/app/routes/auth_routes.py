@@ -1,3 +1,5 @@
+import traceback
+
 from fastapi import APIRouter, Depends, HTTPException, status, Form
 from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
@@ -6,7 +8,10 @@ from app.database import get_db
 from app import models
 from app import auth
 
-router = APIRouter(prefix="/auth", tags=["Authentication"])
+router = APIRouter(
+    prefix="/auth",
+    tags=["Authentication"]
+)
 
 
 # ============================================================
@@ -20,112 +25,143 @@ def register_user(
     password: str = Form(...),
     db: Session = Depends(get_db)
 ):
-    user_exists = db.query(models.User).filter(
-        (models.User.username == username) |
-        (models.User.email == email)
-    ).first()
+    try:
+        print("\n" + "=" * 60)
+        print("REGISTER REQUEST")
+        print("Username :", username)
+        print("Email    :", email)
+        print("Password :", password)
+        print("=" * 60)
 
-    if user_exists:
-        raise HTTPException(
-            status_code=400,
-            detail="Username hoặc Email đã được sử dụng!"
+        # Kiểm tra username/email đã tồn tại chưa
+        user_exists = db.query(models.User).filter(
+            (models.User.username == username) |
+            (models.User.email == email)
+        ).first()
+
+        if user_exists:
+            print("User hoặc Email đã tồn tại.")
+            raise HTTPException(
+                status_code=400,
+                detail="Username hoặc Email đã được sử dụng!"
+            )
+
+        # bcrypt chỉ hỗ trợ tối đa 72 bytes
+        if len(password.encode("utf-8")) > 72:
+            raise HTTPException(
+                status_code=400,
+                detail="Mật khẩu tối đa 72 bytes."
+            )
+
+        print("Đang hash password...")
+
+        hashed_pwd = auth.hash_password(password)
+
+        print("Hash OK:")
+        print(hashed_pwd)
+
+        new_user = models.User(
+            username=username,
+            email=email,
+            hashed_password=hashed_pwd
         )
 
-    # bcrypt giới hạn 72 bytes
-    if len(password.encode("utf-8")) > 72:
+        print("Đang lưu Database...")
+
+        db.add(new_user)
+        db.commit()
+        db.refresh(new_user)
+
+        print("Đăng ký thành công!")
+
+        return {
+            "status": "success",
+            "message": "Đăng ký thành công.",
+            "username": username
+        }
+
+    except HTTPException:
+        raise
+
+    except Exception as e:
+        db.rollback()
+
+        print("\n")
+        print("=" * 80)
+        print("REGISTER ERROR")
+        traceback.print_exc()
+        print("=" * 80)
+        print("\n")
+
         raise HTTPException(
-            status_code=400,
-            detail="Mật khẩu tối đa 72 bytes."
+            status_code=500,
+            detail=str(e)
         )
-
-    hashed_pwd = auth.hash_password(password)
-
-    new_user = models.User(
-        username=username,
-        email=email,
-        hashed_password=hashed_pwd
-    )
-
-    db.add(new_user)
-    db.commit()
-    db.refresh(new_user)
-<<<<<<< HEAD
-
-    return {
-        "status": "Thành công",
-        "message": f"Tài khoản '{username}' đã được khởi tạo thành công!"
-    }
 
 
 # ============================================================
 # LOGIN
 # ============================================================
 
-=======
-    
-    return {"status": "Thành công", "message": f"Tài khoản '{username}' đã được khởi tạo thành công!"}
-# 2. API ĐĂNG NHẬP
->>>>>>> 214eaa3c4cad450c33d21daa5ab7ff0b5825c194
 @router.post("/login")
 def login_user(
     form_data: OAuth2PasswordRequestForm = Depends(),
     db: Session = Depends(get_db)
 ):
-<<<<<<< HEAD
-    print("=" * 50)
-    print("USERNAME =", repr(form_data.username))
-    print("PASSWORD =", repr(form_data.password))
-    print("PASSWORD LENGTH =", len(form_data.password.encode("utf-8")))
-    print("=" * 50)
-
-=======
->>>>>>> 214eaa3c4cad450c33d21daa5ab7ff0b5825c194
-    user = db.query(models.User).filter(
-        models.User.username == form_data.username
-    ).first()
-
-<<<<<<< HEAD
-    if not user:
-=======
-    if not user or not auth.verify_password(form_data.password, user.hashed_password):
->>>>>>> 214eaa3c4cad450c33d21daa5ab7ff0b5825c194
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Tài khoản không tồn tại!",
-            headers={"WWW-Authenticate": "Bearer"},
-        )
-
-<<<<<<< HEAD
     try:
+
+        print("\n" + "=" * 60)
+        print("LOGIN REQUEST")
+        print("Username :", form_data.username)
+        print("Password :", form_data.password)
+        print("=" * 60)
+
+        user = db.query(models.User).filter(
+            models.User.username == form_data.username
+        ).first()
+
+        if not user:
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Tài khoản không tồn tại!",
+                headers={"WWW-Authenticate": "Bearer"},
+            )
+
         password_ok = auth.verify_password(
-            form_data.password[:72],
+            form_data.password,
             user.hashed_password
         )
+
+        if not password_ok:
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Mật khẩu không chính xác!",
+                headers={"WWW-Authenticate": "Bearer"},
+            )
+
+        access_token = auth.create_access_token(
+            data={"sub": str(user.id)}
+        )
+
+        print("LOGIN SUCCESS")
+
+        return {
+            "access_token": access_token,
+            "token_type": "bearer"
+        }
+
+    except HTTPException:
+        raise
+
     except Exception as e:
-        print("VERIFY ERROR =", str(e))
+        print("\n")
+        print("=" * 80)
+        print("LOGIN ERROR")
+        traceback.print_exc()
+        print("=" * 80)
+        print("\n")
+
         raise HTTPException(
             status_code=500,
-            detail=f"Lỗi verify password: {str(e)}"
+            detail=str(e)
         )
-
-    if not password_ok:
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Mật khẩu không chính xác!",
-            headers={"WWW-Authenticate": "Bearer"},
-        )
-
-=======
->>>>>>> 214eaa3c4cad450c33d21daa5ab7ff0b5825c194
-    access_token = auth.create_access_token(
-        data={"sub": str(user.id)}
-    )
-
-    return {
-        "access_token": access_token,
-        "token_type": "bearer"
-<<<<<<< HEAD
-    }
-=======
-    }
->>>>>>> 214eaa3c4cad450c33d21daa5ab7ff0b5825c194
