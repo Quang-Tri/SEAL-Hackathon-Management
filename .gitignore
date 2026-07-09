@@ -1,13 +1,10 @@
-node_modules
-
-ngrok.exe
-main.log
-Todo.json
-SEAL-Hackathon-Management/
-
-
-# Rác h? th?ng và binaries
-ngrok.exe
-main.log
-Todo.json
-SEAL-Hackathon-Management/
+venv/
+.venv/
+env/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.DS_Store
+Thumbs . db

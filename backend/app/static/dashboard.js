@@ -311,12 +311,16 @@ function bindButtons() {
     const submitBtn = document.querySelector(".btn-submit");
     const disbandBtn = document.getElementById("disband-team-btn");
     const leaveBtn = document.getElementById("leave-team-btn");
+    const logoutBtn = document.getElementById("logout-btn");
+    
 
     if (createBtn) createBtn.onclick = createTeam;
     if (joinBtn) joinBtn.onclick = joinTeam;
     if (submitBtn) submitBtn.onclick = submitRepo;
     if (disbandBtn) disbandBtn.onclick = disbandTeam;
     if (leaveBtn) leaveBtn.onclick = leaveTeam;
+    if (logoutBtn) logoutBtn.onclick = logout;
+   
 }
 
 document.addEventListener("DOMContentLoaded", () => {
