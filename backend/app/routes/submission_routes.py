@@ -1,10 +1,12 @@
 from pydantic import BaseModel, HttpUrl
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
+from sqlalchemy.exc import SQLAlchemyError
 
 from app.database import get_db
-from app.models import Team, TeamMember, Submission
+from app.models import Team, TeamMember, Submission, User
 from app.auth import get_current_user
+
 
 router = APIRouter(
     prefix="/submissions",
@@ -20,72 +22,93 @@ class SubmissionRequest(BaseModel):
 def submit_project(
     request: SubmissionRequest,
     db: Session = Depends(get_db),
-    current_user=Depends(get_current_user)
+    current_user: User = Depends(get_current_user)
 ):
-
-    # Tìm team của user
-
-    team = db.query(Team).filter(
-        Team.leader_id == current_user.id
-    ).first()
-
-    # Nếu không phải leader thì kiểm tra TeamMember
-
-    if not team:
-
-        membership = db.query(TeamMember).filter(
-            TeamMember.user_id == current_user.id,
-            TeamMember.is_approved == True
+    try:
+        # Tìm đội mà người dùng là trưởng đội
+        team = db.query(Team).filter(
+            Team.leader_id == current_user.id
         ).first()
 
-        if not membership:
+        # Nếu không phải trưởng đội, kiểm tra tư cách thành viên
+        if not team:
+            membership = db.query(TeamMember).filter(
+                TeamMember.user_id == current_user.id,
+                TeamMember.is_approved.is_(True)
+            ).first()
+
+            if not membership:
+                raise HTTPException(
+                    status_code=status.HTTP_403_FORBIDDEN,
+                    detail="Bạn chưa thuộc đội nào hoặc chưa được phê duyệt."
+                )
+
+            team = db.query(Team).filter(
+                Team.id == membership.team_id
+            ).first()
+
+        if not team:
             raise HTTPException(
-                status_code=403,
-                detail="Bạn không thuộc đội nào hoặc chưa được phê duyệt."
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="Không tìm thấy thông tin đội."
             )
 
-        team = db.query(Team).filter(
-            Team.id == membership.team_id
+        # Chuyển HttpUrl thành chuỗi trước khi lưu vào SQLite
+        repo_url = str(request.repo_url)
+
+        # Tìm bài nộp hiện tại của đội
+        submission = db.query(Submission).filter(
+            Submission.team_id == team.id
         ).first()
 
-    # Tìm bài nộp hiện tại
+        # Chưa có bài nộp thì tạo mới
+        if submission is None:
+            submission = Submission(
+                team_id=team.id,
+                submitted_by=current_user.id,
+                repo_url=repo_url
+            )
 
-    submission = db.query(Submission).filter(
-        Submission.team_id == team.id
-    ).first()
+            db.add(submission)
+            db.commit()
+            db.refresh(submission)
 
-    # Chưa nộp bài
+            return {
+                "message": "Nộp bài thành công!",
+                "team_id": team.id,
+                "repo_url": submission.repo_url
+            }
 
-    if not submission:
+        # Đã có bài nộp thì cập nhật
+        submission.repo_url = repo_url
+        submission.submitted_by = current_user.id
 
-        submission = Submission(
-            team_id=team.id,
-            submitted_by=current_user.id,
-            repo_url=request.repo_url
-        )
-
-        db.add(submission)
         db.commit()
         db.refresh(submission)
 
         return {
-            "message": "Nộp bài thành công",
+            "message": "Cập nhật bài nộp thành công!",
             "team_id": team.id,
-            "repo_url": submission.repo_url,
-            "updated_at": submission.updated_at
+            "repo_url": submission.repo_url
         }
 
-    # Đã nộp → cập nhật
+    except HTTPException:
+        raise
 
-    submission.repo_url = request.repo_url
-    submission.submitted_by = current_user.id
+    except SQLAlchemyError as error:
+        db.rollback()
+        print("SUBMISSION DATABASE ERROR:", repr(error))
 
-    db.commit()
-    db.refresh(submission)
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Không thể lưu bài nộp vào cơ sở dữ liệu."
+        )
 
-    return {
-        "message": "Cập nhật bài nộp thành công",
-        "team_id": team.id,
-        "repo_url": submission.repo_url,
-        "updated_at": submission.updated_at
-    }
+    except Exception as error:
+        db.rollback()
+        print("SUBMISSION ERROR:", repr(error))
+
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Lỗi hệ thống khi nộp bài: {str(error)}"
+        )
