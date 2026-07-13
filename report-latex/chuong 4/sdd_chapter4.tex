@@ -1,0 +1,190 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[vietnamese]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\geometry{a4paper, margin=25mm}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\small,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style={mystyle}}
+
+\begin{document}
+
+\begin{center}
+    \LARGE\textbf{CHƯƠNG 4: CHI TIẾT THIẾT KẾ KỸ THUẬT (DETAILED DESIGN)}\\[0.5em]
+    \large\textbf{Dự án: SEAL Hackathon Management System}
+\end{center}
+
+\section{Thiết kế API (API Design)}
+Hệ thống sử dụng kiến trúc RESTful API, trao đổi dữ liệu qua định dạng JSON.
+
+\subsection{Authentication \& User Module}
+\begin{itemize}
+    \item \textbf{POST /api/v1/auth/login} (Đăng nhập hệ thống)
+    \begin{itemize}
+        \item \textit{Request Body:}
+\begin{lstlisting}[language=json]
+{
+  "email": "user@fpt.edu.vn",
+  "password": "secure_password"
+}
+\end{lstlisting}
+        \item \textit{Response (200 OK):}
+\begin{lstlisting}[language=json]
+{
+  "token": "JWT_TOKEN_STRING",
+  "role": "judge"
+}
+\end{lstlisting}
+    \end{itemize}
+\end{itemize}
+
+\subsection{Submission Module (Dành cho Đội thi)}
+\begin{itemize}
+    \item \textbf{POST /api/v1/submissions} (Nộp bài thi vòng hiện tại)
+    \begin{itemize}
+        \item \textit{Request Body:}
+\begin{lstlisting}[language=json]
+{
+  "teamId": 12,
+  "roundId": 2,
+  "githubUrl": "https://github.com/Quang-Tri/...",
+  "descriptionPdfUrl": "https://storage.seal...",
+  "videoUrl": "https://youtube.com/..."
+}
+\end{lstlisting}
+        \item \textit{Response (201 Created):}
+\begin{lstlisting}[language=json]
+{
+  "submissionId": 101,
+  "status": "Submitted",
+  "submittedAt": "2026-07-12T21:00:00Z"
+}
+\end{lstlisting}
+    \end{itemize}
+\end{itemize}
+
+\subsection{Scoring Module (Dành cho Giám khảo)}
+\begin{itemize}
+    \item \textbf{POST /api/v1/scoring/submit} (Chấm điểm bài thi chính thức)
+    \begin{itemize}
+        \item \textit{Request Body:}
+\begin{lstlisting}[language=json]
+{
+  "judgeId": 5,
+  "submissionId": 101,
+  "scores": [
+    { "criteriaId": 1, "value": 80, "comment": "Good architecture" },
+    { "criteriaId": 2, "value": 90, "comment": "Highly innovative" }
+  ]
+}
+\end{lstlisting}
+        \item \textit{Response (200 OK):}
+\begin{lstlisting}[language=json]
+{
+  "status": "Success",
+  "message": "Score recorded and Audit Log generated."
+}
+\end{lstlisting}
+    \end{itemize}
+\end{itemize}
+
+\newpage
+\section{Biểu đồ tuần tự (Sequence Diagram)}
+Dưới đây là mô tả luồng xử lý bằng ngôn ngữ mô hình hóa văn bản (được sử dụng để sinh biểu đồ trực quan):
+
+\begin{lstlisting}
+1. Judge -> Backend: POST /api/v1/scoring/submit (Scores, SubmissionId)
+2. Backend -> Backend: Check Calibration Done? & Check Conflict of Interest?
+3. Alt: [Khong hop le] Backend -> Judge: 400 Bad Request / 403 Forbidden
+4. Alt: [Hop le]
+     Backend -> Database: INSERT/UPDATE scores into Score Table
+     Database -> Backend: Save Success
+     Backend -> AuditLog Service: Trigger Log (Actor, Action, New_Value)
+     AuditLog Service -> Backend: Log Saved
+     Backend -> Judge: 200 OK (Success Message)
+\end{lstlisting}
+
+\section{Từ điển dữ liệu (Data Dictionary)}
+
+\subsection{Bảng 1: User (Lưu thông tin tài khoản)}
+\begin{tabular}{llll}
+\toprule
+\textbf{Tên trường (Field)} & \textbf{Kiểu dữ liệu} & \textbf{Ràng buộc} & \textbf{Mô tả} \\ \midrule
+id & INT & PK, Auto Inc & Mã định danh duy nhất của người dùng. \\
+email & VARCHAR(100) & Unique, Not Null & Email đăng nhập hệ thống. \\
+password\_hash & VARCHAR(255) & Not Null & Mật khẩu đã băm. \\
+fullName & VARCHAR(255) & Not Null & Tên đầy đủ. \\
+role & VARCHAR(20) & Not Null & Quyền: admin, coordinator, judge... \\
+status & BIT(1) & Not Null & Trạng thái: 0 = inactive, 1 = active. \\ \bottomrule
+\end{tabular}
+
+\subsection{Bảng 2: Submission (Bài nộp của đội thi)}
+\begin{tabular}{llll}
+\toprule
+\textbf{Tên trường (Field)} & \textbf{Kiểu dữ liệu} & \textbf{Ràng buộc} & \textbf{Mô tả} \\ \midrule
+id & INT & PK, Auto Inc & Mã bài nộp. \\
+team\_id & INT & FK $\rightarrow$ Team & Định danh đội thi nộp bài. \\
+round\_id & INT & FK $\rightarrow$ Round & Nộp cho vòng thi nào. \\
+github\_url & VARCHAR(255) & Not Null & Link repository chứa source code. \\
+description\_pdf\_url & VARCHAR(255) & Not Null & Link tài liệu PDF mô tả dự án. \\
+video\_url & VARCHAR(255) & Not Null & Link video demo sản phẩm. \\
+submitted\_at & DATETIME & Not Null & Mốc thời gian nộp bài thực tế. \\ \bottomrule
+\end{tabular}
+
+\subsection{Bảng 3: Score (Bảng chấm điểm chi tiết)}
+\begin{tabular}{llll}
+\toprule
+\textbf{Tên trường (Field)} & \textbf{Kiểu dữ liệu} & \textbf{Ràng buộc} & \textbf{Mô tả} \\ \midrule
+id & INT & PK, Auto Inc & Mã bản ghi điểm. \\
+judge\_id & INT & FK $\rightarrow$ User & Mã định danh Giám khảo. \\
+submission\_id & INT & FK $\rightarrow$ Submission & Bài nộp được chấm điểm. \\
+criteria\_id & INT & FK $\rightarrow$ Criteria & Tiêu chí chấm (Technical...). \\
+value & INT & Not Null & Điểm số (Thang điểm 0 - 100). \\
+comment & TEXT & Nullable & Nhận xét, đánh giá của giám khảo. \\ \bottomrule
+\end{tabular}
+
+\subsection{Bảng 4: AuditLog (Nhật ký giám sát)}
+\begin{tabular}{llll}
+\toprule
+\textbf{Tên trường (Field)} & \textbf{Kiểu dữ liệu} & \textbf{Ràng buộc} & \textbf{Mô tả} \\ \midrule
+id & INT & PK, Auto Inc & Mã log hệ thống. \\
+actor\_id & INT & FK $\rightarrow$ User & Người thực hiện hành động. \\
+action & VARCHAR(100) & Not Null & Hành động thực hiện. \\
+target\_id & INT & Not Null & ID của bản ghi bị tác động. \\
+old\_value & TEXT & Nullable & Giá trị cũ trước khi thay đổi. \\
+new\_value & TEXT & Nullable & Giá trị mới sau khi thay đổi. \\
+timestamp & DATETIME & Not Null & Thời điểm phát sinh hành động. \\ \bottomrule
+\end{tabular}
+
+\end{document}
