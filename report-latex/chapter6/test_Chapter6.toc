@@ -1,0 +1,102 @@
+\babel@toc {vietnamese}{}\relax 
+\contentsline {chapter}{\numberline {6}USER GUIDE}{3}{}%
+\contentsline {section}{\numberline {6.1}Giới thiệu chương}{3}{}%
+\contentsline {section}{\numberline {6.2}Đối tượng sử dụng hệ thống}{3}{}%
+\contentsline {subsection}{\numberline {6.2.1}Thí sinh (Candidate)}{4}{}%
+\contentsline {subsection}{\numberline {6.2.2}Giám khảo (Judge)}{4}{}%
+\contentsline {subsection}{\numberline {6.2.3}Quản trị viên (Administrator)}{4}{}%
+\contentsline {section}{\numberline {6.3}Điều kiện sử dụng hệ thống}{4}{}%
+\contentsline {subsection}{\numberline {6.3.1}Yêu cầu về trình duyệt}{5}{}%
+\contentsline {subsection}{\numberline {6.3.2}Yêu cầu về kết nối mạng}{5}{}%
+\contentsline {subsection}{\numberline {6.3.3}Yêu cầu về tài khoản}{5}{}%
+\contentsline {section}{\numberline {6.4}Hướng dẫn đăng ký tài khoản}{6}{}%
+\contentsline {subsection}{\numberline {6.4.1}Mô tả chức năng}{6}{}%
+\contentsline {subsection}{\numberline {6.4.2}Điều kiện thực hiện}{6}{}%
+\contentsline {subsection}{\numberline {6.4.3}Các bước thực hiện}{6}{}%
+\contentsline {subsection}{\numberline {6.4.4}Kết quả sau khi thực hiện}{7}{}%
+\contentsline {section}{\numberline {6.5}Hướng dẫn đăng nhập}{8}{}%
+\contentsline {subsection}{\numberline {6.5.1}Mô tả chức năng}{8}{}%
+\contentsline {subsection}{\numberline {6.5.2}Điều kiện thực hiện}{9}{}%
+\contentsline {subsection}{\numberline {6.5.3}Các bước thực hiện}{9}{}%
+\contentsline {subsection}{\numberline {6.5.4}Kết quả sau khi thực hiện}{9}{}%
+\contentsline {section}{\numberline {6.6}Hướng dẫn quản lý đội nhóm}{11}{}%
+\contentsline {subsection}{\numberline {6.6.1}Tạo đội mới}{11}{}%
+\contentsline {subsubsection}{Mô tả chức năng}{11}{}%
+\contentsline {subsubsection}{Điều kiện thực hiện}{12}{}%
+\contentsline {subsubsection}{Các bước thực hiện}{12}{}%
+\contentsline {subsubsection}{Kết quả sau khi thực hiện}{12}{}%
+\contentsline {subsection}{\numberline {6.6.2}Tham gia đội thông qua mã mời}{14}{}%
+\contentsline {subsubsection}{Mô tả chức năng}{14}{}%
+\contentsline {subsubsection}{Điều kiện thực hiện}{14}{}%
+\contentsline {subsubsection}{Các bước thực hiện}{15}{}%
+\contentsline {subsubsection}{Kết quả sau khi thực hiện}{15}{}%
+\contentsline {subsection}{\numberline {6.6.3}Phê duyệt thành viên}{17}{}%
+\contentsline {subsubsection}{Mô tả chức năng}{17}{}%
+\contentsline {subsubsection}{Điều kiện thực hiện}{18}{}%
+\contentsline {subsubsection}{Các bước thực hiện}{18}{}%
+\contentsline {subsubsection}{Kết quả sau khi thực hiện}{18}{}%
+\contentsline {subsection}{\numberline {6.6.4}Xóa thành viên khỏi đội}{20}{}%
+\contentsline {subsubsection}{Mô tả chức năng}{20}{}%
+\contentsline {subsubsection}{Điều kiện thực hiện}{21}{}%
+\contentsline {subsubsection}{Các bước thực hiện}{21}{}%
+\contentsline {subsubsection}{Kết quả sau khi thực hiện}{21}{}%
+\contentsline {subsection}{\numberline {6.6.5}Xem thông tin đội}{23}{}%
+\contentsline {subsubsection}{Mô tả chức năng}{23}{}%
+\contentsline {subsubsection}{Điều kiện thực hiện}{23}{}%
+\contentsline {subsubsection}{Các bước thực hiện}{24}{}%
+\contentsline {subsubsection}{Kết quả sau khi thực hiện}{24}{}%
+\contentsline {subsection}{\numberline {6.6.6}Rời đội}{25}{}%
+\contentsline {subsubsection}{Mô tả chức năng}{25}{}%
+\contentsline {subsubsection}{Điều kiện thực hiện}{25}{}%
+\contentsline {subsubsection}{Các bước thực hiện}{26}{}%
+\contentsline {subsubsection}{Kết quả sau khi thực hiện}{26}{}%
+\contentsline {subsection}{\numberline {6.6.7}Giải tán đội}{28}{}%
+\contentsline {subsubsection}{Mô tả chức năng}{28}{}%
+\contentsline {subsubsection}{Điều kiện thực hiện}{28}{}%
+\contentsline {subsubsection}{Các bước thực hiện}{29}{}%
+\contentsline {subsubsection}{Kết quả sau khi thực hiện}{29}{}%
+\contentsline {section}{\numberline {6.7}Hướng dẫn nộp bài dự thi}{31}{}%
+\contentsline {subsection}{\numberline {6.7.1}Mô tả chức năng}{31}{}%
+\contentsline {subsection}{\numberline {6.7.2}Điều kiện thực hiện}{32}{}%
+\contentsline {subsection}{\numberline {6.7.3}Các bước thực hiện}{32}{}%
+\contentsline {subsection}{\numberline {6.7.4}Kết quả sau khi thực hiện}{32}{}%
+\contentsline {section}{\numberline {6.8}Hướng dẫn cập nhật hồ sơ cá nhân}{35}{}%
+\contentsline {subsection}{\numberline {6.8.1}Mô tả chức năng}{35}{}%
+\contentsline {subsection}{\numberline {6.8.2}Điều kiện thực hiện}{36}{}%
+\contentsline {subsection}{\numberline {6.8.3}Các bước thực hiện}{36}{}%
+\contentsline {subsection}{\numberline {6.8.4}Kết quả sau khi thực hiện}{36}{}%
+\contentsline {section}{\numberline {6.9}Hướng dẫn đăng xuất}{37}{}%
+\contentsline {subsection}{\numberline {6.9.1}Mô tả chức năng}{37}{}%
+\contentsline {subsection}{\numberline {6.9.2}Điều kiện thực hiện}{38}{}%
+\contentsline {subsection}{\numberline {6.9.3}Các bước thực hiện}{38}{}%
+\contentsline {subsection}{\numberline {6.9.4}Kết quả sau khi thực hiện}{38}{}%
+\contentsline {section}{\numberline {6.10}Các lỗi thường gặp và cách xử lý}{40}{}%
+\contentsline {subsection}{\numberline {6.10.1}Lỗi đăng nhập thất bại}{40}{}%
+\contentsline {subsubsection}{Mô tả lỗi}{40}{}%
+\contentsline {subsubsection}{Nguyên nhân}{41}{}%
+\contentsline {subsubsection}{Cách xử lý}{41}{}%
+\contentsline {subsection}{\numberline {6.10.2}Lỗi đăng ký tài khoản}{41}{}%
+\contentsline {subsubsection}{Mô tả lỗi}{41}{}%
+\contentsline {subsubsection}{Nguyên nhân}{41}{}%
+\contentsline {subsubsection}{Cách xử lý}{41}{}%
+\contentsline {subsection}{\numberline {6.10.3}Lỗi tạo đội thất bại}{41}{}%
+\contentsline {subsubsection}{Mô tả lỗi}{41}{}%
+\contentsline {subsubsection}{Nguyên nhân}{42}{}%
+\contentsline {subsubsection}{Cách xử lý}{42}{}%
+\contentsline {subsection}{\numberline {6.10.4}Lỗi tham gia đội thất bại}{42}{}%
+\contentsline {subsubsection}{Mô tả lỗi}{42}{}%
+\contentsline {subsubsection}{Nguyên nhân}{42}{}%
+\contentsline {subsubsection}{Cách xử lý}{42}{}%
+\contentsline {subsection}{\numberline {6.10.5}Lỗi nộp bài thất bại}{42}{}%
+\contentsline {subsubsection}{Mô tả lỗi}{42}{}%
+\contentsline {subsubsection}{Nguyên nhân}{43}{}%
+\contentsline {subsubsection}{Cách xử lý}{43}{}%
+\contentsline {subsection}{\numberline {6.10.6}Lỗi kết nối mạng}{43}{}%
+\contentsline {subsubsection}{Mô tả lỗi}{43}{}%
+\contentsline {subsubsection}{Nguyên nhân}{43}{}%
+\contentsline {subsubsection}{Cách xử lý}{43}{}%
+\contentsline {subsection}{\numberline {6.10.7}Lỗi token hết hạn}{43}{}%
+\contentsline {subsubsection}{Mô tả lỗi}{43}{}%
+\contentsline {subsubsection}{Nguyên nhân}{43}{}%
+\contentsline {subsubsection}{Cách xử lý}{44}{}%
+\contentsline {section}{\numberline {6.11}Đánh giá chương}{44}{}%
