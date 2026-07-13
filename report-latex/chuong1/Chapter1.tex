@@ -1,0 +1,202 @@
+\documentclass[14pt, a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[vietnamese]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage{setspace}
+\usepackage{xcolor}
+
+\begin{document}
+	
+	\begin{titlepage}
+		\centering
+		
+		\textbf{TRƯỜNG ĐẠI HỌC GIAO THÔNG VẬN TẢI TP. HỒ CHÍ MINH}\\
+		\textbf{VIỆN CÔNG NGHỆ THÔNG TIN VÀ ĐIỆN, ĐIỆN TỬ}\\
+		
+		\vspace{2cm}
+		
+		\textbf{BÁO CÁO MÔN HỌC}\\
+		\vspace{0.5cm}
+		\textbf{CÔNG NGHỆ PHẦN MỀM}\\
+		\vspace{0.5cm}
+		\textbf{\color{red}HỆ THỐNG QUẢN LÝ CUỘC THI SEAL HACKATHON}\\
+		\vspace{1cm}
+		
+		\textbf{GVHD: Nguyễn Văn Chiến}\\
+		\vspace{0.5cm}
+		\textbf{SVTH:}\\
+		\vspace{0.5cm}
+		
+		\begin{enumerate}
+			\item Nguyễn Trung Hiếu - MSSV: (cập nhật sau)
+			\item Lê Quang Trí - MSSV: 042206005393
+			\item Phạm Nguyễn Thanh Tùng - MSSV: 075206019883
+			\item Nguyễn Hà Thảo Uyên - MSSV: 051306007680
+			\item Trần Đặng Thảo Vân - MSSV: 066306008936
+			\item Đặng Ái Nhân - MSSV: 052305007698
+			\item Phạm Minh Tâm - MSSV: 2251150033
+		\end{enumerate}
+		
+		\vfill
+		\textbf{Tp. Hồ Chí Minh, tháng 5 năm 2026}
+		
+	\end{titlepage}
+	
+	\tableofcontents
+	\newpage
+	
+	\chapter{Tổng quan về đề tài}
+	\section{Mô tả bài toán}
+	
+	Hackathon là một cuộc thi phát triển sản phẩm công nghệ trong một khoảng thời gian giới hạn, nơi các cá nhân hoặc nhóm cùng nhau xây dựng các giải pháp sáng tạo để giải quyết các vấn đề thực tiễn. Trong quá trình tổ chức Hackathon, ban tổ chức phải quản lý số lượng lớn thí sinh, đội thi, cố vấn, giám khảo và các bài dự thi.
+	
+	Việc quản lý thông tin bằng các phương pháp thủ công hoặc sử dụng nhiều nền tảng riêng biệt thường gây khó khăn trong việc theo dõi tiến độ, đánh giá kết quả và trao đổi thông tin giữa các bên liên quan. Điều này làm tăng khối lượng công việc cho ban tổ chức và dễ phát sinh sai sót trong quá trình vận hành cuộc thi.
+	
+	Để giải quyết những vấn đề trên, hệ thống SEAL Hackathon Management System được đề xuất nhằm hỗ trợ quản lý tập trung toàn bộ quá trình tổ chức và vận hành cuộc thi. Hệ thống cho phép người dùng đăng ký tham gia, tạo đội, quản lý dự án, nộp bài dự thi, nhận hỗ trợ từ cố vấn và tham gia quá trình đánh giá một cách hiệu quả.
+	\section{Mục tiêu hệ thống}
+	
+	Hệ thống SEAL Hackathon Management System được xây dựng nhằm đạt được các mục tiêu sau:
+	
+	\begin{itemize}
+		\item Quản lý tập trung thông tin cuộc thi Hackathon.
+		\item Hỗ trợ đăng ký và quản lý người tham gia.
+		\item Hỗ trợ tạo đội thi và quản lý thành viên.
+		\item Quản lý quá trình nộp bài dự thi.
+		\item Hỗ trợ kết nối giữa đội thi và cố vấn.
+		\item Hỗ trợ giám khảo đánh giá và chấm điểm dự án.
+		\item Cung cấp các chức năng quản trị và thống kê phục vụ ban tổ chức.
+	\end{itemize}
+	\section{Phạm vi hệ thống}
+	
+Hệ thống tập trung hỗ trợ các hoạt động chính trong cuộc thi Hackathon từ giai đoạn đăng ký tham gia đến khi công bố kết quả.
+
+Các chức năng được hỗ trợ bao gồm:
+
+\begin{itemize}
+	\item Đăng ký và đăng nhập tài khoản.
+	\item Quản lý hồ sơ cá nhân.
+	\item Đăng ký tham gia cuộc thi.
+	\item Tạo và quản lý đội thi.
+	\item Quản lý cố vấn.
+	\item Nộp và cập nhật bài dự thi.
+	\item Đánh giá và chấm điểm dự án.
+	\item Quản trị cuộc thi và thống kê báo cáo.
+\end{itemize}
+
+Các chức năng ngoài phạm vi của hệ thống bao gồm quản lý thanh toán, livestream sự kiện và các hoạt động tài chính của cuộc thi.
+	
+	\chapter{Phân tích yêu cầu}
+	\section{Các đối tượng sử dụng}
+	
+	Hệ thống SEAL Hackathon Management System bao gồm các đối tượng sử dụng chính sau:
+	
+	\begin{itemize}
+		\item \textbf{Participant}: Người tham gia cuộc thi, có thể đăng ký tài khoản, đăng ký tham gia Hackathon và theo dõi các hoạt động liên quan đến cuộc thi.
+		
+		\item \textbf{Team Member}: Thành viên của đội thi, tham gia xây dựng dự án, quản lý nhóm và thực hiện nộp bài dự thi.
+		
+		\item \textbf{Mentor}: Chuyên gia hoặc cố vấn hỗ trợ các đội thi trong quá trình phát triển dự án và giải quyết các vấn đề chuyên môn.
+		
+		\item \textbf{Judge}: Giám khảo chịu trách nhiệm đánh giá, chấm điểm và đưa ra nhận xét đối với các bài dự thi.
+		
+		\item \textbf{Admin}: Quản trị viên chịu trách nhiệm quản lý người dùng, cuộc thi, đội thi, bài nộp và toàn bộ hoạt động của hệ thống.
+	\end{itemize}
+	\section{Yêu cầu chức năng}
+	
+	Dựa trên phân tích nghiệp vụ và sơ đồ Use Case, hệ thống cần đáp ứng các yêu cầu chức năng sau:
+	
+	\begin{enumerate}
+		\item Cho phép người dùng đăng ký tài khoản và xác thực email.
+		\item Cho phép người dùng đăng nhập và quản lý hồ sơ cá nhân.
+		\item Cho phép xem danh sách và thông tin chi tiết các cuộc thi.
+		\item Cho phép đăng ký tham gia cuộc thi.
+		\item Cho phép tạo đội thi mới.
+		\item Cho phép tham gia đội thi thông qua lời mời hoặc yêu cầu tham gia.
+		\item Cho phép quản lý thành viên trong đội.
+		\item Cho phép trao đổi và làm việc trong khuôn khổ dự án.
+		\item Cho phép xem yêu cầu nộp bài dự thi.
+		\item Cho phép tải tệp dự án lên hệ thống.
+		\item Cho phép cập nhật thông tin bài nộp.
+		\item Cho phép theo dõi trạng thái bài dự thi.
+		\item Cho phép xem thông tin và gửi yêu cầu hỗ trợ đến Mentor.
+		\item Cho phép giám khảo xem danh sách bài dự thi.
+		\item Cho phép đánh giá và chấm điểm dự án.
+		\item Cho phép nhập nhận xét và công bố kết quả đánh giá.
+		\item Cho phép quản trị viên quản lý người dùng.
+		\item Cho phép quản trị viên quản lý cuộc thi.
+		\item Cho phép quản trị viên quản lý đội thi.
+		\item Cho phép quản trị viên thống kê và xuất báo cáo.
+	\end{enumerate}
+	\section{Yêu cầu phi chức năng}
+	
+	Ngoài các yêu cầu chức năng, hệ thống cần đáp ứng các yêu cầu phi chức năng nhằm đảm bảo chất lượng vận hành.
+	
+	\subsection{Hiệu năng}
+	
+	Hệ thống phải đảm bảo thời gian phản hồi dưới 3 giây đối với các thao tác thông thường và hỗ trợ nhiều người dùng truy cập đồng thời.
+	
+	\subsection{Bảo mật}
+	
+	Thông tin người dùng phải được bảo vệ thông qua cơ chế xác thực và phân quyền. Mật khẩu được mã hóa trước khi lưu trữ trong cơ sở dữ liệu.
+	
+	\subsection{Tính khả dụng}
+	
+	Hệ thống phải hoạt động ổn định trên các trình duyệt phổ biến như Google Chrome, Microsoft Edge và Mozilla Firefox.
+	
+	\subsection{Độ tin cậy}
+	
+	Dữ liệu phải được lưu trữ an toàn và hỗ trợ sao lưu định kỳ nhằm giảm thiểu nguy cơ mất mát dữ liệu.
+	
+	\subsection{Khả năng mở rộng}
+	
+	Hệ thống phải có khả năng mở rộng để đáp ứng số lượng người dùng và cuộc thi ngày càng tăng trong tương lai.
+	\section{Sơ đồ use case}
+	
+	Sơ đồ Use Case mô tả các tác nhân tham gia vào hệ thống và các chức năng mà hệ thống cung cấp cho từng tác nhân. Thông qua sơ đồ có thể xác định được phạm vi chức năng của hệ thống cũng như mối quan hệ giữa người dùng và các chức năng nghiệp vụ.
+	
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{../../Downloads/usecase}
+	\end{center}
+	
+	Dựa trên sơ đồ Use Case, hệ thống bao gồm năm tác nhân chính là Participant, Team Member, Mentor, Judge và Admin. Mỗi tác nhân được cung cấp các chức năng phù hợp với vai trò của mình. Participant và Team Member có thể đăng ký tham gia cuộc thi, quản lý đội thi và nộp bài dự thi. Mentor hỗ trợ các đội trong quá trình phát triển dự án. Judge thực hiện đánh giá và chấm điểm các bài dự thi. Admin chịu trách nhiệm quản lý toàn bộ hoạt động của hệ thống bao gồm quản lý người dùng, cuộc thi, bài nộp và kết quả đánh giá.
+	
+	\section{Sơ đồ ngữ cảnh}
+	
+	Sơ đồ ngữ cảnh mô tả hệ thống SEAL Hackathon Management System như một tiến trình trung tâm và các luồng dữ liệu trao đổi với các tác nhân bên ngoài. Sơ đồ giúp xác định phạm vi hệ thống và mối quan hệ giữa hệ thống với môi trường bên ngoài.
+	
+\begin{center}
+	\includegraphics[width=0.8\textwidth]{../../Downloads/context diagram}
+\end{center}
+	
+	Trong sơ đồ ngữ cảnh, các tác nhân bên ngoài bao gồm Participant, Team Member, Mentor, Judge và Admin. Các tác nhân này gửi yêu cầu đến hệ thống như đăng ký tham gia cuộc thi, quản lý đội thi, nộp bài dự thi, đánh giá dự án và quản trị hệ thống. Ngược lại, hệ thống cung cấp các thông tin phản hồi như kết quả đánh giá, thông tin cuộc thi, trạng thái bài nộp và các báo cáo quản trị. Sơ đồ ngữ cảnh cho thấy hệ thống đóng vai trò là trung tâm xử lý và quản lý toàn bộ dữ liệu liên quan đến cuộc thi Hackathon.
+	
+	
+	\section{Phác thảo giao diện}
+	Mục này trình bày phác thảo thiết kế giao diện (Mockup) cho các chức năng cốt lõi của hệ thống SEAL Hackathon Management System. Giao diện được thiết kế theo hướng hiện đại, trực quan, tập trung vào trải nghiệm người dùng (UX/UI) và đảm bảo tính khả dụng trên nhiều thiết bị.
+	
+	\subsection{Giao diện Chi tiết Cuộc thi Hackathon}
+	Giao diện Chi tiết Cuộc thi (Hackathon Details) là trang thông tin trung tâm, cung cấp cái nhìn toàn diện cho \textit{Participant} về thể lệ, tiến trình và quyền lợi khi tham gia SEAL Hackathon.
+	\begin{itemize}
+		\item \textbf{Khối thông tin tổng quan (Hero Section):} Hiển thị hình ảnh thương hiệu, trạng thái cuộc thi cùng nút hành động "Đăng ký tham gia ngay" (Call-to-Action).
+		\item \textbf{Khối Lộ trình thời gian (Timeline Widget):} Hiển thị tiến trình cuộc thi dưới dạng trục thời gian với các mốc quan trọng (Mở cổng đăng ký, Khai mạc, Hạn chót nộp bài, Chung kết).
+		\item \textbf{Khối Thể lệ và Tiêu chí:} Trình bày chi tiết quy định cuộc thi (yêu cầu kho lưu trữ mã nguồn mở) và tiêu chí đánh giá của Giám khảo.
+	\end{itemize}
+	
+	\subsection{Giao diện Quản lý Đội nhóm (Team Management)}
+	Phân hệ này là không gian làm việc chuyên biệt để các thí sinh thiết lập bộ máy nhân sự nội bộ cho cuộc thi, bao gồm:
+	\begin{itemize}
+		\item \textbf{Khối Thiết lập Đội thi:} Cung cấp hai biểu mẫu xử lý song song là Tạo đội mới (trả về mã mời) và Tham gia đội (nhập mã mời có sẵn). Hệ thống giao tiếp với các API \texttt{/teams/create} và \texttt{/teams/join}.
+		\item \textbf{Bảng Danh sách Nhân sự:} Phân tách làm hai khu vực gồm "Thành viên hiện tại" và "Thành viên chờ duyệt". Trưởng nhóm có quyền thao tác trực tiếp (Đồng ý/Từ chối) trên các yêu cầu gia nhập thông qua API \texttt{/teams/approve}.
+	\end{itemize}
+	
+	\subsection{Giao diện Dashboard và Nộp bài (Dashboard \& Submission)}
+	Màn hình Dashboard là trung tâm tương tác chính, được xây dựng bằng cấu trúc lưới và thẻ (Grid \& Card layout) nhằm tối ưu hóa không gian hiển thị.
+	\begin{itemize}
+		\item \textbf{Bố cục tổng quan:} Gồm Sidebar điều hướng bên trái và thanh tiêu đề cấu hình Token xác thực phía trên.
+		\item \textbf{Khối Nộp bài thi (Project Submission):} Thiết kế biểu mẫu đóng gói sản phẩm thông qua trường nhập liệu URL kho lưu trữ GitHub (\texttt{github-link}). Thí sinh có thể liên tục cập nhật đường dẫn trước thời điểm đóng cổng nộp bài thông qua nút "Nộp bài / Cập nhật" (API \texttt{/submissions/submit}).
+		\item \textbf{Cơ chế phản hồi (Toast UI):} Mọi tương tác bất đồng bộ đều được phản hồi trực quan bằng các thông báo ngắn (Toast Message) báo lỗi hoặc thành công, giúp thí sinh kiểm soát tốt quá trình thao tác.
+	\end{itemize}
