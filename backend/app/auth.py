@@ -1,27 +1,37 @@
 from datetime import datetime, timedelta
 from typing import Optional
+import bcrypt  # Đã chuyển sang dùng trực tiếp thư viện bcrypt để sửa lỗi xung đột hệ thống
 from jose import JWTError, jwt
-from passlib.context import CryptContext
 
-# Cấu hình mã hóa mật khẩu
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
-
-# Cấu hình JWT Token (Thay đổi SECRET_KEY bảo mật của bạn tại đây)
+# Cấu hình JWT Token 
 SECRET_KEY = "SEAL_HACKATHON_SUPER_SECRET_KEY_DONT_TELL_ANYONE"
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 60
 
-# Hàm băm mật khẩu thành chuỗi bảo mật
+# ============================================================
+# CÁC HÀM MÃ HÓA MẬT KHẨU (Đã sửa lỗi)
+# ============================================================
+
 def hash_password(password: str) -> str:
-    return pwd_context.hash(str(password)[:72])
+    # Chuyển chuỗi mật khẩu sang dạng bytes và băm bảo mật bằng bcrypt thuần
+    pwd_bytes = str(password)[:72].encode('utf-8')
+    salt = bcrypt.gensalt()
+    return bcrypt.hashpw(pwd_bytes, salt).decode('utf-8')
 
 def verify_password(plain_password: str, hashed_password: str) -> bool:
+    # So sánh mật khẩu text thô với chuỗi mật khẩu đã hash trong cơ sở dữ liệu
     try:
-        return pwd_context.verify(str(plain_password)[:72], hashed_password)
+        return bcrypt.checkpw(
+            str(plain_password)[:72].encode('utf-8'),
+            str(hashed_password).encode('utf-8')
+        )
     except Exception:
         return False
 
-# Hàm tạo mã Token Đăng nhập (JWT Access Token)
+# ============================================================
+# CÁC HÀM QUẢN LÝ JWT TOKEN VÀ XÁC THỰC
+# ============================================================
+
 def create_access_token(data: dict, expires_delta: Optional[timedelta] = None) -> str:
     to_encode = data.copy()
     if expires_delta:
@@ -31,6 +41,7 @@ def create_access_token(data: dict, expires_delta: Optional[timedelta] = None) -
     to_encode.update({"exp": expire})
     encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
     return encoded_jwt
+
 from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
 from sqlalchemy.orm import Session

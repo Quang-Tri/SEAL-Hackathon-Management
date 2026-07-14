@@ -1,0 +1,233 @@
+\babel@toc {vietnamese}{}\relax 
+\contentsline {chapter}{\numberline {1}Tổng quan về đề tài}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Mô tả bài toán}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Mục tiêu hệ thống}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Phạm vi hệ thống}{3}{section.1.3}%
+\contentsline {chapter}{\numberline {2}Phân tích yêu cầu}{4}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Các đối tượng sử dụng}{4}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Yêu cầu chức năng}{4}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Yêu cầu phi chức năng}{5}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Hiệu năng}{5}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Bảo mật}{5}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Tính khả dụng}{5}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Độ tin cậy}{5}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}Khả năng mở rộng}{6}{subsection.2.3.5}%
+\contentsline {section}{\numberline {2.4}Sơ đồ use case}{6}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Sơ đồ ngữ cảnh}{6}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Phác thảo giao diện}{7}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Giao diện Chi tiết Cuộc thi Hackathon}{7}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Giao diện Quản lý Đội nhóm (Team Management)}{7}{subsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.6.3}Giao diện Dashboard và Nộp bài (Dashboard \& Submission)}{8}{subsection.2.6.3}%
+\contentsline {chapter}{\numberline {3}PROJECT MANAGEMENT PLAN}{9}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Giới thiệu chương}{9}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Tổng quan kế hoạch quản lý dự án}{9}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Phạm vi và ước lượng}{9}{subsection.3.2.1}%
+\contentsline {subsubsection}{Phạm vi của dự án}{9}{section*.3}%
+\contentsline {subsubsection}{Cấu trúc phân rã công việc}{10}{section*.4}%
+\contentsline {subsubsection}{Thời gian và kế hoạch Sprint}{11}{section*.5}%
+\contentsline {subsection}{\numberline {3.2.2}Mục tiêu dự án}{12}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Rủi ro dự án}{13}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}Phương pháp quản lý}{14}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Quy trình dự án}{14}{subsection.3.3.1}%
+\contentsline {subsubsection}{Luồng trạng thái công việc}{15}{section*.6}%
+\contentsline {subsection}{\numberline {3.3.2}Quản lý chất lượng}{16}{subsection.3.3.2}%
+\contentsline {subsubsection}{Phòng ngừa lỗi}{16}{section*.7}%
+\contentsline {subsubsection}{Review mã nguồn và tài liệu}{16}{section*.8}%
+\contentsline {subsubsection}{Kiểm thử}{16}{section*.9}%
+\contentsline {subsection}{\numberline {3.3.3}Kế hoạch đào tạo và chia sẻ kiến thức}{17}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4}Sản phẩm bàn giao}{17}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Phân công trách nhiệm}{18}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Thành viên và vai trò chính}{18}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Ma trận trách nhiệm RACI}{18}{subsection.3.5.2}%
+\contentsline {section}{\numberline {3.6}Kế hoạch truyền thông}{20}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Quản lý cấu hình}{21}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Quản lý tài liệu}{21}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Quản lý mã nguồn}{21}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.3}Công cụ và hạ tầng}{25}{subsection.3.7.3}%
+\contentsline {section}{\numberline {3.8}Kết luận chương}{25}{section.3.8}%
+\contentsline {section}{\numberline {3.9}Thiết kế API}{26}{section.3.9}%
+\contentsline {subsection}{\numberline {3.9.1}API Đăng ký và Đăng nhập}{26}{subsection.3.9.1}%
+\contentsline {subsection}{\numberline {3.9.2}API Quản lý Team}{27}{subsection.3.9.2}%
+\contentsline {section}{\numberline {3.10}Sequence Diagram}{28}{section.3.10}%
+\contentsline {subsection}{\numberline {3.10.1}Sequence Diagram Đăng nhập}{29}{subsection.3.10.1}%
+\contentsline {subsection}{\numberline {3.10.2}Sequence Diagram Nộp bài}{30}{subsection.3.10.2}%
+\contentsline {subsection}{\numberline {3.10.3}Sequence Diagram Chấm điểm}{32}{subsection.3.10.3}%
+\contentsline {section}{\numberline {3.11}Thiết kế API (API Design)}{34}{section.3.11}%
+\contentsline {subsection}{\numberline {3.11.1}Authentication \& User Module}{34}{subsection.3.11.1}%
+\contentsline {subsection}{\numberline {3.11.2}Submission Module (Dành cho Đội thi)}{34}{subsection.3.11.2}%
+\contentsline {subsection}{\numberline {3.11.3}Scoring Module (Dành cho Giám khảo)}{35}{subsection.3.11.3}%
+\contentsline {section}{\numberline {3.12}Biểu đồ tuần tự (Sequence Diagram)}{36}{section.3.12}%
+\contentsline {section}{\numberline {3.13}Từ điển dữ liệu (Data Dictionary)}{36}{section.3.13}%
+\contentsline {subsection}{\numberline {3.13.1}Bảng 1: User (Lưu thông tin tài khoản)}{36}{subsection.3.13.1}%
+\contentsline {subsection}{\numberline {3.13.2}Bảng 2: Submission (Bài nộp của đội thi)}{36}{subsection.3.13.2}%
+\contentsline {subsection}{\numberline {3.13.3}Bảng 3: Score (Bảng chấm điểm chi tiết)}{37}{subsection.3.13.3}%
+\contentsline {subsection}{\numberline {3.13.4}Bảng 4: AuditLog (Nhật ký giám sát)}{37}{subsection.3.13.4}%
+\contentsline {chapter}{\numberline {4}SOFTWARE TESTING}{38}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Giới thiệu chương}{38}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Mục tiêu kiểm thử}{39}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Mục tiêu tổng quát}{39}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Mục tiêu cụ thể}{39}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Phạm vi kiểm thử}{40}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Phạm vi kiểm thử}{40}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Phạm vi không kiểm thử}{40}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}Môi trường kiểm thử}{41}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Môi trường phần cứng}{41}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Môi trường phần mềm}{41}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Công cụ kiểm thử}{42}{subsection.4.4.3}%
+\contentsline {section}{\numberline {4.5}Phương pháp kiểm thử}{43}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Kiểm thử chức năng (Functional Testing)}{43}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Kiểm thử hộp đen (Black-box Testing)}{43}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Kiểm thử API}{43}{subsection.4.5.3}%
+\contentsline {subsection}{\numberline {4.5.4}Kiểm thử giao diện người dùng}{44}{subsection.4.5.4}%
+\contentsline {subsection}{\numberline {4.5.5}Kiểm thử tích hợp (Integration Testing)}{44}{subsection.4.5.5}%
+\contentsline {section}{\numberline {4.6}Thiết kế Test Case}{44}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Quy trình xây dựng Test Case}{45}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Cấu trúc của Test Case}{45}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}Danh sách các chức năng được kiểm thử}{46}{subsection.4.6.3}%
+\contentsline {subsection}{\numberline {4.6.4}Quy ước đánh giá kết quả}{47}{subsection.4.6.4}%
+\contentsline {section}{\numberline {4.7}Kiểm thử chức năng đăng ký tài khoản}{47}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}TC-REG-01: Đăng ký tài khoản thành công}{48}{subsection.4.7.1}%
+\contentsline {subsection}{\numberline {4.7.2}TC-REG-02: Đăng ký với Username đã tồn tại}{49}{subsection.4.7.2}%
+\contentsline {subsection}{\numberline {4.7.3}TC-REG-03: Đăng ký với Email đã tồn tại}{50}{subsection.4.7.3}%
+\contentsline {section}{\numberline {4.8}Kiểm thử chức năng đăng nhập}{51}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}TC-LOGIN-01: Đăng nhập thành công}{51}{subsection.4.8.1}%
+\contentsline {subsection}{\numberline {4.8.2}TC-LOGIN-02: Đăng nhập với mật khẩu không chính xác}{52}{subsection.4.8.2}%
+\contentsline {section}{\numberline {4.9}Kiểm thử chức năng quản lý đội nhóm}{53}{section.4.9}%
+\contentsline {subsection}{\numberline {4.9.1}TC-TEAM-01: Hiển thị Dashboard khi chưa có đội}{54}{subsection.4.9.1}%
+\contentsline {subsection}{\numberline {4.9.2}TC-TEAM-02: Tạo đội thành công}{55}{subsection.4.9.2}%
+\contentsline {subsection}{\numberline {4.9.3}TC-TEAM-03: Hiển thị thông tin đội sau khi tạo}{56}{subsection.4.9.3}%
+\contentsline {section}{\numberline {4.10}Kiểm thử chức năng quản lý thành viên}{56}{section.4.10}%
+\contentsline {subsection}{\numberline {4.10.1}TC-MEMBER-01: Tham gia đội thành công}{57}{subsection.4.10.1}%
+\contentsline {subsection}{\numberline {4.10.2}TC-MEMBER-02: Mã mời không hợp lệ}{58}{subsection.4.10.2}%
+\contentsline {subsection}{\numberline {4.10.3}TC-MEMBER-03: Trưởng đội phê duyệt thành viên}{59}{subsection.4.10.3}%
+\contentsline {subsection}{\numberline {4.10.4}TC-MEMBER-04: Loại thành viên khỏi đội}{60}{subsection.4.10.4}%
+\contentsline {section}{\numberline {4.11}Kiểm thử chức năng rời đội và giải tán đội}{60}{section.4.11}%
+\contentsline {subsection}{\numberline {4.11.1}TC-TEAM-04: Thành viên rời đội}{61}{subsection.4.11.1}%
+\contentsline {subsection}{\numberline {4.11.2}TC-TEAM-05: Trưởng đội giải tán đội}{62}{subsection.4.11.2}%
+\contentsline {section}{\numberline {4.12}Kiểm thử chức năng nộp bài dự thi}{63}{section.4.12}%
+\contentsline {subsection}{\numberline {4.12.1}TC-SUBMIT-01: Nộp bài thành công}{64}{subsection.4.12.1}%
+\contentsline {subsection}{\numberline {4.12.2}TC-SUBMIT-02: Cập nhật lại đường dẫn GitHub}{65}{subsection.4.12.2}%
+\contentsline {subsection}{\numberline {4.12.3}Đánh giá chức năng}{65}{subsection.4.12.3}%
+\contentsline {section}{\numberline {4.13}Tổng hợp kết quả kiểm thử}{66}{section.4.13}%
+\contentsline {section}{\numberline {4.14}Các lỗi phát hiện trong quá trình phát triển}{66}{section.4.14}%
+\contentsline {section}{\numberline {4.15}Đánh giá chương}{67}{section.4.15}%
+\contentsline {chapter}{\numberline {5}USER GUIDE}{68}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Giới thiệu chương}{68}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Đối tượng sử dụng hệ thống}{68}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Thí sinh (Candidate)}{68}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Giám khảo (Judge)}{69}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Quản trị viên (Administrator)}{69}{subsection.5.2.3}%
+\contentsline {section}{\numberline {5.3}Điều kiện sử dụng hệ thống}{69}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Yêu cầu về trình duyệt}{69}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Yêu cầu về kết nối mạng}{70}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Yêu cầu về tài khoản}{70}{subsection.5.3.3}%
+\contentsline {section}{\numberline {5.4}Hướng dẫn đăng ký tài khoản}{70}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Mô tả chức năng}{70}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Điều kiện thực hiện}{71}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}Các bước thực hiện}{71}{subsection.5.4.3}%
+\contentsline {subsection}{\numberline {5.4.4}Kết quả sau khi thực hiện}{71}{subsection.5.4.4}%
+\contentsline {section}{\numberline {5.5}Hướng dẫn đăng nhập}{73}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Mô tả chức năng}{73}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Điều kiện thực hiện}{74}{subsection.5.5.2}%
+\contentsline {subsection}{\numberline {5.5.3}Các bước thực hiện}{74}{subsection.5.5.3}%
+\contentsline {subsection}{\numberline {5.5.4}Kết quả sau khi thực hiện}{74}{subsection.5.5.4}%
+\contentsline {section}{\numberline {5.6}Hướng dẫn quản lý đội nhóm}{76}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Tạo đội mới}{76}{subsection.5.6.1}%
+\contentsline {subsubsection}{Mô tả chức năng}{76}{section*.10}%
+\contentsline {subsubsection}{Điều kiện thực hiện}{77}{section*.11}%
+\contentsline {subsubsection}{Các bước thực hiện}{77}{section*.12}%
+\contentsline {subsubsection}{Kết quả sau khi thực hiện}{77}{section*.13}%
+\contentsline {subsection}{\numberline {5.6.2}Tham gia đội thông qua mã mời}{79}{subsection.5.6.2}%
+\contentsline {subsubsection}{Mô tả chức năng}{79}{section*.14}%
+\contentsline {subsubsection}{Điều kiện thực hiện}{79}{section*.15}%
+\contentsline {subsubsection}{Các bước thực hiện}{80}{section*.16}%
+\contentsline {subsubsection}{Kết quả sau khi thực hiện}{80}{section*.17}%
+\contentsline {subsection}{\numberline {5.6.3}Phê duyệt thành viên}{82}{subsection.5.6.3}%
+\contentsline {subsubsection}{Mô tả chức năng}{82}{section*.18}%
+\contentsline {subsubsection}{Điều kiện thực hiện}{82}{section*.19}%
+\contentsline {subsubsection}{Các bước thực hiện}{83}{section*.20}%
+\contentsline {subsubsection}{Kết quả sau khi thực hiện}{83}{section*.21}%
+\contentsline {subsection}{\numberline {5.6.4}Xóa thành viên khỏi đội}{85}{subsection.5.6.4}%
+\contentsline {subsubsection}{Mô tả chức năng}{85}{section*.22}%
+\contentsline {subsubsection}{Điều kiện thực hiện}{85}{section*.23}%
+\contentsline {subsubsection}{Các bước thực hiện}{86}{section*.24}%
+\contentsline {subsubsection}{Kết quả sau khi thực hiện}{86}{section*.25}%
+\contentsline {subsection}{\numberline {5.6.5}Xem thông tin đội}{88}{subsection.5.6.5}%
+\contentsline {subsubsection}{Mô tả chức năng}{88}{section*.26}%
+\contentsline {subsubsection}{Điều kiện thực hiện}{88}{section*.27}%
+\contentsline {subsubsection}{Các bước thực hiện}{89}{section*.28}%
+\contentsline {subsubsection}{Kết quả sau khi thực hiện}{89}{section*.29}%
+\contentsline {subsection}{\numberline {5.6.6}Rời đội}{90}{subsection.5.6.6}%
+\contentsline {subsubsection}{Mô tả chức năng}{90}{section*.30}%
+\contentsline {subsubsection}{Điều kiện thực hiện}{90}{section*.31}%
+\contentsline {subsubsection}{Các bước thực hiện}{91}{section*.32}%
+\contentsline {subsubsection}{Kết quả sau khi thực hiện}{91}{section*.33}%
+\contentsline {subsection}{\numberline {5.6.7}Giải tán đội}{93}{subsection.5.6.7}%
+\contentsline {subsubsection}{Mô tả chức năng}{93}{section*.34}%
+\contentsline {subsubsection}{Điều kiện thực hiện}{93}{section*.35}%
+\contentsline {subsubsection}{Các bước thực hiện}{94}{section*.36}%
+\contentsline {subsubsection}{Kết quả sau khi thực hiện}{94}{section*.37}%
+\contentsline {section}{\numberline {5.7}Hướng dẫn nộp bài dự thi}{96}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Mô tả chức năng}{96}{subsection.5.7.1}%
+\contentsline {subsection}{\numberline {5.7.2}Điều kiện thực hiện}{97}{subsection.5.7.2}%
+\contentsline {subsection}{\numberline {5.7.3}Các bước thực hiện}{97}{subsection.5.7.3}%
+\contentsline {subsection}{\numberline {5.7.4}Kết quả sau khi thực hiện}{97}{subsection.5.7.4}%
+\contentsline {section}{\numberline {5.8}Hướng dẫn cập nhật hồ sơ cá nhân}{100}{section.5.8}%
+\contentsline {subsection}{\numberline {5.8.1}Mô tả chức năng}{100}{subsection.5.8.1}%
+\contentsline {subsection}{\numberline {5.8.2}Điều kiện thực hiện}{101}{subsection.5.8.2}%
+\contentsline {subsection}{\numberline {5.8.3}Các bước thực hiện}{101}{subsection.5.8.3}%
+\contentsline {subsection}{\numberline {5.8.4}Kết quả sau khi thực hiện}{101}{subsection.5.8.4}%
+\contentsline {section}{\numberline {5.9}Hướng dẫn đăng xuất}{102}{section.5.9}%
+\contentsline {subsection}{\numberline {5.9.1}Mô tả chức năng}{102}{subsection.5.9.1}%
+\contentsline {subsection}{\numberline {5.9.2}Điều kiện thực hiện}{103}{subsection.5.9.2}%
+\contentsline {subsection}{\numberline {5.9.3}Các bước thực hiện}{103}{subsection.5.9.3}%
+\contentsline {subsection}{\numberline {5.9.4}Kết quả sau khi thực hiện}{103}{subsection.5.9.4}%
+\contentsline {section}{\numberline {5.10}Các lỗi thường gặp và cách xử lý}{105}{section.5.10}%
+\contentsline {subsection}{\numberline {5.10.1}Lỗi đăng nhập thất bại}{105}{subsection.5.10.1}%
+\contentsline {subsubsection}{Mô tả lỗi}{105}{section*.38}%
+\contentsline {subsubsection}{Nguyên nhân}{106}{section*.39}%
+\contentsline {subsubsection}{Cách xử lý}{106}{section*.40}%
+\contentsline {subsection}{\numberline {5.10.2}Lỗi đăng ký tài khoản}{106}{subsection.5.10.2}%
+\contentsline {subsubsection}{Mô tả lỗi}{106}{section*.41}%
+\contentsline {subsubsection}{Nguyên nhân}{106}{section*.42}%
+\contentsline {subsubsection}{Cách xử lý}{106}{section*.43}%
+\contentsline {subsection}{\numberline {5.10.3}Lỗi tạo đội thất bại}{106}{subsection.5.10.3}%
+\contentsline {subsubsection}{Mô tả lỗi}{106}{section*.44}%
+\contentsline {subsubsection}{Nguyên nhân}{107}{section*.45}%
+\contentsline {subsubsection}{Cách xử lý}{107}{section*.46}%
+\contentsline {subsection}{\numberline {5.10.4}Lỗi tham gia đội thất bại}{107}{subsection.5.10.4}%
+\contentsline {subsubsection}{Mô tả lỗi}{107}{section*.47}%
+\contentsline {subsubsection}{Nguyên nhân}{107}{section*.48}%
+\contentsline {subsubsection}{Cách xử lý}{107}{section*.49}%
+\contentsline {subsection}{\numberline {5.10.5}Lỗi nộp bài thất bại}{107}{subsection.5.10.5}%
+\contentsline {subsubsection}{Mô tả lỗi}{107}{section*.50}%
+\contentsline {subsubsection}{Nguyên nhân}{107}{section*.51}%
+\contentsline {subsubsection}{Cách xử lý}{108}{section*.52}%
+\contentsline {subsection}{\numberline {5.10.6}Lỗi kết nối mạng}{108}{subsection.5.10.6}%
+\contentsline {subsubsection}{Mô tả lỗi}{108}{section*.53}%
+\contentsline {subsubsection}{Nguyên nhân}{108}{section*.54}%
+\contentsline {subsubsection}{Cách xử lý}{108}{section*.55}%
+\contentsline {subsection}{\numberline {5.10.7}Lỗi token hết hạn}{108}{subsection.5.10.7}%
+\contentsline {subsubsection}{Mô tả lỗi}{108}{section*.56}%
+\contentsline {subsubsection}{Nguyên nhân}{108}{section*.57}%
+\contentsline {subsubsection}{Cách xử lý}{108}{section*.58}%
+\contentsline {section}{\numberline {5.11}Đánh giá chương}{109}{section.5.11}%
+\contentsline {chapter}{\numberline {6}CONCLUSION \& FUTURE DEVELOPMENT}{110}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Giới thiệu chương}{110}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Tổng kết công việc đã hoàn thành}{110}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Các mục tiêu đã đạt được}{110}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Các chức năng đã hiện thực hóa}{111}{subsection.6.2.2}%
+\contentsline {section}{\numberline {6.3}Đánh giá mức độ đáp ứng yêu cầu}{112}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Đánh giá yêu cầu chức năng}{112}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Đánh giá yêu cầu phi chức năng}{112}{subsection.6.3.2}%
+\contentsline {section}{\numberline {6.4}Những hạn chế và khó khăn gặp phải}{113}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Hạn chế về phạm vi chức năng}{113}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Hạn chế về kỹ thuật}{113}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}Khó khăn trong quá trình phát triển}{113}{subsection.6.4.3}%
+\contentsline {section}{\numberline {6.5}Hướng phát triển trong tương lai}{114}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Mở rộng chức năng quản lý cuộc thi}{114}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}Cải thiện kỹ thuật và kiến trúc}{114}{subsection.6.5.2}%
+\contentsline {subsection}{\numberline {6.5.3}Nâng cao tính bảo mật}{115}{subsection.6.5.3}%
+\contentsline {subsection}{\numberline {6.5.4}Cải thiện trải nghiệm người dùng}{115}{subsection.6.5.4}%
+\contentsline {section}{\numberline {6.6}Bài học kinh nghiệm}{115}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Kết luận}{116}{section.6.7}%
