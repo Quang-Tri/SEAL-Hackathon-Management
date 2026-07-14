@@ -1,0 +1,893 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CHAPTER 6
+% USER GUIDE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{USER GUIDE}
+
+\section{Giới thiệu chương}
+
+Hướng dẫn sử dụng hệ thống (User Guide) là tài liệu quan trọng giúp người dùng hiểu rõ cách thức vận hành và tương tác với hệ thống SEAL Hackathon Management System. Chương này cung cấp các hướng dẫn chi tiết từng bước cho từng chức năng của hệ thống, từ quy trình đăng ký tài khoản, đăng nhập, quản lý đội nhóm, nộp bài dự thi cho đến các thao tác quản lý nâng cao.
+
+Mục tiêu chính của hướng dẫn sử dụng là đảm bảo mọi người dùng, dù là thí sinh tham gia cuộc thi hay giám khảo chấm điểm, đều có thể sử dụng hệ thống một cách hiệu quả và chính xác. Các hướng dẫn được trình bày theo trình tự logic từ cơ bản đến nâng cao, đi kèm với hình minh họa trực quan để người dùng dễ dàng theo dõi và thực hiện.
+
+Nội dung chương bao gồm giới thiệu về các đối tượng sử dụng hệ thống, các điều kiện cần thiết để truy cập hệ thống, hướng dẫn chi tiết cho từng chức năng chính, cũng như các lỗi thường gặp và cách xử lý. Tất cả các hướng dẫn đều được xây dựng dựa trên quy trình nghiệp vụ thực tế của hệ thống SEAL Hackathon Management System.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Đối tượng sử dụng hệ thống}
+
+Hệ thống SEAL Hackathon Management System được thiết kế để phục vụ nhiều đối tượng người dùng khác nhau trong quá trình tổ chức và vận hành cuộc thi Hackathon. Mỗi đối tượng người dùng có vai trò và quyền hạn riêng biệt, tương ứng với các chức năng và tính năng được cung cấp trong hệ thống.
+
+\subsection{Thí sinh (Candidate)}
+
+Thí sinh là đối tượng người dùng chính của hệ thống, bao gồm các sinh viên hoặc người tham gia cuộc thi SEAL Hackathon. Thí sinh có quyền thực hiện các chức năng cơ bản như đăng ký tài khoản, đăng nhập hệ thống, tạo đội thi mới, tham gia đội thông qua mã mời, quản lý thành viên trong đội, và nộp bài dự thi thông qua đường dẫn GitHub repository.
+
+Đối với thí sinh đóng vai trò Trưởng đội (Team Leader), hệ thống cung cấp thêm các quyền hạn quản lý như phê duyệt hoặc từ chối yêu cầu tham gia đội, xóa thành viên khỏi đội, và giải tán đội khi cần thiết. Thí sinh đóng vai trò Thành viên (Team Member) có quyền xem thông tin đội, rời khỏi đội và tham gia nộp bài dự thi.
+
+\subsection{Giám khảo (Judge)}
+
+Giám khảo là đối tượng người dùng có trách nhiệm đánh giá và chấm điểm các bài dự thi của các đội tham gia cuộc thi. Giám khảo được cấp tài khoản bởi Quản trị viên hệ thống và có quyền truy cập vào giao diện chấm điểm chuyên biệt.
+
+Giám khảo có thể xem danh sách các bài dự thi đã được nộp, truy cập vào GitHub repository của từng đội để đánh giá mã nguồn, nhập điểm số theo thang điểm từ 0 đến 10, và viết nhận xét chi tiết về từng bài dự thi. Hệ thống hỗ trợ giám khảo trong việc quản lý tiến độ chấm điểm và lưu trữ kết quả đánh giá.
+
+\subsection{Quản trị viên (Administrator)}
+
+Quản trị viên là đối tượng người dùng có quyền hạn cao nhất trong hệ thống. Quản trị viên chịu trách nhiệm quản lý toàn bộ hệ thống, bao gồm tạo tài khoản cho giám khảo, quản lý danh sách giám khảo, và giám sát hoạt động của hệ thống.
+
+Quản trị viên có quyền truy cập vào các chức năng quản trị không được cung cấp cho các đối tượng người dùng khác, đảm bảo hệ thống vận hành ổn định và an toàn. Các chức năng quản trị giúp quản trị viên kiểm soát quy trình tổ chức cuộc thi và xử lý các vấn đề phát sinh trong quá trình vận hành.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Điều kiện sử dụng hệ thống}
+
+Để sử dụng hệ thống SEAL Hackathon Management System một cách hiệu quả, người dùng cần đáp ứng các điều kiện về phần cứng, phần mềm, kết nối mạng và tài khoản truy cập. Các điều kiện này đảm bảo trải nghiệm người dùng được tối ưu và hệ thống hoạt động ổn định.
+
+\subsection{Yêu cầu về trình duyệt}
+
+Hệ thống SEAL Hackathon Management System được xây dựng dựa trên các công nghệ web hiện đại, do đó người dùng cần sử dụng trình duyệt web hỗ trợ đầy đủ các tính năng để đảm bảo hiển thị và hoạt động chính xác. Các trình duyệt được khuyến nghị sử dụng bao gồm Google Chrome phiên bản 90 trở lên, Mozilla Firefox phiên bản 88 trở lên, Microsoft Edge phiên bản 90 trở lên, hoặc Safari phiên bản 14 trở lên.
+
+Trình duyệt cần được bật JavaScript và cho phép lưu trữ Local Storage để hệ thống có thể lưu trữ thông tin đăng nhập và token xác thực. Người dùng cũng cần đảm bảo trình duyệt không chặn các kết nối đến địa chỉ máy chủ của hệ thống và không bật các chế độ bảo mật quá hạn chế có thể ảnh hưởng đến hoạt động của hệ thống.
+
+\subsection{Yêu cầu về kết nối mạng}
+
+Hệ thống yêu cầu kết nối Internet ổn định để truy cập vào máy chủ và thực hiện các thao tác với cơ sở dữ liệu. Tốc độ kết nối mạng tối thiểu khuyến nghị là 1 Mbps để đảm bảo việc tải trang và gửi dữ liệu diễn ra mượt mà.
+
+Trong quá trình sử dụng hệ thống, người dùng cần duy trì kết nối mạng liên tục để tránh mất dữ liệu khi đang thực hiện các thao tác quan trọng như nộp bài dự thi hoặc chấm điểm. Hệ thống sử dụng giao thức HTTPS để bảo mật dữ liệu truyền tải, do đó người dùng cần đảm bảo kết nối mạng không bị chặn bởi các tường lửa hoặc proxy server.
+
+\subsection{Yêu cầu về tài khoản}
+
+Để sử dụng các chức năng của hệ thống, người dùng cần có tài khoản đăng nhập hợp lệ được cấp bởi hệ thống. Đối với thí sinh, tài khoản có thể được tự đăng ký thông qua chức năng đăng ký của hệ thống. Đối với giám khảo và quản trị viên, tài khoản được tạo bởi quản trị viên hệ thống.
+
+Mỗi tài khoản bao gồm thông tin Username, Email và mật khẩu. Username phải là duy nhất trong hệ thống và không chứa ký tự đặc biệt. Email phải là địa chỉ email hợp lệ và chưa được sử dụng bởi tài khoản nào khác. Mật khẩu cần đáp ứng yêu cầu về độ dài và độ phức tạp để đảm bảo an toàn cho tài khoản.
+
+Sau khi đăng ký thành công, người dùng cần đăng nhập vào hệ thống bằng Username và mật khẩu đã đăng ký để sử dụng các chức năng. Hệ thống sử dụng cơ chế JWT (JSON Web Token) để xác thực người dùng, token có hiệu lực trong 60 phút sau khi đăng nhập.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Hướng dẫn đăng ký tài khoản}
+
+Chức năng đăng ký tài khoản cho phép người dùng mới tạo tài khoản truy cập vào hệ thống SEAL Hackathon Management System. Đây là bước đầu tiên và bắt buộc đối với mọi thí sinh muốn tham gia cuộc thi Hackathon.
+
+\subsection{Mô tả chức năng}
+
+Chức năng đăng ký tài khoản cho phép người dùng nhập thông tin cá nhân bao gồm Username, Email và mật khẩu để tạo tài khoản mới. Hệ thống sẽ kiểm tra tính duy nhất của Username và Email, đảm bảo không có trùng lặp trong cơ sở dữ liệu. Mật khẩu sẽ được mã hóa bằng thuật toán BCrypt trước khi lưu trữ để bảo mật thông tin người dùng.
+
+Sau khi đăng ký thành công, tài khoản mới được tạo trong cơ sở dữ liệu và người dùng có thể sử dụng thông tin đăng nhập để truy cập hệ thống. Hệ thống hiển thị thông báo thành công và chuyển hướng người dùng đến trang đăng nhập.
+
+\subsection{Điều kiện thực hiện}
+
+Để thực hiện chức năng đăng ký tài khoản, người dùng cần truy cập vào trang đăng ký của hệ thống thông qua địa chỉ URL được cung cấp. Người dùng cần chuẩn bị thông tin Username chưa tồn tại trong hệ thống, địa chỉ Email hợp lệ chưa được sử dụng, và mật khẩu đáp ứng yêu cầu về độ dài.
+
+Hệ thống yêu cầu Username phải có độ dài từ 3 đến 20 ký tự, chỉ chứa các ký tự chữ cái, số và dấu gạch dưới. Email phải có định dạng chuẩn (ví dụ: user@example.com). Mật khẩu phải có độ dài tối thiểu 6 ký tự và tối đa 72 ký tự do giới hạn của thuật toán mã hóa.
+
+\subsection{Các bước thực hiện}
+
+Quy trình đăng ký tài khoản được thực hiện theo các bước sau:
+
+Bước 1: Người dùng truy cập vào trang đăng ký của hệ thống thông qua địa chỉ URL hoặc nút "Sign Up" trên trang đăng nhập.
+
+Bước 2: Nhập Username vào ô "Username" theo định dạng yêu cầu. Username cần dễ nhớ và không chứa ký tự đặc biệt.
+
+Bước 3: Nhập địa chỉ Email hợp lệ vào ô "Email". Email này sẽ được sử dụng để nhận thông tin từ hệ thống nếu có.
+
+Bước 4: Nhập mật khẩu vào ô "Password". Mật khẩu nên kết hợp giữa chữ cái, số và ký tự đặc biệt để tăng độ bảo mật.
+
+Bước 5: Nhấn nút "REGISTER" để gửi thông tin đăng ký đến hệ thống.
+
+Bước 6: Hệ thống kiểm tra tính hợp lệ của thông tin và tính duy nhất của Username và Email.
+
+Bước 7: Nếu thông tin hợp lệ và không trùng lặp, hệ thống tạo tài khoản mới và hiển thị thông báo đăng ký thành công.
+
+\subsection{Kết quả sau khi thực hiện}
+
+Sau khi đăng ký thành công, tài khoản mới được lưu vào cơ sở dữ liệu với trạng thái hoạt động. Người dùng nhận được thông báo "Đăng ký thành công" và có thể sử dụng Username và mật khẩu vừa đăng ký để đăng nhập vào hệ thống.
+
+Trong trường hợp Username hoặc Email đã tồn tại trong hệ thống, người dùng sẽ nhận được thông báo lỗi "Username hoặc Email đã được sử dụng!" và cần nhập thông tin khác để đăng ký lại.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Screenshot_1.png}
+	\caption{Giao diện đăng ký tài khoản}
+	\label{fig:register-page}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Screenshot_2.png}
+	\caption{Thông báo đăng ký thành công}
+	\label{fig:register-success}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Hướng dẫn đăng nhập}
+
+Chức năng đăng nhập cho phép người dùng đã có tài khoản truy cập vào hệ thống SEAL Hackathon Management System. Quá trình đăng nhập bao gồm xác thực danh tính người dùng và cấp phát token truy cập để sử dụng các chức năng của hệ thống.
+
+\subsection{Mô tả chức năng}
+
+Chức năng đăng nhập yêu cầu người dùng cung cấp Username và mật khẩu đã đăng ký để xác thực danh tính. Hệ thống so sánh thông tin đăng nhập với dữ liệu trong cơ sở dữ liệu và kiểm tra mật khẩu đã được mã hóa. Nếu thông tin đúng, hệ thống cấp phát JWT token có hiệu lực trong 60 phút và chuyển người dùng đến giao diện Dashboard.
+
+Token được lưu trữ trong Local Storage của trình duyệt để sử dụng trong các yêu cầu API tiếp theo. Cơ chế này giúp hệ thống xác thực người dùng mà không cần đăng nhập lại trong phiên làm việc.
+
+\subsection{Điều kiện thực hiện}
+
+Để thực hiện chức năng đăng nhập, người dùng cần có tài khoản đã được đăng ký trong hệ thống. Người dùng cần nhớ Username và mật khẩu đã đăng ký. Nếu quên mật khẩu, người dùng cần liên hệ quản trị viên để khôi phục tài khoản.
+
+Hệ thống yêu cầu người dùng nhập chính xác Username và mật khẩu theo trường hợp (case-sensitive). Sau 5 lần đăng nhập thất bại liên tiếp, tài khoản có thể bị khóa tăng cường để bảo mật.
+
+\subsection{Các bước thực hiện}
+
+Quy trình đăng nhập được thực hiện theo các bước sau:
+
+Bước 1: Người dùng truy cập vào trang đăng nhập của hệ thống thông qua địa chỉ URL chính thức.
+
+Bước 2: Nhập Username đã đăng ký vào ô "Username". Cần lưu ý nhập đúng chính xác từng ký tự.
+
+Bước 3: Nhập mật khẩu vào ô "Password". Mật khẩu sẽ được hiển thị dưới dạng dấu chấm để bảo mật.
+
+Bước 4: Nhấn nút "LOG IN" để gửi thông tin đăng nhập đến hệ thống.
+
+Bước 5: Hệ thống kiểm tra sự tồn tại của Username trong cơ sở dữ liệu.
+
+Bước 6: Hệ thống xác minh mật khẩu bằng thuật toán so sánh BCrypt.
+
+Bước 7: Nếu thông tin đúng, hệ thống tạo JWT token và lưu vào Local Storage.
+
+Bước 8: Hệ thống chuyển hướng người dùng đến giao diện Dashboard theo vai trò của tài khoản.
+
+\subsection{Kết quả sau khi thực hiện}
+
+Sau khi đăng nhập thành công, người dùng được chuyển đến giao diện Dashboard với các chức năng phù hợp với vai trò của tài khoản. Token xác thực được lưu trữ trong trình duyệt để sử dụng trong các phiên làm việc tiếp theo.
+
+Đối với thí sinh chưa tham gia đội nào, Dashboard hiển thị các tùy chọn tạo đội mới hoặc tham gia đội thông qua mã mời. Đối với thí sinh đã có đội, Dashboard hiển thị thông tin đội, danh sách thành viên và chức năng nộp bài dự thi.
+
+Trong trường hợp đăng nhập thất bại do Username không tồn tại hoặc mật khẩu sai, hệ thống hiển thị thông báo lỗi tương ứng và người dùng cần kiểm tra lại thông tin đăng nhập.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Screenshot_2.png}
+	\caption{Giao diện đăng nhập hệ thống}
+	\label{fig:login-page}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Screenshot_3.png}
+	\caption{Giao diện Dashboard sau khi đăng nhập thành công}
+	\label{fig:dashboard-after-login}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Hướng dẫn quản lý đội nhóm}
+
+Chức năng quản lý đội nhóm là chức năng trung tâm của hệ thống SEAL Hackathon Management System, cho phép thí sinh tạo đội mới, tham gia đội, quản lý thành viên và thực hiện các thao tác liên quan đến tổ chức đội thi. Chức năng này hỗ trợ quy trình làm việc nhóm trong cuộc thi Hackathon.
+
+\subsection{Tạo đội mới}
+
+\subsubsection{Mô tả chức năng}
+
+Chức năng tạo đội mới cho phép thí sinh tạo một đội thi Hackathon với vai trò Trưởng đội (Team Leader). Khi tạo đội, hệ thống tự động sinh một mã mời (invite code) gồm 6 ký tự viết hoa để chia sẻ cho các thành viên khác muốn tham gia đội.
+
+Trưởng đội có toàn quyền quản lý đội bao gồm phê duyệt thành viên, xóa thành viên, giải tán đội và nộp bài dự thi. Mỗi thí sinh chỉ có thể tạo hoặc tham gia tối đa một đội để đảm bảo công bằng trong cuộc thi.
+
+\subsubsection{Điều kiện thực hiện}
+
+Để tạo đội mới, người dùng cần đã đăng nhập vào hệ thống và chưa thuộc đội nào khác (chưa là Trưởng đội của đội khác và chưa là thành viên được duyệt của đội nào). Người dùng cần chuẩn bị tên đội phù hợp, không chứa ký tự đặc biệt và có độ dài từ 3 đến 50 ký tự.
+
+Hệ thống kiểm tra điều kiện này trước khi cho phép tạo đội để tránh trường hợp một người tham gia nhiều đội, đảm bảo tính công bằng trong cuộc thi.
+
+\subsubsection{Các bước thực hiện}
+
+Quy trình tạo đội mới được thực hiện theo các bước sau:
+
+Bước 1: Người dùng đăng nhập vào hệ thống và truy cập Dashboard.
+
+Bước 2: Trong mục "Quản lý Đội nhóm", tìm phần "Tạo đội mới".
+
+Bước 3: Nhập tên đội mong muốn vào ô "Tên đội". Tên đội nên ngắn gọn, dễ nhớ và phản ánh nội dung dự án.
+
+Bước 4: Nhấn nút "Tạo đội" để gửi yêu cầu tạo đội đến hệ thống.
+
+Bước 5: Hệ thống kiểm tra điều kiện người dùng chưa thuộc đội nào khác.
+
+Bước 6: Hệ thống kiểm tra tên đội chưa bị trùng với đội đã tồn tại.
+
+Bước 7: Nếu các điều kiện thỏa mãn, hệ thống tạo đội mới với người dùng làm Trưởng đội.
+
+Bước 8: Hệ thống tự động sinh mã mời gồm 6 ký tự viết hoa cho đội.
+
+Bước 9: Hệ thống hiển thị thông báo tạo đội thành công cùng với mã mời.
+
+\subsubsection{Kết quả sau khi thực hiện}
+
+Sau khi tạo đội thành công, đội mới được lưu vào cơ sở dữ liệu với người dùng là Trưởng đội. Mã mời được hiển thị trên Dashboard để Trưởng đội chia sẻ cho các thành viên khác muốn tham gia.
+
+Giao diện Dashboard cập nhật để hiển thị thông tin đội vừa tạo, bao gồm tên đội, mã mời và số lượng thành viên hiện tại (ban đầu chỉ có Trưởng đội). Các chức năng quản lý đội như phê duyệt thành viên, xem danh sách thành viên và nộp bài dự thi được kích hoạt.
+
+Trong trường hợp người dùng đã thuộc đội khác, hệ thống hiển thị thông báo lỗi "Bạn đã là trưởng đội của một nhóm. Không thể tạo đội mới." hoặc "Bạn đã là thành viên của một đội. Không thể tạo đội mới."
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Screenshot_4.png}
+	\caption{Form tạo đội mới}
+	\label{fig:create-team-form}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Screenshot_5.png}
+	\caption{Thông báo tạo đội thành công với mã mời}
+	\label{fig:create-team-success}
+\end{figure}
+
+\subsection{Tham gia đội thông qua mã mời}
+
+\subsubsection{Mô tả chức năng}
+
+Chức năng tham gia đội cho phép thí sinh gia nhập vào một đội đã tồn tại thông qua mã mời do Trưởng đội cung cấp. Khi tham gia đội, thí sinh gửi yêu cầu đến Trưởng đội và chờ được phê duyệt trước khi trở thành thành viên chính thức của đội.
+
+Mã mời gồm 6 ký tự viết hoa được sinh tự động khi tạo đội, đảm bảo tính duy nhất và khó đoán. Mỗi đội có tối đa 7 thành viên bao gồm Trưởng đội, đảm bảo quy mô đội nhóm phù hợp cho cuộc thi Hackathon.
+
+\subsubsection{Điều kiện thực hiện}
+
+Để tham gia đội, người dùng cần đã đăng nhập vào hệ thống và chưa thuộc đội nào khác. Người dùng cần có mã mời chính xác của đội muốn tham gia. Mã mời được Trưởng đội chia sẻ thông qua các kênh liên lạc như email, tin nhắn hoặc nhóm thảo luận.
+
+Hệ thống kiểm tra điều kiện người dùng chưa thuộc đội nào và mã mời hợp lệ trước khi cho phép gửi yêu cầu tham gia. Đội phải còn slot trống (tổng số thành viên và yêu cầu chờ duyệt dưới 7 người) để nhận thành viên mới.
+
+\subsubsection{Các bước thực hiện}
+
+Quy trình tham gia đội được thực hiện theo các bước sau:
+
+Bước 1: Người dùng đăng nhập vào hệ thống và truy cập Dashboard.
+
+Bước 2: Trong mục "Quản lý Đội nhóm", tìm phần "Tham gia đội".
+
+Bước 3: Nhập mã mời 6 ký tự viết hoa vào ô "Mã code tham gia". Mã mời cần được nhập chính xác từng ký tự.
+
+Bước 4: Nhấn nút "Tham gia đội" để gửi yêu cầu tham gia đến hệ thống.
+
+Bước 5: Hệ thống kiểm tra tính hợp lệ của mã mời trong cơ sở dữ liệu.
+
+Bước 6: Hệ thống kiểm tra người dùng chưa thuộc đội nào khác.
+
+Bước 7: Hệ thống kiểm tra đội còn slot trống để nhận thành viên mới.
+
+Bước 8: Hệ thống kiểm tra người dùng chưa gửi yêu cầu tham gia đội này trước đó.
+
+Bước 9: Nếu các điều kiện thỏa mãn, hệ thống tạo yêu cầu tham gia với trạng thái chờ duyệt.
+
+Bước 10: Hệ thống hiển thị thông báo "Đã gửi yêu cầu gia nhập đội. Vui lòng chờ trưởng đội duyệt."
+
+\subsubsection{Kết quả sau khi thực hiện}
+
+Sau khi gửi yêu cầu tham gia thành công, yêu cầu được lưu vào cơ sở dữ liệu với trạng thái chờ duyệt. Trưởng đội của đội mục tiêu sẽ thấy yêu cầu này trong danh sách "Thành viên chờ duyệt" trên Dashboard.
+
+Người dùng gửi yêu cầu nhận được thông báo xác nhận và cần chờ Trưởng đội phê duyệt. Trong thời gian chờ duyệt, người dùng chưa thể thực hiện các chức năng của thành viên chính thức như nộp bài dự thi.
+
+Trưởng đội có thể phê duyệt hoặc từ chối yêu cầu tham gia. Nếu được phê duyệt, người dùng trở thành thành viên chính thức của đội và có thể sử dụng đầy đủ các chức năng của đội. Nếu bị từ chối, người dùng có thể gửi yêu cầu tham gia đội khác.
+
+Trong trường hợp mã mời không hợp lệ, hệ thống hiển thị thông báo "Mã mời không hợp lệ." Trong trường hợp đội đã đầy slot, hệ thống hiển thị thông báo "Đội đã đầy slot chờ (tối đa 7 người)."
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Screenshot_6.png}
+	\caption{Form tham gia đội bằng mã mời}
+	\label{fig:join-team-form}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Screenshot_7.png}
+	\caption{Thông báo gửi yêu cầu tham gia thành công}
+	\label{fig:join-team-success}
+\end{figure}
+
+\subsection{Phê duyệt thành viên}
+
+\subsubsection{Mô tả chức năng}
+
+Chức năng phê duyệt thành viên cho phép Trưởng đội xem danh sách các yêu cầu tham gia đội đang chờ duyệt và quyết định chấp nhận hoặc từ chối từng yêu cầu. Chức năng này giúp Trưởng đội kiểm soát thành viên của đội và đảm bảo chỉ những người phù hợp được tham gia.
+
+Khi phê duyệt thành viên, Trưởng đội cần xem xét số lượng thành viên hiện tại của đội để không vượt quá giới hạn 7 người. Sau khi phê duyệt, thành viên mới có quyền truy cập vào các chức năng của đội bao gồm nộp bài dự thi.
+
+\subsubsection{Điều kiện thực hiện}
+
+Để phê duyệt thành viên, người dùng cần là Trưởng đội của đội có yêu cầu chờ duyệt. Chỉ Trưởng đội mới có quyền thực hiện chức năng này. Đội phải còn slot trống để nhận thêm thành viên chính thức (tổng số thành viên chính thức dưới 7 người).
+
+Trưởng đội cần truy cập Dashboard và xem mục "Thành viên chờ duyệt" để thực hiện phê duyệt. Mỗi yêu cầu chờ duyệt hiển thị thông tin Username, Email và thời gian gửi yêu cầu.
+
+\subsubsection{Các bước thực hiện}
+
+Quy trình phê duyệt thành viên được thực hiện theo các bước sau:
+
+Bước 1: Trưởng đội đăng nhập vào hệ thống và truy cập Dashboard.
+
+Bước 2: Trong mục "Danh sách Thành viên", tìm phần "Thành viên chờ duyệt".
+
+Bước 3: Xem danh sách các yêu cầu tham gia đang chờ với thông tin chi tiết.
+
+Bước 4: Đánh giá từng yêu cầu dựa trên thông tin và nhu cầu của đội.
+
+Bước 5: Đối với yêu cầu muốn chấp nhận, nhấn nút "Duyệt" tương ứng.
+
+Bước 6: Đối với yêu cầu muốn từ chối, nhấn nút "Từ chối" tương ứng.
+
+Bước 7: Hệ thống kiểm tra đội còn slot trống trước khi phê duyệt.
+
+Bước 8: Nếu phê duyệt, hệ thống cập nhật trạng thái thành viên thành "đã duyệt".
+
+Bước 9: Nếu từ chối, hệ thống xóa yêu cầu khỏi danh sách chờ duyệt.
+
+Bước 10: Hệ thống cập nhật danh sách thành viên chính thức và số lượng thành viên.
+
+\subsubsection{Kết quả sau khi thực hiện}
+
+Sau khi phê duyệt thành công, thành viên mới được cập nhật trạng thái thành "đã duyệt" và trở thành thành viên chính thức của đội. Thành viên này có thể truy cập Dashboard với đầy đủ chức năng của đội, bao gồm xem thông tin đội, nộp bài dự thi và thực hiện các hoạt động nhóm.
+
+Danh sách "Thành viên chờ duyệt" được cập nhật để loại bỏ yêu cầu đã được xử lý. Số lượng thành viên chính thức của đội tăng lên và được hiển thị trên Dashboard.
+
+Trong trường hợp đội đã đủ 7 thành viên chính thức, hệ thống hiển thị thông báo "Đội đã đủ 7 thành viên chính thức. Không thể duyệt thêm." và không cho phép phê duyệt thêm thành viên.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Screenshot_8.png}
+	\caption{Danh sách thành viên chờ duyệt}
+	\label{fig:pending-members-list}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Screenshot_9.png}
+	\caption{Thông báo phê duyệt thành viên thành công}
+	\label{fig:approve-member-success}
+\end{figure}
+
+\subsection{Xóa thành viên khỏi đội}
+
+\subsubsection{Mô tả chức năng}
+
+Chức năng xóa thành viên (Kick member) cho phép Trưởng đội xóa một thành viên chính thức khỏi đội khi cần thiết. Chức năng này giúp Trưởng đội quản lý đội nhóm và xử lý các tình huống như thành viên không hoạt động, vi phạm quy định hoặc rời đội mà không thông báo.
+
+Khi xóa thành viên, người dùng bị xóa mất quyền truy cập vào các chức năng của đội và không còn được tính là thành viên của đội. Thành viên bị xóa có thể tìm đội khác để tham gia.
+
+\subsubsection{Điều kiện thực hiện}
+
+Để xóa thành viên, người dùng cần là Trưởng đội của đội. Chỉ Trưởng đội mới có quyền thực hiện chức năng này. Trưởng đội không thể tự xóa chính mình khỏi đội; nếu muốn rời đội, Trưởng đội cần sử dụng chức năng giải tán đội.
+
+Trưởng đội cần xác định thành viên muốn xóa từ danh sách thành viên chính thức của đội. Thành viên bị xóa phải là thành viên đã được duyệt (không phải yêu cầu chờ duyệt).
+
+\subsubsection{Các bước thực hiện}
+
+Quy trình xóa thành viên được thực hiện theo các bước sau:
+
+Bước 1: Trưởng đội đăng nhập vào hệ thống và truy cập Dashboard.
+
+Bước 2: Trong mục "Danh sách Thành viên", xem phần "Thành viên hiện tại".
+
+Bước 3: Xác định thành viên muốn xóa từ danh sách hiển thị.
+
+Bước 4: Nhấn nút "Xóa" hoặc biểu tượng xóa tương ứng với thành viên đó.
+
+Bước 5: Hệ thống hiển thị hộp thoại xác nhận xóa thành viên.
+
+Bước 6: Trưởng đội xác nhận hành động xóa thành viên.
+
+Bước 7: Hệ thống kiểm tra người dùng là Trưởng đội và thành viên tồn tại trong đội.
+
+Bước 8: Hệ thống xóa thành viên khỏi cơ sở dữ liệu của đội.
+
+Bước 9: Hệ thống cập nhật danh sách thành viên và số lượng thành viên.
+
+Bước 10: Hệ thống hiển thị thông báo "Đã xóa thành viên khỏi đội thành công."
+
+\subsubsection{Kết quả sau khi thực hiện}
+
+Sau khi xóa thành công, thành viên bị xóa không còn thuộc đội và mất quyền truy cập vào các chức năng của đội. Thành viên này có thể tham gia đội khác thông qua mã mời của đội mới.
+
+Danh sách thành viên chính thức của đội được cập nhật để loại bỏ thành viên đã bị xóa. Số lượng thành viên của đội giảm xuống và được hiển thị trên Dashboard. Slot trống của đội tăng lên, cho phép nhận thêm thành viên mới nếu cần.
+
+Trong trường hợp Trưởng đội cố gắng xóa chính mình, hệ thống hiển thị thông báo "Trưởng đội không thể tự kick chính mình. Hãy dùng chức năng giải tán đội."
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Screenshot_10.png}
+	\caption{Danh sách thành viên hiện tại của đội}
+	\label{fig:members-list}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Screenshot_11.png}
+	\caption{Thông báo xóa thành viên thành công}
+	\label{fig:kick-member-success}
+\end{figure}
+
+\subsection{Xem thông tin đội}
+
+\subsubsection{Mô tả chức năng}
+
+Chức năng xem thông tin đội cho phép cả Trưởng đội và thành viên xem các thông tin cơ bản về đội đang tham gia. Thông tin bao gồm tên đội, mã mời, số lượng thành viên hiện tại, vai trò của người dùng trong đội và danh sách thành viên chi tiết.
+
+Chức năng này giúp các thành viên nắm rõ thông tin đội và phối hợp hiệu quả trong quá trình làm việc nhóm. Thông tin đội được cập nhật theo thời gian thực khi có thay đổi về thành viên.
+
+\subsubsection{Điều kiện thực hiện}
+
+Để xem thông tin đội, người dùng cần đã đăng nhập vào hệ thống và thuộc một đội (đang là Trưởng đội hoặc thành viên được duyệt của đội). Người dùng chưa thuộc đội nào sẽ không thấy thông tin đội mà chỉ thấy các tùy chọn tạo đội hoặc tham gia đội.
+
+\subsubsection{Các bước thực hiện}
+
+Quy trình xem thông tin đội được thực hiện theo các bước sau:
+
+Bước 1: Người dùng đăng nhập vào hệ thống và truy cập Dashboard.
+
+Bước 2: Nếu người dùng thuộc đội, thông tin đội hiển thị tự động trên Dashboard.
+
+Bước 3: Xem tên đội hiển thị ở phần thông tin đội.
+
+Bước 4: Xem mã mời (chỉ hiển thị với Trưởng đội).
+
+Bước 5: Xem số lượng thành viên hiện tại của đội.
+
+Bước 6: Xem vai trò của người dùng (Trưởng đội hoặc Thành viên).
+
+Bước 7: Xem danh sách thành viên chi tiết trong mục "Thành viên hiện tại".
+
+Bước 8: Danh sách hiển thị Username, Email, vai trò và thời gian tham gia.
+
+\subsubsection{Kết quả sau khi thực hiện}
+
+Người dùng có thể xem đầy đủ thông tin về đội đang tham gia. Đối với Trưởng đội, thông tin bao gồm tên đội, mã mời để chia sẻ, số lượng thành viên và danh sách thành viên chi tiết. Đối với thành viên, thông tin bao gồm tên đội, số lượng thành viên và danh sách thành viên (không hiển thị mã mời).
+
+Thông tin đội được cập nhật theo thời gian thực khi có thay đổi như thêm thành viên mới, xóa thành viên hoặc thay đổi vai trò. Điều này giúp tất cả thành viên đồng bộ thông tin và phối hợp hiệu quả.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Screenshot_12.png}
+	\caption{Thông tin chi tiết về đội}
+	\label{fig:team-info}
+\end{figure}
+
+\subsection{Rời đội}
+
+\subsubsection{Mô tả chức năng}
+
+Chức năng rời đội cho phép thành viên (không phải Trưởng đội) tự nguyện rời khỏi đội đang tham gia. Chức năng này hữu ích khi thành viên muốn chuyển sang đội khác hoặc không thể tiếp tục tham gia cuộc thi.
+
+Khi rời đội, thành viên mất quyền truy cập vào các chức năng của đội và không còn được tính là thành viên của đội. Thành viên rời đội có thể tham gia đội khác thông qua mã mời.
+
+\subsubsection{Điều kiện thực hiện}
+
+Để rời đội, người dùng cần là thành viên được duyệt của đội (không phải Trưởng đội). Trưởng đội không thể sử dụng chức năng rời đội; nếu muốn rời đội, Trưởng đội cần sử dụng chức năng giải tán đội.
+
+Người dùng cần cân nhắc kỹ trước khi rời đội vì hành động này không thể hoàn tác và ảnh hưởng đến tiến độ làm việc của đội.
+
+\subsubsection{Các bước thực hiện}
+
+Quy trình rời đội được thực hiện theo các bước sau:
+
+Bước 1: Thành viên đăng nhập vào hệ thống và truy cập Dashboard.
+
+Bước 2: Trong mục thông tin đội, tìm nút hoặc chức năng "Rời đội".
+
+Bước 3: Nhấn nút "Rời đội" để gửi yêu cầu rời đội đến hệ thống.
+
+Bước 4: Hệ thống hiển thị hộp thoại xác nhận rời đội.
+
+Bước 5: Thành viên xác nhận hành động rời đội.
+
+Bước 6: Hệ thống kiểm tra người dùng là thành viên (không phải Trưởng đội).
+
+Bước 7: Hệ thống xóa thành viên khỏi cơ sở dữ liệu của đội.
+
+Bước 8: Hệ thống cập nhật danh sách thành viên và số lượng thành viên của đội.
+
+Bước 9: Hệ thống hiển thị thông báo "Bạn đã rời khỏi đội thành công."
+
+Bước 10: Hệ thống chuyển người dùng về trạng thái chưa thuộc đội nào.
+
+\subsubsection{Kết quả sau khi thực hiện}
+
+Sau khi rời đội thành công, người dùng không còn thuộc đội cũ và mất quyền truy cập vào các chức năng của đội đó. Người dùng được chuyển về trạng thái chưa thuộc đội nào và có thể tạo đội mới hoặc tham gia đội khác.
+
+Đội cũ được cập nhật danh sách thành viên và số lượng thành viên giảm xuống. Slot trống của đội tăng lên, cho phép nhận thêm thành viên mới nếu cần. Các bài nộp của đội vẫn được giữ nguyên trong hệ thống.
+
+Trong trường hợp Trưởng đội cố gắng rời đội, hệ thống hiển thị thông báo "Bạn không phải trưởng đội. Không có quyền rời đội." hoặc hướng dẫn sử dụng chức năng giải tán đội.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Screenshot_13.png}
+	\caption{Nút rời đội trên Dashboard}
+	\label{fig:leave-team-button}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Screenshot_14.png}
+	\caption{Thông báo rời đội thành công}
+	\label{fig:leave-team-success}
+\end{figure}
+
+\subsection{Giải tán đội}
+
+\subsubsection{Mô tả chức năng}
+
+Chức năng giải tán đội cho phép Trưởng đội xóa toàn bộ đội và tất cả thành viên khỏi hệ thống. Chức năng này được sử dụng khi đội không thể tiếp tục tham gia cuộc thi hoặc Trưởng đội muốn giải tán đội để tạo đội mới.
+
+Khi giải tán đội, tất cả thành viên của đội (bao gồm cả Trưởng đội) mất quyền truy cập vào các chức năng của đội. Các bài nộp của đội có thể được giữ lại hoặc xóa tùy theo quy định của cuộc thi.
+
+\subsubsection{Điều kiện thực hiện}
+
+Để giải tán đội, người dùng cần là Trưởng đội của đội. Chỉ Trưởng đội mới có quyền thực hiện chức năng này. Trưởng đội cần cân nhắc kỹ trước khi giải tán đội vì hành động này ảnh hưởng đến tất cả thành viên và không thể hoàn tác.
+
+\subsubsection{Các bước thực hiện}
+
+Quy trình giải tán đội được thực hiện theo các bước sau:
+
+Bước 1: Trưởng đội đăng nhập vào hệ thống và truy cập Dashboard.
+
+Bước 2: Trong mục thông tin đội, tìm nút hoặc chức năng "Giải tán đội".
+
+Bước 3: Nhấn nút "Giải tán đội" để gửi yêu cầu giải tán đến hệ thống.
+
+Bước 4: Hệ thống hiển thị hộp thoại xác nhận giải tán đội với cảnh báo.
+
+Bước 5: Trưởng đội xác nhận hành động giải tán đội.
+
+Bước 6: Hệ thống kiểm tra người dùng là Trưởng đội của đội.
+
+Bước 7: Hệ thống xóa đội và tất cả thành viên khỏi cơ sở dữ liệu.
+
+Bước 8: Hệ thống xóa các dữ liệu liên quan đến đội (tùy theo cấu hình).
+
+Bước 9: Hệ thống hiển thị thông báo "Đội đã được giải tán thành công."
+
+Bước 10: Hệ thống chuyển Trưởng đội về trạng thái chưa thuộc đội nào.
+
+\subsubsection{Kết quả sau khi thực hiện}
+
+Sau khi giải tán thành công, đội không còn tồn tại trong hệ thống. Tất cả thành viên của đội (bao gồm Trưởng đội) được chuyển về trạng thái chưa thuộc đội nào và mất quyền truy cập vào các chức năng của đội.
+
+Trưởng đội có thể tạo đội mới sau khi giải tán đội cũ. Các thành viên khác có thể tham gia đội khác thông qua mã mời. Các bài nộp của đội có thể được lưu lại hoặc xóa tùy theo cấu hình hệ thống.
+
+Trong trường hợp người dùng không phải Trưởng đội cố gắng giải tán đội, hệ thống hiển thị thông báo "Bạn không phải trưởng đội. Không có quyền giải tán đội."
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Screenshot_15.png}
+	\caption{Nút giải tán đội trên Dashboard}
+	\label{fig:disband-team-button}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Screenshot_16.png}
+	\caption{Thông báo giải tán đội thành công}
+	\label{fig:disband-team-success}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Hướng dẫn nộp bài dự thi}
+
+Chức năng nộp bài dự thi cho phép các đội thi nộp đường dẫn GitHub repository chứa mã nguồn dự án để ban giám khảo đánh giá. Chức năng này hỗ trợ nộp bài lần đầu và cập nhật bài nộp nhiều lần trước hạn chót.
+
+\subsection{Mô tả chức năng}
+
+Chức năng nộp bài dự thi cho phép Trưởng đội hoặc thành viên đã được duyệt nộp đường dẫn GitHub repository của dự án. Đường dẫn này được lưu vào cơ sở dữ liệu và liên kết với đội thi. Ban giám khảo có thể truy cập đường dẫn này để đánh giá mã nguồn và tính năng của dự án.
+
+Hệ thống hỗ trợ nộp đè, nghĩa là đội có thể cập nhật đường dẫn GitHub nhiều lần trước hạn chót. Mỗi lần cập nhật, hệ thống ghi nhận thời gian cập nhật mới nhất để ban giám khảo đánh giá phiên bản gần nhất.
+
+\subsection{Điều kiện thực hiện}
+
+Để nộp bài dự thi, người dùng cần đã đăng nhập vào hệ thống và thuộc một đội (đang là Trưởng đội hoặc thành viên được duyệt của đội). Đội phải đã được tạo và có ít nhất một thành viên chính thức.
+
+Người dùng cần có GitHub repository chứa mã nguồn dự án và repository phải được đặt chế độ public để ban giám khảo có thể truy cập và đánh giá. Đường dẫn GitHub phải có định dạng hợp lệ và có thể truy cập được.
+
+\subsection{Các bước thực hiện}
+
+Quy trình nộp bài dự thi được thực hiện theo các bước sau:
+
+Bước 1: Người dùng đăng nhập vào hệ thống và truy cập Dashboard.
+
+Bước 2: Trong mục "Nộp bài thi", tìm phần "Repository GitHub".
+
+Bước 3: Nhập đường dẫn GitHub repository vào ô "Link GitHub bài thi".
+
+Bước 4: Đường dẫn phải có định dạng https://github.com/username/repository.
+
+Bước 5: Kiểm tra repository đã được đặt chế độ public.
+
+Bước 6: Nhấn nút "Nộp bài / Cập nhật" để gửi đường dẫn đến hệ thống.
+
+Bước 7: Hệ thống kiểm tra tính hợp lệ của định dạng URL.
+
+Bước 8: Hệ thống kiểm tra người dùng thuộc đội hợp lệ.
+
+Bước 9: Nếu đội chưa có bài nộp, hệ thống tạo bản ghi bài nộp mới.
+
+Bước 10: Nếu đội đã có bài nộp, hệ thống cập nhật đường dẫn và thời gian.
+
+Bước 11: Hệ thống hiển thị thông báo "Nộp bài thành công!" hoặc "Cập nhật bài nộp thành công!"
+
+\subsection{Kết quả sau khi thực hiện}
+
+Sau khi nộp thành công, đường dẫn GitHub được lưu vào cơ sở dữ liệu và liên kết với đội thi. Ban giám khảo có thể truy cập đường dẫn này để đánh giá dự án. Đội có thể tiếp tục cập nhật đường dẫn trước hạn chót nếu cần sửa đổi hoặc cải thiện dự án.
+
+Hệ thống ghi nhận thời gian nộp hoặc cập nhật gần nhất để ban giám khảo biết phiên bản nào là mới nhất. Lịch sử nộp bài có thể được hiển thị trên Dashboard để đội theo dõi tiến độ nộp bài.
+
+Trong trường hợp đường dẫn GitHub không hợp lệ, hệ thống hiển thị thông báo lỗi và yêu cầu người dùng kiểm tra lại đường dẫn. Trong trường hợp người dùng chưa thuộc đội nào, hệ thống hiển thị thông báo "Bạn chưa thuộc đội nào hoặc chưa được phê duyệt."
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Screenshot_17.png}
+	\caption{Form nộp bài dự thi với đường dẫn GitHub}
+	\label{fig:submit-form}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Screenshot_18.png}
+	\caption{Thông báo nộp bài thành công}
+	\label{fig:submit-success}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Screenshot_19.png}
+	\caption{Lịch sử nộp bài của đội}
+	\label{fig:submission-history}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Hướng dẫn cập nhật hồ sơ cá nhân}
+
+Chức năng cập nhật hồ sơ cá nhân cho phép người dùng xem và chỉnh sửa thông tin cá nhân của mình trong hệ thống. Thông tin hồ sơ bao gồm Username, Email và các thông tin khác liên quan đến tài khoản.
+
+\subsection{Mô tả chức năng}
+
+Chức năng cập nhật hồ sơ cá nhân cho phép người dùng xem thông tin hiện tại của tài khoản và thực hiện các thay đổi khi cần thiết. Tuy nhiên, do giới hạn của phiên bản hiện tại, một số thông tin như Username và Email có thể không thể thay đổi sau khi đăng ký để đảm bảo tính toàn vẹn của dữ liệu.
+
+Hệ thống hiển thị thông tin hồ sơ trên Dashboard để người dùng dễ dàng truy cập và xem. Các thay đổi hồ sơ (nếu được hỗ trợ) cần được xác nhận và lưu vào cơ sở dữ liệu.
+
+\subsection{Điều kiện thực hiện}
+
+Để cập nhật hồ sơ cá nhân, người dùng cần đã đăng nhập vào hệ thống. Người dùng cần có quyền truy cập vào chức năng hồ sơ cá nhân trên Dashboard.
+
+Một số thông tin như Username có thể không thể thay đổi sau khi đăng ký để đảm bảo tính duy nhất và tránh xung đột dữ liệu. Email cũng có thể không thể thay đổi nếu đã được sử dụng để xác thực tài khoản.
+
+\subsection{Các bước thực hiện}
+
+Quy trình cập nhật hồ sơ cá nhân được thực hiện theo các bước sau:
+
+Bước 1: Người dùng đăng nhập vào hệ thống và truy cập Dashboard.
+
+Bước 2: Tìm phần thông tin người dùng trên Dashboard (thường ở góc trên bên phải).
+
+Bước 3: Xem thông tin hiện tại bao gồm Username và Email.
+
+Bước 4: Nếu có chức năng chỉnh sửa, nhấn nút "Chỉnh sửa hồ sơ".
+
+Bước 5: Thực hiện các thay đổi mong muốn trên các trường cho phép.
+
+Bước 6: Nhấn nút "Lưu thay đổi" để cập nhật thông tin.
+
+Bước 7: Hệ thống kiểm tra tính hợp lệ của thông tin mới.
+
+Bước 8: Hệ thống lưu thay đổi vào cơ sở dữ liệu.
+
+Bước 9: Hệ thống hiển thị thông báo cập nhật thành công.
+
+Bước 10: Thông tin trên Dashboard được cập nhật để phản ánh thay đổi.
+
+\subsection{Kết quả sau khi thực hiện}
+
+Sau khi cập nhật thành công, thông tin hồ sơ cá nhân được cập nhật trong cơ sở dữ liệu và hiển thị trên Dashboard. Các thay đổi có hiệu lực ngay lập tức và được áp dụng cho các phiên làm việc tiếp theo.
+
+Trong trường hợp thông tin không thể thay đổi (như Username), hệ thống hiển thị thông báo tương ứng và không cho phép chỉnh sửa trường đó.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Screenshot_19.png}
+	\caption{Thông tin hồ sơ cá nhân trên Dashboard}
+	\label{fig:user-profile}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Hướng dẫn đăng xuất}
+
+Chức năng đăng xuất cho phép người dùng thoát khỏi hệ thống một cách an toàn, xóa token xác thực khỏi trình duyệt và ngăn chặn truy cập trái phép vào tài khoản.
+
+\subsection{Mô tả chức năng}
+
+Chức năng đăng xuất xóa JWT token được lưu trữ trong Local Storage của trình duyệt, kết thúc phiên làm việc hiện tại của người dùng. Sau khi đăng xuất, người dùng cần đăng nhập lại để truy cập vào các chức năng của hệ thống.
+
+Đăng xuất là hành động quan trọng để bảo mật tài khoản, đặc biệt khi sử dụng trên các thiết bị công cộng hoặc sau khi hoàn thành công việc. Hệ thống cung cấp nút đăng xuất dễ tiếp cận trên Dashboard và các trang khác.
+
+\subsection{Điều kiện thực hiện}
+
+Để đăng xuất, người dùng cần đã đăng nhập vào hệ thống và có token xác thực hợp lệ được lưu trong trình duyệt. Người dùng có thể đăng xuất từ bất kỳ trang nào của hệ thống có nút đăng xuất.
+
+Không có điều kiện đặc biệt nào khác để thực hiện đăng xuất. Người dùng có thể đăng xuất bất cứ lúc nào mong muốn.
+
+\subsection{Các bước thực hiện}
+
+Quy trình đăng xuất được thực hiện theo các bước sau:
+
+Bước 1: Người dùng đang ở bất kỳ trang nào của hệ thống sau khi đăng nhập.
+
+Bước 2: Tìm nút "Đăng xuất" trên Dashboard hoặc thanh điều hướng.
+
+Bước 3: Nhấn nút "Đăng xuất" để thực hiện hành động đăng xuất.
+
+Bước 4: Hệ thống hiển thị hộp thoại xác nhận đăng xuất (tùy theo cấu hình).
+
+Bước 5: Người dùng xác nhận hành động đăng xuất.
+
+Bước 6: Hệ thống xóa JWT token khỏi Local Storage của trình duyệt.
+
+Bước 7: Hệ thống xóa các dữ liệu tạm thời của phiên làm việc.
+
+Bước 8: Hệ thống chuyển hướng người dùng về trang đăng nhập.
+
+Bước 9: Hệ thống hiển thị thông báo "Đã đăng xuất thành công" (tùy theo cấu hình).
+
+\subsection{Kết quả sau khi thực hiện}
+
+Sau khi đăng xuất thành công, token xác thực bị xóa và phiên làm việc kết thúc. Người dùng được chuyển về trang đăng nhập và cần nhập Username và mật khẩu để truy cập lại hệ thống.
+
+Tất cả các chức năng được bảo vệ bởi xác thực sẽ không thể truy cập được sau khi đăng xuất. Điều này đảm bảo an toàn cho tài khoản người dùng, đặc biệt khi sử dụng trên các thiết bị chia sẻ.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Screenshot_20.png}
+	\caption{Nút đăng xuất trên Dashboard}
+	\label{fig:logout-button}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Screenshot_21.png}
+	\caption{Trang đăng nhập sau khi đăng xuất}
+	\label{fig:login-page-after-logout}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Các lỗi thường gặp và cách xử lý}
+
+Trong quá trình sử dụng hệ thống SEAL Hackathon Management System, người dùng có thể gặp một số lỗi thường gặp. Phần này trình bày các lỗi phổ biến và hướng dẫn cách xử lý để người dùng có thể tự khắc phục vấn đề.
+
+\subsection{Lỗi đăng nhập thất bại}
+
+\subsubsection{Mô tả lỗi}
+
+Lỗi đăng nhập thất bại xảy ra khi người dùng nhập sai Username hoặc mật khẩu, hoặc khi tài khoản không tồn tại trong hệ thống. Hệ thống hiển thị thông báo "Tài khoản không tồn tại!" hoặc "Mật khẩu không chính xác!" tùy theo trường hợp.
+
+\subsubsection{Nguyên nhân}
+
+Nguyên nhân có thể do người dùng không nhớ chính xác Username hoặc mật khẩu đã đăng ký, hoặc do nhập sai chính xác từng ký tự (phân biệt chữ hoa và chữ thường). Nguyên nhân khác có thể do tài khoản chưa được đăng ký hoặc đã bị xóa khỏi hệ thống.
+
+\subsubsection{Cách xử lý}
+
+Để khắc phục lỗi này, người dùng cần kiểm tra lại Username và mật khẩu đã nhập. Đảm bảo nhập đúng chính xác từng ký tự, bao gồm chữ hoa, chữ thường và các ký tự đặc biệt. Nếu vẫn không đăng nhập được, người dùng có thể thử chức năng quên mật khẩu (nếu có) hoặc liên hệ quản trị viên để khôi phục tài khoản.
+
+\subsection{Lỗi đăng ký tài khoản}
+
+\subsubsection{Mô tả lỗi}
+
+Lỗi đăng ký tài khoản xảy ra khi Username hoặc Email đã tồn tại trong hệ thống, hoặc khi thông tin nhập không hợp lệ. Hệ thống hiển thị thông báo "Username hoặc Email đã được sử dụng!" hoặc các thông báo lỗi khác tùy theo trường hợp.
+
+\subsubsection{Nguyên nhân}
+
+Nguyên nhân có thể do người dùng cố gắng đăng ký với Username hoặc Email đã được sử dụng bởi tài khoản khác. Nguyên nhân khác có thể do định dạng Email không hợp lệ, mật khẩu quá dài hoặc quá ngắn, hoặc Username chứa ký tự không được phép.
+
+\subsubsection{Cách xử lý}
+
+Để khắc phục lỗi này, người dùng cần chọn Username khác chưa được sử dụng. Kiểm tra Email nhập chưa được đăng ký trong hệ thống. Đảm bảo Email có định dạng hợp lệ (ví dụ: user@example.com). Mật khẩu cần có độ dài từ 6 đến 72 ký tự. Username chỉ chứa chữ cái, số và dấu gạch dưới.
+
+\subsection{Lỗi tạo đội thất bại}
+
+\subsubsection{Mô tả lỗi}
+
+Lỗi tạo đội thất bại xảy ra khi người dùng đã thuộc đội khác hoặc khi tên đội bị trùng. Hệ thống hiển thị thông báo "Bạn đã là trưởng đội của một nhóm. Không thể tạo đội mới." hoặc "Bạn đã là thành viên của một đội. Không thể tạo đội mới."
+
+\subsubsection{Nguyên nhân}
+
+Nguyên nhân do người dùng đã là Trưởng đội của một đội khác hoặc đã là thành viên được duyệt của một đội khác. Hệ thống không cho phép một người tham gia nhiều đội để đảm bảo công bằng trong cuộc thi.
+
+\subsubsection{Cách xử lý}
+
+Để khắc phục lỗi này, người dùng cần rời khỏi đội hiện tại trước khi tạo đội mới (nếu là thành viên) hoặc giải tán đội hiện tại (nếu là Trưởng đội). Sau khi rời đội hoặc giải tán đội, người dùng có thể tạo đội mới.
+
+\subsection{Lỗi tham gia đội thất bại}
+
+\subsubsection{Mô tả lỗi}
+
+Lỗi tham gia đội thất bại xảy ra khi mã mời không hợp lệ, đội đã đầy slot, hoặc người dùng đã thuộc đội khác. Hệ thống hiển thị thông báo "Mã mời không hợp lệ.", "Đội đã đầy slot chờ (tối đa 7 người)." hoặc các thông báo lỗi khác.
+
+\subsubsection{Nguyên nhân}
+
+Nguyên nhân có thể do mã mời được nhập sai, đội đã không còn tồn tại, hoặc đội đã đủ 7 thành viên. Nguyên nhân khác có thể do người dùng đã thuộc đội khác hoặc đã gửi yêu cầu tham gia đội này trước đó.
+
+\subsubsection{Cách xử lý}
+
+Để khắc phục lỗi này, người dùng cần kiểm tra lại mã mời và nhập chính xác từng ký tự. Liên hệ Trưởng đội để xác nhận mã mời còn hợp lệ và đội còn slot trống. Nếu người dùng đã thuộc đội khác, cần rời khỏi đội hiện tại trước khi tham gia đội mới.
+
+\subsection{Lỗi nộp bài thất bại}
+
+\subsubsection{Mô tả lỗi}
+
+Lỗi nộp bài thất bại xảy ra khi đường dẫn GitHub không hợp lệ hoặc người dùng chưa thuộc đội nào. Hệ thống hiển thị thông báo lỗi tương ứng và không lưu đường dẫn vào cơ sở dữ liệu.
+
+\subsubsection{Nguyên nhân}
+
+Nguyên nhân có thể do đường dẫn GitHub không đúng định dạng, repository không tồn tại hoặc không được đặt chế độ public. Nguyên nhân khác có thể do người dùng chưa thuộc đội nào hoặc chưa được phê duyệt làm thành viên.
+
+\subsubsection{Cách xử lý}
+
+Để khắc phục lỗi này, người dùng cần kiểm tra lại đường dẫn GitHub đảm bảo đúng định dạng https://github.com/username/repository. Đảm bảo repository tồn tại và được đặt chế độ public. Nếu chưa thuộc đội, người dùng cần tạo đội hoặc tham gia đội trước khi nộp bài.
+
+\subsection{Lỗi kết nối mạng}
+
+\subsubsection{Mô tả lỗi}
+
+Lỗi kết nối mạng xảy ra khi trình duyệt không thể kết nối đến máy chủ của hệ thống. Hệ thống hiển thị thông báo lỗi kết nối hoặc không phản hồi khi người dùng thực hiện các thao tác.
+
+\subsubsection{Nguyên nhân}
+
+Nguyên nhân có thể do mất kết nối Internet, máy chủ đang bảo trì, hoặc có vấn đề với tường lửa/proxy server chặn kết nối đến máy chủ.
+
+\subsubsection{Cách xử lý}
+
+Để khắc phục lỗi này, người dùng cần kiểm tra kết nối Internet và đảm bảo đang online. Thử tải lại trang (refresh) hoặc thử truy cập lại sau vài phút. Nếu vấn đề kéo dài, liên hệ quản trị viên để kiểm tra trạng thái máy chủ.
+
+\subsection{Lỗi token hết hạn}
+
+\subsubsection{Mô tả lỗi}
+
+Lỗi token hết hạn xảy ra khi JWT token lưu trong trình duyệt hết hiệu lực sau 60 phút. Hệ thống hiển thị thông báo lỗi xác thực và chuyển người dùng về trang đăng nhập.
+
+\subsubsection{Nguyên nhân}
+
+Nguyên nhân do token có thời gian hiệu lực 60 phút để đảm bảo an toàn. Sau thời gian này, token hết hạn và người dùng cần đăng nhập lại để nhận token mới.
+
+\subsubsection{Cách xử lý}
+
+Để khắc phục lỗi này, người dùng cần đăng nhập lại vào hệ thống bằng Username và mật khẩu. Sau khi đăng nhập thành công, hệ thống cấp phát token mới và người dùng có thể tiếp tục sử dụng các chức năng.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Đánh giá chương}
+
+Chương 6 đã trình bày hướng dẫn sử dụng chi tiết cho hệ thống SEAL Hackathon Management System, bao gồm các chức năng từ cơ bản đến nâng cao. Các hướng dẫn được trình bày theo trình tự logic, đi kèm với hình minh họa trực quan để người dùng dễ dàng theo dõi và thực hiện.
+
+Các hướng dẫn bao gồm đầy đủ các bước thực hiện, điều kiện tiên quyết và kết quả mong đợi cho từng chức năng, giúp người dùng hiểu rõ quy trình sử dụng hệ thống. Phần lỗi thường gặp và cách xử lý cung cấp giải pháp cho các vấn đề phổ biến, giúp người dùng tự khắc phục khi gặp sự cố.
+
+Tài liệu hướng dẫn sử dụng này được xây dựng dựa trên quy trình nghiệp vụ thực tế của hệ thống và phản ánh chính xác các chức năng đã được triển khai. Tài liệu đóng vai trò quan trọng trong việc hỗ trợ người dùng sử dụng hệ thống hiệu quả và giảm thiểu các vấn đề có thể phát sinh trong quá trình vận hành.
+
+Trong tương lai, tài liệu hướng dẫn sử dụng có thể được mở rộng thêm các chức năng mới khi hệ thống được nâng cấp, bao gồm các chức năng quản trị nâng cao, thống kê và báo cáo, tích hợp với các hệ thống khác và các tính năng hỗ trợ người dùng chuyên sâu hơn.
