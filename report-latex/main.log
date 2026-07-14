@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.25)  14 JUL 2026 17:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.25)  14 JUL 2026 19:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -600,26 +600,26 @@ LaTeX Warning: Label `fig:submit-success' multiply defined.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count327
@@ -639,7 +639,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 30.
+Package hyperref Info: Link coloring OFF on input line 31.
  (main.out) (main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
@@ -5110,586 +5110,37 @@ Overfull \hbox (80.84631pt too wide) in paragraph at lines 129--139
  []
 
 [36])
-Overfull \hbox (55.02333pt too wide) in paragraph at lines 142--57
+Overfull \hbox (55.02333pt too wide) in paragraph at lines 142--58
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 142--57
+Underfull \hbox (badness 10000) in paragraph at lines 142--58
 
  []
 
-[37] (chương 5/Chapter5.tex
-Ch\uhorn \ohorn ng 4.
-[38
+[37]
 
+! LaTeX Error: File `chương 5/Chapter5.tex' not found.
 
-] [39] [40] [41] [42] [43] [44] [45] [46] [47]
-<chương 5/images/register_success.png, id=1236, 1153.30875pt x 610.07925pt>
-File: chương 5/images/register_success.png Graphic file (type png)
-<use chương 5/images/register_success.png>
-Package pdftex.def Info: chương 5/images/register_success.png  used on input line 648.
-(pdftex.def)             Requested size: 373.3035pt x 197.47282pt.
- [48 <./chương 5/images/register_success.png>]
-<chương 5/images/register_duplicate_username.png, id=1244, 1153.911pt x 549.252pt>
-File: chương 5/images/register_duplicate_username.png Graphic file (type png)
-<use chương 5/images/register_duplicate_username.png>
-Package pdftex.def Info: chương 5/images/register_duplicate_username.png  used on input line 726.
-(pdftex.def)             Requested size: 373.3035pt x 177.68346pt.
- [49 <./chương 5/images/register_duplicate_username.png>]
-<chương 5/images/register_duplicate_email.png, id=1252, 1151.502pt x 551.05875pt>
-File: chương 5/images/register_duplicate_email.png Graphic file (type png)
-<use chương 5/images/register_duplicate_email.png>
-Package pdftex.def Info: chương 5/images/register_duplicate_email.png  used on input line 804.
-(pdftex.def)             Requested size: 373.3035pt x 178.64632pt.
- [50 <./chương 5/images/register_duplicate_email.png>]
-<chương 5/images/login_success.png, id=1261, 1154.51324pt x 608.87476pt>
-File: chương 5/images/login_success.png Graphic file (type png)
-<use chương 5/images/login_success.png>
-Package pdftex.def Info: chương 5/images/login_success.png  used on input line 880.
-(pdftex.def)             Requested size: 373.3035pt x 196.86926pt.
- [51]
-<chương 5/images/login_failed.png, id=1267, 1153.30875pt x 573.342pt>
-File: chương 5/images/login_failed.png Graphic file (type png)
-<use chương 5/images/login_failed.png>
-Package pdftex.def Info: chương 5/images/login_failed.png  used on input line 949.
-(pdftex.def)             Requested size: 373.3035pt x 185.58156pt.
- [52 <./chương 5/images/login_success.png>] [53 <./chương 5/images/login_failed.png>]
-<chương 5/images/dashboard_no_team.png, id=1281, 1154.51324pt x 608.87476pt>
-File: chương 5/images/dashboard_no_team.png Graphic file (type png)
-<use chương 5/images/dashboard_no_team.png>
-Package pdftex.def Info: chương 5/images/dashboard_no_team.png  used on input line 1018.
-(pdftex.def)             Requested size: 373.3035pt x 196.86926pt.
- [54 <./chương 5/images/dashboard_no_team.png>]
-<chương 5/images/create_team_success.png, id=1289, 1154.51324pt x 614.295pt>
-File: chương 5/images/create_team_success.png Graphic file (type png)
-<use chương 5/images/create_team_success.png>
-Package pdftex.def Info: chương 5/images/create_team_success.png  used on input line 1082.
-(pdftex.def)             Requested size: 373.3035pt x 198.62181pt.
- [55 <./chương 5/images/create_team_success.png>]
-<chương 5/images/dashboard_team_info.png, id=1297, 1142.46825pt x 604.05675pt>
-File: chương 5/images/dashboard_team_info.png Graphic file (type png)
-<use chương 5/images/dashboard_team_info.png>
-Package pdftex.def Info: chương 5/images/dashboard_team_info.png  used on input line 1150.
-(pdftex.def)             Requested size: 373.3035pt x 197.37608pt.
- [56 <./chương 5/images/dashboard_team_info.png>]
-<chương 5/images/join_team_success.png, id=1306, 1154.51324pt x 551.05875pt>
-File: chương 5/images/join_team_success.png Graphic file (type png)
-<use chương 5/images/join_team_success.png>
-Package pdftex.def Info: chương 5/images/join_team_success.png  used on input line 1224.
-(pdftex.def)             Requested size: 373.3035pt x 178.17545pt.
- [57 <./chương 5/images/join_team_success.png>]
-<chương 5/images/join_team_failed.png, id=1314, 1154.51324pt x 611.28375pt>
-File: chương 5/images/join_team_failed.png Graphic file (type png)
-<use chương 5/images/join_team_failed.png>
-Package pdftex.def Info: chương 5/images/join_team_failed.png  used on input line 1283.
-(pdftex.def)             Requested size: 373.3035pt x 197.64818pt.
- [58 <./chương 5/images/join_team_failed.png>]
-<chương 5/images/approve_member.png, id=1322, 1154.51324pt x 609.477pt>
-File: chương 5/images/approve_member.png Graphic file (type png)
-<use chương 5/images/approve_member.png>
-Package pdftex.def Info: chương 5/images/approve_member.png  used on input line 1338.
-(pdftex.def)             Requested size: 373.3035pt x 197.064pt.
- [59 <./chương 5/images/approve_member.png>]
-<chương 5/images/kick_member.png, id=1330, 1154.51324pt x 606.46574pt>
-File: chương 5/images/kick_member.png Graphic file (type png)
-<use chương 5/images/kick_member.png>
-Package pdftex.def Info: chương 5/images/kick_member.png  used on input line 1393.
-(pdftex.def)             Requested size: 373.3035pt x 196.09035pt.
- [60 <./chương 5/images/kick_member.png>]
-<chương 5/images/leave_team_confirm.png, id=1338, 1154.51324pt x 610.07925pt>
-File: chương 5/images/leave_team_confirm.png Graphic file (type png)
-<use chương 5/images/leave_team_confirm.png>
-Package pdftex.def Info: chương 5/images/leave_team_confirm.png  used on input line 1465.
-(pdftex.def)             Requested size: 341.43307pt x 180.41866pt.
-<chương 5/images/leave_team_success.png, id=1339, 1154.51324pt x 608.87476pt>
-File: chương 5/images/leave_team_success.png Graphic file (type png)
-<use chương 5/images/leave_team_success.png>
-Package pdftex.def Info: chương 5/images/leave_team_success.png  used on input line 1472.
-(pdftex.def)             Requested size: 364.19667pt x 192.06598pt.
- [61 <./chương 5/images/leave_team_confirm.png>]
-<chương 5/images/disband_team_confirm.png, id=1347, 1154.51324pt x 613.0905pt>
-File: chương 5/images/disband_team_confirm.png Graphic file (type png)
-<use chương 5/images/disband_team_confirm.png>
-Package pdftex.def Info: chương 5/images/disband_team_confirm.png  used on input line 1539.
-(pdftex.def)             Requested size: 341.43307pt x 181.30916pt.
- [62 <./chương 5/images/leave_team_success.png>]
-<chương 5/images/disband_team_success.png, id=1356, 1154.51324pt x 608.2725pt>
-File: chương 5/images/disband_team_success.png Graphic file (type png)
-<use chương 5/images/disband_team_success.png>
-Package pdftex.def Info: chương 5/images/disband_team_success.png  used on input line 1546.
-(pdftex.def)             Requested size: 364.19667pt x 191.876pt.
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: tex)
 
-Underfull \hbox (badness 10000) in paragraph at lines 1590--1591
-[]\T5/cmr/m/n/12 https://github.com/Quang-Tri/SEAL-Hackathon-
- []
+Enter file name: 
+c:/Users/Admin/Desktop/SEAL-Hackathon-Management/report-latex/main.tex:63: Emergency stop.
+<read *> 
+         
+l.63 \input{chương 5/Chapter5}
+                                ^^M
+*** (cannot \read from terminal in nonstop modes)
 
-[63 <./chương 5/images/disband_team_confirm.png> <./chương 5/images/disband_team_success.png>]
-<chương 5/images/submit_github_success.png, id=1365, 1154.51324pt x 617.30624pt>
-File: chương 5/images/submit_github_success.png Graphic file (type png)
-<use chương 5/images/submit_github_success.png>
-Package pdftex.def Info: chương 5/images/submit_github_success.png  used on input line 1618.
-(pdftex.def)             Requested size: 373.3035pt x 199.59544pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 1655--1656
-[]\T5/cmr/m/n/12 https://github.com/Quang-Tri/SEAL-Hackathon-
- []
-
-[64 <./chương 5/images/submit_github_success.png>]
-<chương 5/images/update_github_success.png, id=1373, 1150.2975pt x 611.886pt>
-File: chương 5/images/update_github_success.png Graphic file (type png)
-<use chương 5/images/update_github_success.png>
-Package pdftex.def Info: chương 5/images/update_github_success.png  used on input line 1683.
-(pdftex.def)             Requested size: 373.3035pt x 198.57115pt.
- [65 <./chương 5/images/update_github_success.png>]
-Underfull \hbox (badness 3428) in paragraph at lines 1807--1807
-[]\T5/cmr/m/n/12 Kh�ng th� ^^_�ng k� t�i
- []
-
-
-Underfull \hbox (badness 7667) in paragraph at lines 1831--1831
-[]\T5/cmr/m/n/12 Leader kh�ng th� Kick
- []
-
-[66]) [67] (chapter6/Chapter6.tex
-Ch\uhorn \ohorn ng 5.
-[68
-
-
-] [69] [70]
-
-LaTeX Warning: File `chapter6/images/register_page.png' not found on input line 110.
-
-
-chapter6/Chapter6.tex:110: Package pdftex.def Error: File `chapter6/images/register_page.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.110 ...width]{chapter6/images/register_page.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[71]
-
-LaTeX Warning: File `chapter6/images/register_success.png' not found on input line 117.
-
-
-chapter6/Chapter6.tex:117: Package pdftex.def Error: File `chapter6/images/register_success.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.117 ...th]{chapter6/images/register_success.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[72] [73]
-
-LaTeX Warning: File `chapter6/images/login_page.png' not found on input line 170.
-
-
-chapter6/Chapter6.tex:170: Package pdftex.def Error: File `chapter6/images/login_page.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.170 ...extwidth]{chapter6/images/login_page.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[74]
-
-LaTeX Warning: File `chapter6/images/dashboard_after_login.png' not found on input line 177.
-
-
-chapter6/Chapter6.tex:177: Package pdftex.def Error: File `chapter6/images/dashboard_after_login.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.177 ...hapter6/images/dashboard_after_login.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[75] [76]
-
-LaTeX Warning: File `chapter6/images/create_team_form.png' not found on input line 234.
-
-
-chapter6/Chapter6.tex:234: Package pdftex.def Error: File `chapter6/images/create_team_form.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.234 ...th]{chapter6/images/create_team_form.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[77]
-
-LaTeX Warning: File `chapter6/images/create_team_success.png' not found on input line 241.
-
-
-chapter6/Chapter6.tex:241: Package pdftex.def Error: File `chapter6/images/create_team_success.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.241 ...{chapter6/images/create_team_success.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[78] [79]
-
-LaTeX Warning: File `chapter6/images/join_team_form.png' not found on input line 296.
-
-
-chapter6/Chapter6.tex:296: Package pdftex.def Error: File `chapter6/images/join_team_form.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.296 ...idth]{chapter6/images/join_team_form.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[80]
-
-LaTeX Warning: File `chapter6/images/join_team_success.png' not found on input line 303.
-
-
-chapter6/Chapter6.tex:303: Package pdftex.def Error: File `chapter6/images/join_team_success.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.303 ...h]{chapter6/images/join_team_success.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[81] [82]
-
-LaTeX Warning: File `chapter6/images/pending_members_list.png' not found on input line 356.
-
-
-chapter6/Chapter6.tex:356: Package pdftex.def Error: File `chapter6/images/pending_members_list.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.356 ...chapter6/images/pending_members_list.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[83]
-
-LaTeX Warning: File `chapter6/images/approve_member_success.png' not found on input line 363.
-
-
-chapter6/Chapter6.tex:363: Package pdftex.def Error: File `chapter6/images/approve_member_success.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.363 ...apter6/images/approve_member_success.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[84] [85]
-
-LaTeX Warning: File `chapter6/images/members_list.png' not found on input line 416.
-
-
-chapter6/Chapter6.tex:416: Package pdftex.def Error: File `chapter6/images/members_list.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.416 ...twidth]{chapter6/images/members_list.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[86]
-
-LaTeX Warning: File `chapter6/images/kick_member_success.png' not found on input line 423.
-
-
-chapter6/Chapter6.tex:423: Package pdftex.def Error: File `chapter6/images/kick_member_success.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.423 ...{chapter6/images/kick_member_success.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[87] [88]
-
-LaTeX Warning: File `chapter6/images/team_info.png' not found on input line 468.
-
-
-chapter6/Chapter6.tex:468: Package pdftex.def Error: File `chapter6/images/team_info.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.468 ...textwidth]{chapter6/images/team_info.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[89] [90]
-
-LaTeX Warning: File `chapter6/images/leave_team_button.png' not found on input line 521.
-
-
-chapter6/Chapter6.tex:521: Package pdftex.def Error: File `chapter6/images/leave_team_button.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.521 ...h]{chapter6/images/leave_team_button.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[91]
-
-LaTeX Warning: File `chapter6/images/leave_team_success.png' not found on input line 528.
-
-
-chapter6/Chapter6.tex:528: Package pdftex.def Error: File `chapter6/images/leave_team_success.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.528 ...]{chapter6/images/leave_team_success.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[92] [93]
-
-LaTeX Warning: File `chapter6/images/disband_team_button.png' not found on input line 579.
-
-
-chapter6/Chapter6.tex:579: Package pdftex.def Error: File `chapter6/images/disband_team_button.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.579 ...{chapter6/images/disband_team_button.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[94]
-
-LaTeX Warning: File `chapter6/images/disband_team_success.png' not found on input line 586.
-
-
-chapter6/Chapter6.tex:586: Package pdftex.def Error: File `chapter6/images/disband_team_success.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.586 ...chapter6/images/disband_team_success.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[95] [96]
-
-LaTeX Warning: File `chapter6/images/submit_form.png' not found on input line 645.
-
-
-chapter6/Chapter6.tex:645: Package pdftex.def Error: File `chapter6/images/submit_form.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.645 ...xtwidth]{chapter6/images/submit_form.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[97]
-
-LaTeX Warning: File `chapter6/images/submit_success.png' not found on input line 652.
-
-
-chapter6/Chapter6.tex:652: Package pdftex.def Error: File `chapter6/images/submit_success.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.652 ...idth]{chapter6/images/submit_success.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[98]
-
-LaTeX Warning: File `chapter6/images/submission_history.png' not found on input line 659.
-
-
-chapter6/Chapter6.tex:659: Package pdftex.def Error: File `chapter6/images/submission_history.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.659 ...]{chapter6/images/submission_history.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[99] [100]
-
-LaTeX Warning: File `chapter6/images/user_profile.png' not found on input line 714.
-
-
-chapter6/Chapter6.tex:714: Package pdftex.def Error: File `chapter6/images/user_profile.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.714 ...twidth]{chapter6/images/user_profile.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[101] [102]
-
-LaTeX Warning: File `chapter6/images/logout_button.png' not found on input line 767.
-
-
-chapter6/Chapter6.tex:767: Package pdftex.def Error: File `chapter6/images/logout_button.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.767 ...width]{chapter6/images/logout_button.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[103]
-
-LaTeX Warning: File `chapter6/images/login_page_after_logout.png' not found on input line 774.
-
-
-chapter6/Chapter6.tex:774: Package pdftex.def Error: File `chapter6/images/login_page_after_logout.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.774 ...pter6/images/login_page_after_logout.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[104] [105] [106] [107] [108]
-
-chapter6/Chapter6.tex:889: LaTeX Error: Unicode character � (U+FFFD)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.889 C�
-          c hướng dẫn bao gồm đầy đủ các bước thực hiện...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-) [109] (chương 7/Chapter7.tex
-Ch\uhorn \ohorn ng 6.
-[110
-
-
-] [111] [112] [113] [114]
-Overfull \hbox (11.80437pt too wide) in paragraph at lines 238--239
-[]\T5/cmr/bx/n/12 Ki�n th�c k� thu�t: \T5/cmr/m/n/12 Vi�c �p d�ng FastAPI, JWT Au-then-ti-ca-tion, SQLAlchemy
- []
-
-[115]) [116]
-
-c:/Users/Admin/Desktop/SEAL-Hackathon-Management/report-latex/main.tex:77: LaTeX Error: \begin{itemize} on input line 186 ended by \end{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.77 \end{document}
-                   
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-(main.aux)
- ***********
-LaTeX2e <2025-11-01>
-L3 programming layer <2025-12-24>
- ***********
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E3F4603C9A34DA224117749E327A2AA2;36789.
- )
-(\end occurred inside a group at level 1)
-
-### semi simple group (level 1) entered at line 186 (\begingroup)
-### bottom level 
+ 
 Here is how much of TeX's memory you used:
- 16082 strings out of 467871
- 276752 string characters out of 5418376
+ 15011 strings out of 467871
+ 235516 string characters out of 5418376
  847764 words of memory out of 5000000
- 44182 multiletter control sequences out of 15000+600000
+ 43330 multiletter control sequences out of 15000+600000
  647106 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,11n,79p,993b,1339s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnti12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vntt12.pfb>
-Output written on main.pdf (121 pages, 3965144 bytes).
-PDF statistics:
- 1818 PDF objects out of 2073 (max. 8388607)
- 520 named destinations out of 1000 (max. 500000)
- 1524 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+c:/Users/Admin/Desktop/SEAL-Hackathon-Management/report-latex/main.tex:63:  ==> Fatal error occurred, no output PDF file produced!
